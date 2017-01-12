@@ -1,0 +1,567 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt,
+var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font - size: 100 % ;
+  font: inherit;
+  vertical - align: baseline;
+}
+
+.footer-distributed {
+  background-color: #292c2f;
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 55px 50px;
+}
+
+.footer-distributed .footer-left {
+  width: 35%;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 20px;
+}
+
+.footer-distributed .footer-center {
+  width: 35%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.footer-distributed .footer-right {
+  width: 20%;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 60px;
+}
+
+.footer-distributed h3 span {
+  color: #5383d3;
+}
+
+.footer-distributed h3 {
+  color: #ffffff;
+  font: normal 36px 'Cookie', cursive;
+  margin: 0;
+}
+
+.footer-distributed .footer-links {
+  color: #ffffff;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footer-distributed .footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+  color: #8f9296;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-center i {
+  background-color: #33383b;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center p span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 2;
+  width: 310px;
+}
+
+.footer-distributed .footer-center p {
+  display: inline-block;
+  color: #ffffff;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about {
+  line-height: 20px;
+  color: #92999f;
+  font-size: 13px;
+  font-weight: normal;
+}
+
+.footer-distributed .footer-icons {
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-company-about span {
+  display: block;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color: #33383b;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+.header-width {
+  height: 80px;
+}
+
+.header {
+  top: auto;
+  left: auto;
+  right: auto;
+  width: 100%;
+  min-height: 70px;
+  padding: 0;
+  box-shadow: 0 1px 4px rgba(228,228,228,.95);
+  background: #fff;
+  position: fixed;
+  z-index: 1;
+}
+
+.login_header {
+  text-align: right;
+  font-size: 12px;
+  margin-right: 5px;
+  margin-top: 8px;
+}
+
+.login_header {
+  text-align: right;
+  font-size: 12px;
+  padding-right: 16px;
+}
+
+.logo {
+  height: 60px;
+  width: 140px;
+}
+
+body {
+  -webkit-animation: bugfix infinite 1s;
+}
+
+@-webkit-keyframes bugfix {
+  from {padding:0;}
+  to {padding:0;}
+}
+
+label#sidemenutoggler {
+  display: block;
+  position: relative;
+  font-size: 10px;
+  width: 35px;
+  height: 20px;
+  top: 0;
+  left: 0;
+  background: white;
+  text-indent: -1000px;
+  border: 6px solid black;
+  border-width: 6px 0;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  margin-top: 20px;
+  margin-right: -41px;
+}
+
+label#sidemenutoggler::before, label#sidemenutoggler::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  top: 50%;
+  margin-top: -3px;
+  left: 0;
+  background: black;
+  -webkit-transform: rotate(0);
+  transform: rotate(0);
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+#sidemenucheckbox:checked ~ label#sidemenutoggler {
+  border-color: transparent;
+}
+
+#sidemenucheckbox:checked ~ label#sidemenutoggler::before {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#sidemenucheckbox:checked ~ label#sidemenutoggler::after {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#sidemenucheckbox{
+  display: none;
+}
+
+#rightsidemenu{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  background: #F7D48A;
+  font: bold 10px 'Bitter', sans-serif;
+  z-index: 1001;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  visibility: hidden;
+  box-shadow: 5px 0 10px rgba(0,0,0,.2);
+  -webkit-transform: translate3d(100%,0,0) rotate(-20deg);
+  transform: translate3d(100%,0,0) rotate(-20deg);
+  font-family: initial;
+}
+
+#rightsidemenu a{
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+}
+
+#rightsidemenu ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: block;
+  text-align: center;
+  font-size: 15px;
+  -webkit-transform: translate3d(0,-20%,0);
+  transform: translate3d(0,-20%,0);
+  opacity: 0;
+}
+
+#rightsidemenu ul li a{
+  padding: 30px 10px;
+  display: block;
+}
+
+#rightsidemenu ul li a:hover{
+  background: #F7AC6A;
+  transition: all 0.5s;
+
+}
+
+.overlay{
+  content: '';
+  position: fixed;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background: gray;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  z-index: 1000;
+  -webkit-transition: opacity .3s, visibility 0s .3s;
+  transition: opacity .3s, visibility 0s .3s;
+}
+
+.overlay label{
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
+#rightsidemenu label#closex{
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  text-indent: -1000px;
+  z-index: 10;
+  top: 0;
+  left: 5px;
+}
+
+#rightsidemenu label#closex::before, #rightsidemenu label#closex::after{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  background: black;
+  top: 50%;
+  margin-top: -3px;
+  -ms-transform: rotate(-40deg);
+  -webkit-transform: rotate(-40deg);
+  transform: rotate(-40deg);
+}
+
+#rightsidemenu label#closex::after{
+  -ms-transform: rotate(40deg);
+  -webkit-transform: rotate(40deg);
+  transform: rotate(40deg);
+}
+
+#sidemenucheckbox:checked ~ #rightsidemenu{
+  visibility: visible;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+  -webkit-transition: -webkit-transform .5s ease-in-out;
+  transition: transform .5s ease-in-out;
+}
+
+#sidemenucheckbox:checked ~ #rightsidemenu ul{
+  -webkit-transform: translate3d(0,50px,0);
+  transform: translate3d(0,50px,0);
+  opacity: 1;
+  -webkit-transition: opacity 1s .5s, -webkit-transform 1s .5s;
+  transition: opacity 1s .5s, transform 1s .5s;
+}
+
+#sidemenucheckbox:checked ~ .overlay{
+  opacity: .8;
+  visibility: visible;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.menu_toggler {
+  float: right;
+  margin-top: 20px;
+}
+
+@font-face {
+  font-family: 'Bitter';
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Bitter';
+  font-style: normal;
+  font-weight: 400;
+}
+
+.language {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+}
+
+.language {
+  margin-right: 58px;
+  margin-top: 24px;
+}
+
+.language a {
+  text-decoration: none;
+}
+
+main > header:first-child {
+  background-image: url('hinhnen.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: #fff;
+  height: 400px;
+}
+
+section {
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 10px 0;
+  position: relative;
+  width: 90%;
+}
+
+main > header:first-child section span {
+  display: block;
+  font-weight: 300;
+  font-size: 38px;
+  font-family: initial;
+  padding-top: 21px;
+}
+
+main > header:first-child section h1 {
+  margin-bottom: 40px !important;
+}
+
+main #learn-more-button {
+  color: #fff;
+  border-color: #fff;
+}
+
+.button.soft {
+  border: 2px solid #53bceb;
+  padding: 8px 10px;
+}
+
+.content h2 strong {
+  color: #ff7600;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.staff-item .name {
+  color: #000;
+  margin-bottom: 3px;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.staff-item .position {
+  font-style: italic;
+  font-weight: 300;
+  color: #999;
+}
+
+.staff-item {
+  width: 125px;
+  height: 195px;
+  margin-right: 20px;
+}
+
+.staff-item .image-wrapper {
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.clear {
+  clear: both;
+}
+
+.left {
+  float: left;
+}
+
+.margin-left-52 {
+  margin-left: 52px !important;
+}
+
+main {
+  margin-top: 0px;
+}
+
+main > header:first-child section span {
+  font-size: 38px;
+  font-family: initial;
+  padding-top: 21px;
+}
+
+main > header:first-child section span {
+  display: block;
+  font-weight: 300;
+}
+
+section {
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 10px 0;
+  position: relative;
+  width: 90%;
+}
+
+main > header:first-child {
+  height: 400px;
+  color: #fff;
+}
+
+main > header:first-child {
+  background-image: url('hinhnen.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+main #learn-more-button {
+  color: #fff;
+  border-color: #fff;
+}
+
+.button.soft {
+  border: 2px solid #53bceb;
+  padding: 8px 10px;
+}
+
+main > header:first-child section h1 {
+  margin-bottom: 40px !important;
+}
+
+.content-center {
+  text-align: center;
+}
+
+.btn-more {
+  color: #ff7600;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1;
+  display: inline-block;
+  border: solid 1px #ff7600;
+  padding: 8px 15px 7px;
+  margin: 15px 0px;
+}
+
+.container .content-center a:hover {
+  background-color: #ff7600;
+}
+
+.content-center a:hover {
+  color: white !important;
+  text-decoration: none;
+}
+
+.iportfolio img:hover {
+  opacity: 0.6;
+}
+
+.about-block {
+  background: #f7f7f7;
+}
+
+.margin-left-52 {
+  margin-left: 52px !important;
+}

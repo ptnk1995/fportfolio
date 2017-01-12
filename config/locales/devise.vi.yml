@@ -35,9 +35,6 @@ vi:
       send_instructions: "Bạn sẽ nhận được email hướng dẫn bỏ khóa tài khoản trong một vài phút nữa."
       unlocked: "Tài khoản của bạn đã được bỏ khóa thành công. Mời bạn đăng nhập"
       send_paranoid_instructions: "Nếu tài khoản của bạn tồn tại, bạn sẽ nhận được email hướng dẫn bỏ khóa tài khoản trong một vài phút nữa."
-    omniauth_callbacks:
-      success: "Đăng nhập thành công bằng tài khỏan %{kind}."
-      failure: "Không thể đăng nhập qua tài khoản %{kind} vì "%{reason}"."
     mailer:
       confirmation_instructions:
         subject: "Hướng dẫn xác thực"

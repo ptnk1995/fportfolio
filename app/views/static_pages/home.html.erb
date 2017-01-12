@@ -1,0 +1,87 @@
+<main>
+  <header>
+    <section>
+      <h1>
+        <span><%= t("manage.manage_project") %></span>
+        <span><%= t("manage.character.first") %></span>
+        <span><%= t("manage.character.second") %></span>
+      </h1>
+      <p>
+        <%= link_to t("manage.our_project"), root_path, class: "button soft",
+          href: "#readmore", id:"learn-more-button",
+          onclick: "$('html,body').animate({scrollTop:
+          $('#learnmore').offset().top}); return false;" %>
+      </p>
+    </section>
+  </header>
+  <div id="readmore">
+    <div class="portfolio-block content content-center" id="portfolio">
+      <div class="container">
+        <h2 class="margin-bottom-50"><strong><%= t("project") %></strong></h2>
+        <div class="row">
+          <div class="col-md-3 col-sm-6 bottommargin-lg">
+            <div class="iportfolio">
+              <div class="portfolio-image">
+                <%=link_to "#" do %>
+                  <%= image_tag "Ateam.jpg",
+                    class: "img-thumbnail noradius lazyLoadImage" %>
+                <% end %>
+              </div>
+              <div class="portfolio-desc center nobottompadding">
+                <h3>
+                  <%= link_to t("header.menu.home"), root_path %>
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content-center">
+          <%= link_to t("read_more"), root_path, class: "btn-more" %>
+        </div>
+      </div>
+    </div>
+    <div class="about-block content content-center" id="about_team">
+      <div class="container">
+        <h2 class="margin-bottom-50"><strong><%= t("about_us") %></strong></h2>
+        <div class="row margin-left-52">
+          <div class="staff-item col-md-2 left">
+            <div class="image-wrapper">
+              <%= image_tag "user/anh_trung.png" %>
+            </div>
+            <p class="name"><%= t("list_team.member1") %></p>
+            <p class="position"><%= t("position.manage") %></p>
+          </div>
+          <div class="staff-item col-md-2 left">
+            <div class="image-wrapper">
+              <%= image_tag "user/anh_trung.png" %>
+            </div>
+            <p class="name"><%= t("list_team.member2") %></p>
+            <p class="position"><%= t("position.manage") %></p>
+          </div>
+          <div class="staff-item col-md-2 left">
+            <div class="image-wrapper">
+              <%= image_tag "user/anh_trung.png" %>
+            </div>
+            <p class="name"><%= t("list_team.member3") %></p>
+            <p class="position"><%= t("position.dev") %></p>
+          </div>
+          <div class="staff-item col-md-2 left">
+            <div class="image-wrapper">
+              <%= image_tag "user/anh_trung.png" %>
+            </div>
+            <p class="name"><%= t("list_team.member4") %></p>
+            <p class="position"><%= t("position.dev") %></p>
+          </div>
+          <div class="staff-item col-md-2 left">
+            <div class="image-wrapper">
+              <%= image_tag "user/anh_trung.png" %>
+            </div>
+            <p class="name"><%= t("list_team.member5") %></p>
+            <p class="position"><%= t("position.dev") %></p>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+</main>

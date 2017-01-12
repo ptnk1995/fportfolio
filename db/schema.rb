@@ -145,13 +145,13 @@ ActiveRecord::Schema.define(version: 20170111070509) do
     t.index ["user_id"], name: "index_socials_on_user_id", using: :btree
   end
 
-  create_table "targettechniques", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "target_techniques", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "target_id"
     t.integer  "target_type"
     t.integer  "technique_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
-    t.index ["technique_id"], name: "index_targettechniques_on_technique_id", using: :btree
+    t.index ["technique_id"], name: "index_target_techniques_on_technique_id", using: :btree
   end
 
   create_table "techniques", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -194,5 +194,5 @@ ActiveRecord::Schema.define(version: 20170111070509) do
   add_foreign_key "projects", "categories"
   add_foreign_key "rates", "users"
   add_foreign_key "socials", "users"
-  add_foreign_key "targettechniques", "techniques"
+  add_foreign_key "target_techniques", "techniques"
 end

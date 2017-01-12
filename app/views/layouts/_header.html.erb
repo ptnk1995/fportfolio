@@ -1,0 +1,53 @@
+<header class="header-width">
+  <div class="header header-mobi-ext">
+    <div class="container">
+      <div class="row login_header">
+        <%= link_to t("login"), "#" %>
+      </div>
+      <div class="row">
+        <div class="col-md-2 col-sm-2">
+          <%= image_tag "cong-ty-tnhh-framgia.jpg", class: "logo" %>
+        </div>
+        <div class="language">
+          <%= link_to "vi" do %>
+            <%= image_tag "vi.png" %>
+          <% end %>
+          <%= link_to "en" do %>
+            <%= image_tag "en.png" %>
+          <% end %>
+        </div>
+        <input type="checkbox" id="sidemenucheckbox" />
+        <label id="sidemenutoggler" for="sidemenucheckbox"
+          onClick="legacybrowsertoggle()" class="menu_toggler"></label>
+        <nav id="rightsidemenu">
+          <ul>
+            <li>
+              <%= link_to t("header.menu.home"), root_path %>
+            </li>
+            <li>
+              <%= link_to t("header.menu.project"), "#" %>
+            </li>
+            <li>
+              <%= link_to t("header.menu.new"), "#" %>
+            </li>
+            <li>
+              <%= link_to t("header.menu.blog"), "#" %>
+            </li>
+            <li>
+              <%= link_to t("header.menu.idea"), "#" %>
+            </li>
+            <li>
+              <%= link_to t("header.menu.contact"), "#" %>
+            </li>
+            <li>
+              <%= link_to t("header.menu.about_team"), "#" %>
+            </li>
+          </ul>
+        <label id="closex" for="sidemenucheckbox"
+          onClick="legacybrowsertoggle()"><%= t("close") %></label>
+        </nav>
+        <div class="overlay"><label for="sidemenucheckbox"></label></div>
+        </div>
+    </div>
+  </div>
+</header>
