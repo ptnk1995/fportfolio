@@ -1,0 +1,52 @@
+vi:
+  title_home: "Danh mục đầu tư"
+  about_us: "Đội ngũ phát triển"
+  close: "Đóng"
+  login: "Đăng nhập"
+  project: "Dự án"
+  read_more: "Xem thêm"
+  header:
+    menu:
+      home: "Trang chủ"
+      project: "Dự án"
+      new: "Thông báo"
+      blog: "Bài viết"
+      idea: "Đề xuất ý tưởng"
+      contact: "Liên hệ"
+      about_team: "Chúng tôi"
+  footer:
+    menu:
+      home: "Trang chủ |"
+      blog: "Bài viết |"
+      about: "About |"
+      faq: "Faq |"
+      contact: "Liên hệ |"
+    company-name: "Copyright 2016 Framgia, Inc. All rights reserved."
+    address: "Tầng 6 tòa nhà Big C, Đà Nẵng, Việt Nam"
+    phone: "84-4-3795-5417"
+    email: "hr_team@framgia.com"
+    introduce: "About Framgia Viet Nam"
+    description: "Framgia Việt Nam là công ty IT Nhật Bản hoạt động trong lĩnh
+    vực thiết kế, phát triển ứng dụng, games chạy trên nền tảng smartphone,
+    nền tảng mạng xã hội, sản xuất và phát triển ứng dụng website."
+  social:
+    facebook: "https://www.facebook.com/FramgiaVietnam"
+    github: "https://github.com/framgia/"
+    link: "https://www.linkedin.com/company/3341218?trk=tyah&amp;
+      trkInfo=clickedVertical%3Acompany%2CclickedEntityId%
+      3A3341218%2Cidx%3A2-1-2%2CtarId%3A1465497556522%2Ctas%3Aframgia%20vietnam"
+  manage:
+    manage_project: "Quản lý project"
+    our_project: "Dự án của chúng tôi"
+    character:
+      first: "Với điểm riêng."
+      second: "Tạo phần mềm chuyên nghiệp."
+  list_team:
+    member1: "Hoàng Nhạc Trung"
+    member2: "Nguyễn Văn Trần Anh"
+    member3: "Nguyễn Phước Tiên"
+    member4: "Nguyễn Ngọc Thịnh"
+    member5: "Kỳ Hữu Hải"
+  position:
+    manage: "Quản lý"
+    dev: "Nhà phát triển"
