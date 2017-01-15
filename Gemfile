@@ -1,7 +1,8 @@
 source "https://rubygems.org"
 
 gem "rails", "~> 5.0.0", ">= 5.0.0.1"
-gem "bootstrap-will_paginate", "0.0.10"
+gem "kaminari"
+gem "bootstrap-kaminari-views"
 gem "bootstrap-sass", "3.3.6"
 gem "font-awesome-rails"
 gem "animate-rails"
@@ -14,13 +15,11 @@ gem "omniauth"
 gem "omniauth-facebook"
 gem "omniauth-twitter"
 gem "cancancan"
-gem "will_paginate", "3.1.0"
 gem "carrierwave", "0.11.2"
 gem "config", "~> 1.3"
 gem "turbolinks", "~> 5"
 gem "jbuilder", "~> 2.5"
 gem "devise"
-gem "kaminari"
 
 group :development, :test do
   gem "pry-rails"

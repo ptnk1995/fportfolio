@@ -280,6 +280,7 @@ label#sidemenutoggler::before, label#sidemenutoggler::after {
 #rightsidemenu ul li a{
   padding: 30px 10px;
   display: block;
+  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial,sans-serif;
 }
 
 #rightsidemenu ul li a:hover{
@@ -564,4 +565,8 @@ main > header:first-child section h1 {
 
 .margin-left-52 {
   margin-left: 52px !important;
+}
+
+.center {
+  text-align: center;
 }

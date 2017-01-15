@@ -7,7 +7,8 @@ class ProjectsController < ApplicationController
   end
 
   def index
-    @projects = Project.order_by_newest.page(params[:page]).per Settings.per_page.projects
+    @projects = Project.order_by_newest.page(params[:page])
+      .per Settings.per_page.projects
   end
 
   def create
