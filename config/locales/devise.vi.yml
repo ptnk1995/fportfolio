@@ -51,3 +51,4 @@ vi:
       not_saved:
         one: "1 lỗi làm %{resource} này không lưu lại được:"
         other: "%{count} lỗi làm %{resource} này không lưu lại được:"
+  sign_in_with_provider: "Đăng nhập bằng %{social_network}"

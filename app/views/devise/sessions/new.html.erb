@@ -1,0 +1,48 @@
+<div class="logmod">
+  <div class="logmod__wrapper">
+    <div class="logmod__container">
+      <ul class="logmod__tabs">
+        <li data-tabtar="lgm-2"><a href="#"><%= t("sign_in") %></a></li>
+      </ul>
+      <div class="logmod__tab-wrapper">
+        <div class="logmod__tab lgm-2">
+          <div class="logmod__form">
+            <%= form_for resource, as: resource_name, class: "omb_loginForm",
+              url: session_path(resource_name, locale: I18n.locale) do |f| %>
+              <%= devise_error_messages! %>
+              <form accept-charset="utf-8" action="#" class="simform">
+                <div class="sminputs">
+                  <div class="input full">
+                    <label class="string optional" for="user-name">
+                      <%= t("email") %></label>
+                    <%= f.email_field :email, autofocus: true, 
+                      required: "required", class: "username", 
+                      placeholder: (t "lg_field_email") %>
+                  </div>
+                </div>
+                <div class="sminputs">
+                  <div class="input full">
+                    <label class="string optional" for="user-pw">
+                      <%= t("password") %></label>
+                    <%= f.password_field :password, autocomplete: "off", 
+                      class: "password", required: "required", 
+                        placeholder: (t "lg_field_pass") %>
+                    <span class="hide-password"><%= t("show") %></span>
+                  </div>
+                </div>
+                <div class="simform__actions">
+                  <%= link_to "Back", root_path(locale: I18n.locale) %>
+                  <%= f.submit t(:lg_button_login), 
+                    class: "sumbit", value: "Login" %>
+                </div> 
+              </form>
+            <% end %>
+          </div> 
+          <div class="logmod__alter">
+            <%= render "users/shared/links" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
