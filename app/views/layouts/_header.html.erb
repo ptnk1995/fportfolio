@@ -2,7 +2,15 @@
   <div class="header header-mobi-ext">
     <div class="container">
       <div class="row login_header">
-        <%= link_to t("login"), "#" %>
+        <% if user_signed_in? %>
+          <%= link_to t("menu_edit_profile"),
+            edit_user_registration_path(locale: I18n.locale) %>          
+          <%= link_to t("menu_sign_out"), 
+            destroy_user_session_path(locale: I18n.locale), method: :delete %>
+        <% else %>
+          <%= link_to t("menu_sign_in"), new_user_session_path(locale: I18n.locale) %>
+          <%= link_to t("menu_sign_up"), new_user_registration_path(locale: I18n.locale) %>        
+        <% end %>
       </div>
       <div class="row">
         <div class="col-md-2 col-sm-2">
