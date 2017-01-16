@@ -1,2 +1,8 @@
 user:
   name: 50
+project:
+  max_image_files: 5
+per_page:
+  project: 20
+format:
+  image: "%w(jpg jpeg gif png)"

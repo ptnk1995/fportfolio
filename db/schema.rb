@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170111070509) do
+ActiveRecord::Schema.define(version: 20170116033058) do
 
   create_table "attachments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "path"
@@ -95,7 +95,9 @@ ActiveRecord::Schema.define(version: 20170111070509) do
     t.integer  "project_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "user_id"
     t.index ["project_id"], name: "index_participates_on_project_id", using: :btree
+    t.index ["user_id"], name: "index_participates_on_user_id", using: :btree
   end
 
   create_table "posts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -190,6 +192,7 @@ ActiveRecord::Schema.define(version: 20170111070509) do
   add_foreign_key "messages", "projects"
   add_foreign_key "messages", "users"
   add_foreign_key "participates", "projects"
+  add_foreign_key "participates", "users"
   add_foreign_key "posts", "categories"
   add_foreign_key "projects", "categories"
   add_foreign_key "rates", "users"
