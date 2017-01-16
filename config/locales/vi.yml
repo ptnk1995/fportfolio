@@ -3,7 +3,6 @@ vi:
   about_us: "Đội ngũ phát triển"
   close: "Đóng"
   login: "Đăng nhập"
-  project: "Dự án"
   read_more: "Xem thêm"
   header:
     menu:
@@ -50,3 +49,21 @@ vi:
   position:
     manage: "Quản lý"
     dev: "Nhà phát triển"
+  projects:
+    label: "Dự án"
+    created: " Tạo dự án thành công ."
+    create_failed: "Tạo dự án thất bại ."
+    check_max_files: "Dự án chỉ bao gồm không quá 5 files."
+    new:
+      save: "Tạo dự án"
+      reset: "Làm mới"
+  helper:
+    placeholder:
+      project:
+        name: "Tên"
+        url : "URL"
+        core_features: "Tính Năng Nổi Bật"
+        platform: "Nền Tảng"
+        server_information: "Server Thông Tin"
+        git_repository: "Git Repository"
+        realease_note: "Phiên Bản Hiện Tại"

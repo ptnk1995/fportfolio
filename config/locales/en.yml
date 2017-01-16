@@ -3,7 +3,6 @@ en:
   about_us: "About us"
   close: "Close"
   login: "Login"
-  project: "Project"
   read_more: "Read more"
   header:
     menu:
@@ -50,3 +49,23 @@ en:
   position:
     manage: "Manage"
     dev: "Developer"
+  projects:
+    label: "Project"
+    created: "Project was successfully created."
+    create_failed: "Project was create failed ."
+    check_max_files: "Project must not contain more than 5 files"
+    new:
+      save: "Save"
+      reset: "Reset"
+  helper:
+    placeholder:
+      project:
+        name: "Name"
+        url : "URL"
+        core_features: "Core Features"
+        platform: "Platform"
+        server_information: "Server Information"
+        git_repository: "Git Repository"
+        realease_note: "Release Note"
+        save: "Save"
+        reset: "Reset"
