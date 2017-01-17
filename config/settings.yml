@@ -2,7 +2,9 @@ user:
   name: 50
 project:
   max_image_files: 5
+  item: 3
 per_page:
   project: 20
 format:
   image: "%w(jpg jpeg gif png)"
+description: 20

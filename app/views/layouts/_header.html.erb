@@ -9,10 +9,10 @@
           <%= image_tag "cong-ty-tnhh-framgia.jpg", class: "logo" %>
         </div>
         <div class="language">
-          <%= link_to "vi" do %>
+          <%= link_to url_for(locale: "vi") do %>
             <%= image_tag "vi.png" %>
           <% end %>
-          <%= link_to "en" do %>
+          <%= link_to url_for(locale: "en") do %>
             <%= image_tag "en.png" %>
           <% end %>
         </div>
@@ -22,10 +22,11 @@
         <nav id="rightsidemenu">
           <ul>
             <li>
-              <%= link_to t("header.menu.home"), root_path %>
+              <%= link_to t("header.menu.home"), root_path(I18n.locale) %>
             </li>
             <li>
-              <%= link_to t("header.menu.project"), "#" %>
+              <%= link_to t("header.menu.project"),
+                projects_path(I18n.locale) %>
             </li>
             <li>
               <%= link_to t("header.menu.new"), "#" %>

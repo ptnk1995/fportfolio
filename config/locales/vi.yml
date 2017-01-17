@@ -67,3 +67,12 @@ vi:
         server_information: "Server Thông Tin"
         git_repository: "Git Repository"
         realease_note: "Phiên Bản Hiện Tại"
+  introduce:
+    portfolio: "Chúng tôi rất vinh dự khi có cơ hội hợp tác với các công ty
+      hàng đầu, những đơn vị đã và đang đóng góp các giá trị to lớn trong ngành
+      công nghiệp của họ. Danh sách các dự án của chúng tôi mô tả chi tiết những
+      dự án nổi bật đã hoàn thành. Chúng tôi luôn luôn chú trọng vào việc không
+      ngừng cải tiến, thay đổi phạm vi linh hoạt, nội lực của nhóm, và bàn giao
+      các sản phẩm chất lượng."
+  portfolio: "Các dự án"
+
