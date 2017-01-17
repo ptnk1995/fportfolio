@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+    :recoverable, :rememberable, :trackable, :validatable,
+    :omniauthable, omniauth_providers: [:facebook, :twitter]
 
   has_many :socials, dependent: :destroy
   has_many :posts, dependent: :destroy
@@ -15,4 +16,12 @@ class User < ApplicationRecord
 
   validates :name, presence: true, length: {maximum: Settings.user.name}
 
+  def self.from_omniauth auth
+    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+      user.provider = auth.provider
+      user.uid = auth.uid
+      user.email = auth.info.email unless auth.info.email.nil?
+      user.password = Devise.friendly_token[0,20]
+    end
+  end
 end

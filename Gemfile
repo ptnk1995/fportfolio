@@ -20,6 +20,7 @@ gem "config", "~> 1.3"
 gem "turbolinks", "~> 5"
 gem "jbuilder", "~> 2.5"
 gem "devise"
+gem "figaro"
 
 group :development, :test do
   gem "pry-rails"

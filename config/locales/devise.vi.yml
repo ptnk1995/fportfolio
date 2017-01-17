@@ -52,3 +52,14 @@ vi:
         one: "1 lỗi làm %{resource} này không lưu lại được:"
         other: "%{count} lỗi làm %{resource} này không lưu lại được:"
   sign_in_with_provider: "Đăng nhập bằng %{social_network}"
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              taken: " đã tồn tại."
+            password: 
+              too_short: " quá ngắn."
+            password_confirmation: 
+              confirmation: " không trùng khớp."
