@@ -2,61 +2,124 @@
   <div class="header header-mobi-ext">
     <div class="container">
       <div class="row login_header">
-        <% if user_signed_in? %>
-          <%= link_to t("menu_edit_profile"),
-            edit_user_registration_path(locale: I18n.locale) %>          
-          <%= link_to t("menu_sign_out"), 
-            destroy_user_session_path(locale: I18n.locale), method: :delete %>
-        <% else %>
-          <%= link_to t("menu_sign_in"), new_user_session_path(locale: I18n.locale) %>
-          <%= link_to t("menu_sign_up"), new_user_registration_path(locale: I18n.locale) %>        
-        <% end %>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <% if user_signed_in? %>
+              <li>
+                <%= link_to t("log_out"),
+                  destroy_user_session_path(locale: I18n.locale),
+                  method: :delete %>
+              </li>
+            <% else %>
+              <li>
+                <%= link_to "", data: {toggle: "modal", target: "#modalLogin"} do %>
+                  <span class="glyphicon glyphicon-log-in"></span>
+                    <%= t "login" %>
+                <% end %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="col-md-2 col-sm-2">
           <%= image_tag "cong-ty-tnhh-framgia.jpg", class: "logo" %>
         </div>
-        <div class="language">
-          <%= link_to url_for(locale: "vi") do %>
-            <%= image_tag "vi.png" %>
-          <% end %>
-          <%= link_to url_for(locale: "en") do %>
-            <%= image_tag "en.png" %>
-          <% end %>
+        <div class="col-md-10">
+          <div class="language">
+            <%= link_to url_for(locale: "vi") do %>
+              <%= image_tag "vi.png" %>
+            <% end %>
+            <%= link_to url_for(locale: "en") do %>
+              <%= image_tag "en.png" %>
+            <% end %>
+          </div>
+          <input type="checkbox" id="sidemenucheckbox" />
+          <label id="sidemenutoggler" for="sidemenucheckbox"
+            onClick="legacybrowsertoggle()" class="menu_toggler"></label>
+          <nav id="rightsidemenu">
+            <ul>
+              <li>
+                <%= link_to t("header.menu.home"), root_path(I18n.locale) %>
+              </li>
+              <li>
+                <%= link_to t("header.menu.project"),
+                  projects_path(I18n.locale) %>
+              </li>
+              <li>
+                <%= link_to t("header.menu.new"), "#" %>
+              </li>
+              <li>
+                <%= link_to t("header.menu.blog"), "#" %>
+              </li>
+              <li>
+                <%= link_to t("header.menu.idea"), "#" %>
+              </li>
+              <li>
+                <%= link_to t("header.menu.contact"), "#" %>
+              </li>
+              <li>
+                <%= link_to t("header.menu.about_team"), "#",
+                  id:"about_team-button" %>
+              </li>
+            </ul>
+          <label id="closex" for="sidemenucheckbox"
+            onClick="legacybrowsertoggle()"><%= t("close") %></label>
+          </nav>
+          <div class="overlay"><label for="sidemenucheckbox"></label></div>
+          </div>
         </div>
-        <input type="checkbox" id="sidemenucheckbox" />
-        <label id="sidemenutoggler" for="sidemenucheckbox"
-          onClick="legacybrowsertoggle()" class="menu_toggler"></label>
-        <nav id="rightsidemenu">
-          <ul>
-            <li>
-              <%= link_to t("header.menu.home"), root_path(I18n.locale) %>
-            </li>
-            <li>
-              <%= link_to t("header.menu.project"),
-                projects_path(I18n.locale) %>
-            </li>
-            <li>
-              <%= link_to t("header.menu.new"), "#" %>
-            </li>
-            <li>
-              <%= link_to t("header.menu.blog"), "#" %>
-            </li>
-            <li>
-              <%= link_to t("header.menu.idea"), "#" %>
-            </li>
-            <li>
-              <%= link_to t("header.menu.contact"), "#" %>
-            </li>
-            <li>
-              <%= link_to t("header.menu.about_team"), "#" %>
-            </li>
-          </ul>
-        <label id="closex" for="sidemenucheckbox"
-          onClick="legacybrowsertoggle()"><%= t("close") %></label>
-        </nav>
-        <div class="overlay"><label for="sidemenucheckbox"></label></div>
+    </div>
+  </div>
+  <div class="modal fade bd-example-modal-lg" id="modalLogin"
+    tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header" style="padding:35px 50px;">
+          <button type="button" class="close" data-dismiss="modal">
+            &times;
+          </button>
+          <h4>
+            <span class="glyphicon glyphicon-lock"></span>
+            <%= t("login") %>
+          </h4>
         </div>
+        <div class="modal-body col-md-12">
+          <div class="col-md-8">
+            <%= form_for resource, as: resource_name,
+              url: session_path(resource_name) do |f| %>
+              <span class="glyphicon glyphicon-user"></span>
+              <%= f.label :email %>
+              <%= f.email_field :email, autofocus: true,
+                class: "form-control" %>
+              <span class="glyphicon glyphicon-eye-open"></span>
+              <%= f.label :password %><br />
+              <%= f.password_field :password, autocomplete: "off",
+                class: "form-control" %>
+              <% if devise_mapping.rememberable? -%>
+                  <%= f.check_box :remember_me %>
+                  <%= f.label :remember_me %>
+              <% end -%>
+              <%= f.submit t("login"), class: "form-control btn btn-success" %>
+            <% end %>
+          </div>
+          <div class="col-md-4">
+            <p><%= t "social_login" %></p>
+            <%= link_to user_twitter_omniauth_authorize_path, class: "btn btn-danger bottom-30" do %>
+              <i class="fa fa-twitter-square" aria-hidden="true"></i>
+              <%= t "login_twitter" %>
+            <% end %>
+            <%= link_to user_facebook_omniauth_authorize_path, class: "btn btn-primary" do %>
+              <i class="fa fa-facebook-square" aria-hidden="true"></i>
+              <%= t "login_facebook" %>
+            <% end %>
+          </div>
+          <div class="clr"></div>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
     </div>
   </div>
 </header>

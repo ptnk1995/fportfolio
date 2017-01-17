@@ -1,4 +1,8 @@
 en:
+  log_out: "Log out"
+  social_login: "Login with social"
+  login_twitter: "Login via Twitter"
+  login_facebook: "Login via Facebook"
   sign_up: "Sign Up"
   user: "User"
   user_name: "User name"
