@@ -1,9 +1,10 @@
 class ProjectsController < ApplicationController
-  before_action :check_max_files, only: :create
-  before_action :authenticate_user!, only: :create
+  before_action :authenticate_user!
 
   def new
     @categories = Category.all
+    @project = Project.new
+    @project.images.build
   end
 
   def index
@@ -14,11 +15,11 @@ class ProjectsController < ApplicationController
   def create
     @project = current_user.projects.new project_params
     if current_user.save
-      images_params[:images].each {|image| @project.images.build(image: image).save}
-      flash[:success] = t "project.created"
-      redirect_to root_url
+      flash[:success] = t "projects.created"
+      redirect_to users_path
     else
-      flash[:danger] = t "project.create_failed"
+      @categories = Category.all
+      flash[:danger] = t "images.create_failed"
       render :new
     end
   end
@@ -30,19 +31,9 @@ class ProjectsController < ApplicationController
   end
 
   private
-  def check_max_files
-    if images_params[:images].size > Settings.project.max_image_files
-      flash[:danger] = t "project.check_max_files"
-      render :new
-    end
-  end
-
   def project_params
     params.require(:project).permit :name, :url, :description, :core_features,
-      :realease_note, :git_repository, :server_information, :platform, :category_id
-  end
-
-  def images_params
-    params.require(:project).permit images: []
+      :realease_note, :git_repository, :server_information, :platform, :category_id,
+      images_attributes: [:image]
   end
 end

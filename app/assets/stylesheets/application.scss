@@ -13,6 +13,12 @@
  *= require_tree .
  *= require_self
  *= require font-awesome
+ *= require bootstrap-modal-bs3patch
+ *= require bootstrap-modal
  */
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
+
+.bottom-30 {
+  margin-bottom: 30px !important;
+}

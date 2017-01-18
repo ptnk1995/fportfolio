@@ -16,6 +16,8 @@ class User < ApplicationRecord
 
   validates :name, presence: true, length: {maximum: Settings.user.name}
 
+  scope :order_by_newest, ->{order created_at: :desc}
+
   def self.from_omniauth auth
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.provider = auth.provider

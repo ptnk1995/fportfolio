@@ -143,7 +143,7 @@ time, mark, audio, video {
 }
 
 .header-width {
-  height: 80px;
+  height: 118px;
 }
 
 .header {
@@ -286,7 +286,6 @@ label#sidemenutoggler::before, label#sidemenutoggler::after {
 #rightsidemenu ul li a:hover{
   background: #F7AC6A;
   transition: all 0.5s;
-
 }
 
 .overlay{
@@ -392,8 +391,7 @@ label#sidemenutoggler::before, label#sidemenutoggler::after {
 }
 
 .language {
-  margin-right: 58px;
-  margin-top: 24px;
+  margin-right: 6%;
 }
 
 .language a {
@@ -569,8 +567,6 @@ main > header:first-child section h1 {
 
 .center {
   text-align: center;
-
-/* signin - signup */
 
 html {
   box-sizing: border-box;
@@ -1188,5 +1184,14 @@ html {
   width: 100%;
   height: 100%;
   z-index: 999999;
-  background-image: url(http://basehold.it/i/24);
+
+.modal-header, h4, .close {
+  background-color: #5cb85c;
+  color: white !important;
+  text-align: center;
+  font-size: 30px;
+}
+
+.modal-footer {
+  background-color: #f9f9f9;
 }
