@@ -1,4 +1,8 @@
 vi:
+  log_out: "Đăng xuất"
+  social_login: "Đăng nhập qua tài khoản Mạng Xã Hội"
+  login_twitter: "Đăng nhập bằng Twitter"
+  login_facebook: "Đăng nhập bằng Facebook"
   sign_up: "Đăng ký"
   user: "User"
   user_name: "User name"

@@ -169,6 +169,8 @@ ActiveRecord::Schema.define(version: 20170116033058) do
     t.text     "biography",              limit: 65535
     t.string   "private_attribute"
     t.boolean  "is_admin",                             default: false
+    t.string   "provider"
+    t.string   "uid"
     t.string   "email",                                default: "",    null: false
     t.string   "encrypted_password",                   default: "",    null: false
     t.string   "reset_password_token"
@@ -181,8 +183,6 @@ ActiveRecord::Schema.define(version: 20170116033058) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                                           null: false
     t.datetime "updated_at",                                           null: false
-    t.string   "provider"
-    t.string   "uid"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end

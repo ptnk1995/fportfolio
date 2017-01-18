@@ -143,7 +143,7 @@ time, mark, audio, video {
 }
 
 .header-width {
-  height: 80px;
+  height: 118px;
 }
 
 .header {
@@ -392,8 +392,7 @@ label#sidemenutoggler::before, label#sidemenutoggler::after {
 }
 
 .language {
-  margin-right: 58px;
-  margin-top: 24px;
+  margin-right: 6%;
 }
 
 .language a {
@@ -1188,5 +1187,14 @@ html {
   width: 100%;
   height: 100%;
   z-index: 999999;
-  background-image: url(http://basehold.it/i/24);
+
+.modal-header, h4, .close {
+  background-color: #5cb85c;
+  color: white !important;
+  text-align: center;
+  font-size: 30px;
+}
+
+.modal-footer {
+  background-color: #f9f9f9;
 }
