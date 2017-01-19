@@ -286,7 +286,6 @@ label#sidemenutoggler::before, label#sidemenutoggler::after {
 #rightsidemenu ul li a:hover{
   background: #F7AC6A;
   transition: all 0.5s;
-
 }
 
 .overlay{
@@ -568,8 +567,6 @@ main > header:first-child section h1 {
 
 .center {
   text-align: center;
-
-/* signin - signup */
 
 html {
   box-sizing: border-box;

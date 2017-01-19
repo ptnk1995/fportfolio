@@ -1,4 +1,6 @@
 en:
+  project_not_found: "Project not found"
+  available: "User is available in your project"
   log_out: "Log out"
   social_login: "Login with social"
   login_twitter: "Login via Twitter"
@@ -28,6 +30,7 @@ en:
   close: "Close"
   login: "Login"
   read_more: "Read more"
+  image_error: "should be less than 500KB"
   header:
     menu:
       home: "Home"
@@ -58,6 +61,8 @@ en:
     link: "https://www.linkedin.com/company/3341218?trk=tyah&amp;
       trkInfo=clickedVertical%3Acompany%2CclickedEntityId%
       3A3341218%2Cidx%3A2-1-2%2CtarId%3A1465497556522%2Ctas%3Aframgia%20vietnam"
+  images:
+    create_failed: "File apply only image"
   manage:
     manage_project: "Manage project"
     our_project: "Our Projects"
@@ -77,11 +82,22 @@ en:
     label: "Project"
     created: "Project was successfully created."
     create_failed: "Project was create failed ."
-    check_max_files: "Project must not contain more than 5 files"
+    check_max_files: "Project must not contain more than 5 files and least one file"
     new:
       save: "Save"
       reset: "Reset"
-  helper:
+  users:
+    label_position: "Position of him/her for your project:"
+    about_you: "More about him/her"
+    add_member: "Add Member"
+    label: "Select member for Project"
+    like: "Like: 20"
+    rate: "Rate: 30"
+    biography: "Biography :"
+  participates:
+    created: "Member was successfully added."
+    create_failed: "Member was add failed "
+  helpers:
     placeholder:
       project:
         name: "Name"
@@ -99,5 +115,6 @@ en:
       portfolio represents outstanding projects we have done. We always focus on
       continuous improvement, scope flexibility, team input, and delivering
       essential quality products."
-  portfolio: "Portfolio"
-
+  participate:
+    description: "Position"
+    available: "User's not available"

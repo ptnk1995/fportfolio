@@ -16,3 +16,5 @@
 //= require turbolinks
 //= require login
 //= require_tree .
+//= require bootstrap-modal
+//= require bootstrap-modalmanager

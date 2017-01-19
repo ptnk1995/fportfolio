@@ -1,4 +1,6 @@
 vi:
+  project_not_found: "Du An khong ton tai"
+  available: "Thành Viên này đã có trong dự án của bạn ! "
   log_out: "Đăng xuất"
   social_login: "Đăng nhập qua tài khoản Mạng Xã Hội"
   login_twitter: "Đăng nhập bằng Twitter"
@@ -58,6 +60,8 @@ vi:
     link: "https://www.linkedin.com/company/3341218?trk=tyah&amp;
       trkInfo=clickedVertical%3Acompany%2CclickedEntityId%
       3A3341218%2Cidx%3A2-1-2%2CtarId%3A1465497556522%2Ctas%3Aframgia%20vietnam"
+  images:
+    create_failed: "Vui lòng chỉ chọn file ảnh"
   manage:
     manage_project: "Quản lý project"
     our_project: "Dự án của chúng tôi"
@@ -77,10 +81,23 @@ vi:
     label: "Dự án"
     created: " Tạo dự án thành công ."
     create_failed: "Tạo dự án thất bại ."
-    check_max_files: "Dự án chỉ bao gồm không quá 5 files."
+    check_max_files: "Dự án chỉ bao gồm không quá 5 ảnh và ít nhất 1 ảnh."
     new:
       save: "Tạo dự án"
       reset: "Làm mới"
+  users:
+    label_position: "Vị trí của họ trong project "
+    about_you: "Một số thông tin về người này"
+    add_member: "Thêm Thành Viên"
+    label: "Tìm thành viên cho dự án của bạn."
+    like: "Thích: 203"
+    rate: "Đánh giá: 303"
+    skill: "Ruby on Rails , Java, Scrum"
+    cetificate: "Toeic 250"
+    biography: "Tiểu Sử :"
+  participates:
+    created: "Thêm thành viên thành công."
+    create_failed: "Thêm thành viên thất bại ."
   helper:
     placeholder:
       project:
@@ -98,5 +115,6 @@ vi:
       dự án nổi bật đã hoàn thành. Chúng tôi luôn luôn chú trọng vào việc không
       ngừng cải tiến, thay đổi phạm vi linh hoạt, nội lực của nhóm, và bàn giao
       các sản phẩm chất lượng."
-  portfolio: "Các dự án"
-
+  participate:
+    description: "Vị Trí"
+    available: "Thành Viên không tồn tại !"
