@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   resources :projects
   resources :users
   resources :participates
+  resources :likes
 end
