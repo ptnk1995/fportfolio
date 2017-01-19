@@ -15,5 +15,7 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require login
+//= require jquery.raty
+//= require ratyrate
 //= require_tree .
 //= require social-share-button

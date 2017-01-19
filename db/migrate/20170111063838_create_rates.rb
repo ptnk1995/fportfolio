@@ -1,12 +1,16 @@
-class CreateRates < ActiveRecord::Migration[5.0]
-  def change
+class CreateRates < ActiveRecord::Migration
+  def self.up
     create_table :rates do |t|
-      t.integer :target_id
-      t.integer :target_type
-      t.integer :rate
-      t.references :user, foreign_key: true
-
+      t.belongs_to :rater
+      t.belongs_to :rateable, polymorphic: true
+      t.float :stars, null: false
+      t.string :dimension
       t.timestamps
     end
+    add_index :rates, :rater_id
+    add_index :rates, [:rateable_id, :rateable_type]
+  end
+  def self.down
+    drop_table :rates
   end
 end
