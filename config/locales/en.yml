@@ -120,3 +120,11 @@ en:
   participate:
     description: "Position"
     available: "User's not available"
+  portfolio: "Portfolio"
+  feature_project: "MEMBER OF PROJECT"
+  member_of_project: "Member of project"
+  close: "Close"
+  join_project: "Join this project"
+  server_informations: "Server information"
+  core_features: "Core feature"
+  record_isnt_exist: "Not found this action"

@@ -25,6 +25,14 @@ class ProjectsController < ApplicationController
   end
 
   def show
+    @project = Project.find_by id: params[:id]
+    if @project
+      @images = @project.images
+      @members = @project.users.merge(Participate.accepted)
+    else
+      flash[:warning] = t "record_isnt_exist"
+      redirect_to root_url
+    end
   end
 
   def update

@@ -1,0 +1,27 @@
+<aside id="k2t_member-2" class="widget k2t_widget_member">
+  <h4 class="widget-title"><span><%= t "member_of_project" %></span></h4>
+  <div class="scroll">
+    <ul class="listing-member">
+      <% @members.each do |member| %>
+        <li>
+          <div>
+            <div style="float: left;">
+              <%= link_to "#", class: "member-thumb" do %>
+                <%= image_tag member.images.first.image.url ,
+                  class: "img-member" %>
+              <% end %>
+            </div>
+            <div style="float: left;">
+              <h4>
+              <%= link_to "#{member.name}", "#", class: "name-of-member-project",
+                title: "#{member.name}" %>
+              </h4>
+              <span class="position"><%= member.position %></span>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</aside>

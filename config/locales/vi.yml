@@ -120,3 +120,11 @@ vi:
   participate:
     description: "Vị Trí"
     available: "Thành Viên không tồn tại !"
+  portfolio: "Các dự án"
+  feature_project: "ĐẶC ĐIỂM DỰ ÁN"
+  member_of_project: "Thành viên của dự án"
+  close: "Đóng"
+  join_project: "Tham gia"
+  server_informations: "Cơ sở dữ liệu"
+  core_features: "Công nghệ và framework"
+  record_isnt_exist: "Không tìm thấy thao tác này"
