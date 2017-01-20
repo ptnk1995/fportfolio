@@ -31,6 +31,8 @@ en:
   login: "Login"
   read_more: "Read more"
   image_error: "should be less than 500KB"
+  liked: "Liked"
+  errors: "Errors"
   header:
     menu:
       home: "Home"

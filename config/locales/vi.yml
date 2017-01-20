@@ -30,6 +30,8 @@ vi:
   close: "Đóng"
   login: "Đăng nhập"
   read_more: "Xem thêm"
+  liked: "Thích"
+  errors: "Lỗi"
   header:
     menu:
       home: "Trang chủ"
