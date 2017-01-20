@@ -3,11 +3,11 @@ class CommentsController < ApplicationController
 
   def create
     @comment = @project.comments.build comment_params
-    if @like.save
+    if @comment.save
       respond_to do |format|
         format.js
       end
-    end 
+    end
   end
 
   private
