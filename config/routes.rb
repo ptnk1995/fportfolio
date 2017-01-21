@@ -5,11 +5,15 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   scope "(:locale)", locale: /en|vi/ do
     root "static_pages#home"
-    resources :projects do
-    end
+    resources :projects
     resources :users
     resources :participates
     resources :likes
     resources :comments
+    resources :news
+    resources :blogs
+    resources :chats
+    resources :messages
   end
+  mount ActionCable.server => "/cable"
 end

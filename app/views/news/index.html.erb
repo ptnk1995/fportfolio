@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= t("title_home") %></title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag "application", media: "all",
+    "data-turbolinks-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
+  </head>
+<style type="text/css">
+
+.col-4 {
+  width: 33.3333%; }
+
+.col-8 {
+  width: 66.6667%; }
+
+
+/*# sourceMappingURL=style.css.map */
+
+</style>
+  <body>
+  <div class="container list-news">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading"><%= t "portfolio" %></h2>
+        <h3 class="section-subheading text-muted">
+          <%= t "introduce.portfolio" %>
+        </h3>
+      </div>
+    </div>
+    <ul class="news">
+      <li class="news-item">
+        <div class="news-thumbnails col-4">
+          <img src="http://skilled.aislinthemes.com/app/uploads/2013/01/07-260x170.png">
+        </div>
+        <div class="content-news col-8">
+          <a href="#" class="title"><h2>Adobe InDesign CS6 Tutorial Beginners</h2></a>
+          <div class="info">
+            <div class="price">
+              <div class="ribbon">
+                New
+              </div>
+              <div class="triangle"></div>
+            </div>
+            <span class="by">by aislin</span>
+            <span class="lessons">7 lessons</span>
+            <span class="types">
+              <a href="#" class="types-link">Graphic Design, Music</a>
+            </span>
+          </div>
+          <div class="rating">
+            <ul class="rates">
+              <li class="rate-item"><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+              <li class="rate-item"><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+              <li class="rate-item"><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+              <li class="rate-item"><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+              <li class="rate-item"><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+          <p class="description">
+            Learn how to integrate Sensei with WooCommerce in order to sell your Courses. Beautiful web design begins with a practical knowledge of the tools and features of Adobe Photoshop. This course, intended for beginners and experienced designers alike, will show you how to use Photoshop to design web pages.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
+  </body>
+</html>

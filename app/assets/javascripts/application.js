@@ -21,3 +21,5 @@
 //= require bootstrap-modal
 //= require bootstrap-modalmanager
 //= require social-share-button
+//= require cable
+//= require_tree ./channels

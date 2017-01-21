@@ -1,0 +1,121 @@
+<body class="body-show-user">
+  <div class="body-head-user">
+    <div class="bh-content">
+      <h1><%= @user.name %></h1>
+      <div class="mainbh-content">
+        <span class="date">
+          <i class="fa fa-envelope"></i> <i>Email: <%= @user.email %></i>
+        </span>
+        <span class="user">
+          <i class="fa fa-user"></i> <i>Position: <%= @user.position %></i>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="body-content-user">
+    <div class="main col-9-user">
+      <div class="left-session col-3-user">
+        <div class="teacher-entry col-4-user">
+          <div class="teacher-thumbnail">
+            <img width="500" height="500" src="http://demo.lunartheme.com/lincoln/wp-content/uploads/2015/07/teacher20-500x500.jpg" class="img-user"
+            alt="teacher">
+          </div>
+          <div class="teacher-social">
+            <ul class="teacher_social">
+              <li style="float: left; margin-left: 30px;">
+                <a target="_blank" href="#">
+                  <i class="fa fa-facebook"></i></a>
+              </li>
+              <li style="float: left; margin-left: 30px;">
+                <a target="_blank" href="#">
+                  <i class="fa fa-twitter"></i></a>
+              </li>
+              <li style="float: left; margin-left: 30px;">
+                <a target="_blank" href="#">
+                  <i class="fa fa-google-plus"></i></a>
+              </li>
+              <div class="clear"></div>
+            </ul>
+          </div>
+        </div>
+        <div class="download">
+          <b>Download: </b>
+          <ul>
+            <li>
+              <a href="#">Course Brochure</a>
+            </li>
+            <li>
+              <a href="#">Apply Form</a>
+            </li>
+            <li>
+              <a href="#">CV Form</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="teacher-content col-9-user">
+        <div class="instructor">
+          <h3>CERTIFICATES</h3>
+          <div class="ins-item">
+            <ul>
+              <% @certificate_users.each do |certificate_user| %>
+                <li class="item">
+                  <label for=""><img src="assest/img/bradon.jpg"></label>
+                  <span class="caption">
+                    <h4><%= certificate_user.certification.name %></h4>
+                    <i><%= certificate_user.certification.description %></i>
+                  </span>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+        <hr>
+        <div class="description col-8-user">
+          <h3>BIOGRAPHY</h3>
+          <p><%= @user.biography %></p>
+        </div>
+        <hr />
+        <div class="contact">
+          <h3>CONTRIBUTE ON PROJECTS</h3>
+          <div class="addr col-6">
+            <div class="owl-item active" style="width: 262.5px; margin-right: 30px;">
+              <article class="related-course">
+                <div class="related-inner">
+                  <div class="related-thumb">
+                    <a class="image-link" href="http://demo.lunartheme.com/lincoln/k-course/exercise-sciences/"><img src="http://demo.lunartheme.com/lincoln/wp-content/uploads/2015/08/football-461340_1280-270x155.jpg"
+                      class="attachment-thumb_270x155 size-thumb_270x155 wp-post-image" alt="Sport Exercise Sciences"
+                      width="270" height="155"><i class="zmdi zmdi-plus k2t-element-hover btn-ripple"></i>
+                    </a>
+                  </div>
+                  <div class="related-text">
+                    <div class="related-meta">
+                      <span class="date">
+                  <i class="fa fa-calendar"></i> December 17, 2015
+                      </span>
+                    </div>
+                    <h5><a href="http://demo.lunartheme.com/lincoln/k-course/exercise-sciences/" title="Sport Exercise Sciences" class="item-show-user">Sport Exercise Sciences</a></h5>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="categr col-6">
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="right-session col-3-user">
+      <h3>TECHNIQUES</h3>
+      <ul class="embrace">
+        <% @techniques.each_with_index do |technique, index| %>
+          <li class="parent">
+            <a href="#" class="embrace-items"><%= technique.skill %></a>
+            <span class="count">(<%= (index + 1) %>)</span>
+          </li>
+        <% end %>
+      </ul>
+  </div>
+</body>
+</html>

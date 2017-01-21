@@ -1,4 +1,12 @@
 <li class="comment">
-  <div class="user-comment"><%= comment.name %></div>
-  <h4 class="content-comment"><i><%= comment.content %></i></h4>
+  <a class="pull-left" href="#">
+      <img class="avatar" src="http://bootdey.com/img/Content/user_1.jpg" alt="avatar">
+  </a>
+  <div class="comment-body">
+      <div class="comment-heading">
+          <h4 class="user"><%= comment.name %></h4>
+          <h5 class="time"><%= comment.created_at %> minutes ago</h5>
+      </div>
+      <p><%= comment.content %></p>
+  </div>
 </li>

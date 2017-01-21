@@ -1,0 +1,84 @@
+.container-profile {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0px !important;
+  width: 100% !important;
+}
+
+.list-news {
+display: block;
+margin: auto;
+width: 100%;
+font-family: Raleway; }
+.list-news .news {
+display: block;
+list-style: none;
+min-width: 1170px; }
+.list-news .news .news-item {
+display: block;
+width: 100%;
+clear: both;
+min-height: 150px;
+margin-bottom: 25px;
+position: relative; }
+.list-news .news .news-item .news-thumbnails {
+display: inline-block;
+float: left;
+width: 22%; }
+.list-news .news .news-item .news-thumbnails img {
+  width: 100%;
+  height: 170px; }
+.list-news .news .news-item .content-news {
+display: inline-block;
+margin-left: 30px;
+min-height: 190px; }
+.list-news .news .news-item .content-news .title {
+  text-decoration: none;
+  color: #1a1a1a; }
+  .list-news .news .news-item .content-news .title:hover {
+    color: #ecb202; }
+  .list-news .news .news-item .content-news .title h2 {
+    margin: 0;
+    font-weight: 500; }
+.list-news .news .news-item .content-news .info {
+  margin-top: 5px; }
+  .list-news .news .news-item .content-news .info .price {
+    position: absolute;
+    left: -10px; }
+    .list-news .news .news-item .content-news .info .price .ribbon {
+      padding-top: 5px;
+      padding-left: 10px;
+      font-weight: bold;
+      color: #fff;
+      width: 90px;
+      height: 30px;
+      background: #ecb202;
+      -webkit-clip-path: polygon(100% 0, 90% 50%, 100% 100%, 0 100%, 0 50%, 0 0);
+      clip-path: polygon(100% 0, 90% 50%, 100% 100%, 0 100%, 0 50%, 0 0); }
+    .list-news .news .news-item .content-news .info .price .triangle {
+      width: 10px;
+      height: 10px;
+      background: #ca9802;
+      -webkit-clip-path: polygon(100% 0, 0 0, 100% 100%);
+      clip-path: polygon(100% 0, 0 0, 100% 100%); }
+  .list-news .news .news-item .content-news .info .by {
+    color: #666666; }
+  .list-news .news .news-item .content-news .info .lessons {
+    color: #666666; }
+  .list-news .news .news-item .content-news .info .types a {
+    color: #ecb202;
+    text-decoration: none; }
+.list-news .news .news-item .content-news .rating {
+  display: block; }
+  .list-news .news .news-item .content-news .rating .rates {
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .list-news .news .news-item .content-news .rating .rates .rate-item {
+      display: inline-block; }
+      .list-news .news .news-item .content-news .rating .rates .rate-item a {
+        color: #ecb202; }
+.list-news .news .news-item .content-news .description {
+  display: block;
+  color: #666666; }

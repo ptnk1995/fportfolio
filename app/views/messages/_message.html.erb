@@ -1,0 +1,11 @@
+<div class="media msg">
+  <a class="pull-left" href="#">
+    <%= image_tag message.user.images.first.image.url,
+            class: "img-circle avatar", style: "width: 32px; height: 32px;" %>
+  </a>
+  <div class="media-body">
+    <small class="pull-right time"><i class="fa fa-clock-o"></i> <%= message.created_at %></small>
+    <h5 class="media-heading"><%= message.user.name %></h5>
+    <small class="col-lg-10"><%= message.content %></small>
+  </div>
+</div>

@@ -1,22 +1,18 @@
 <%= form_for project.comments.build, remote: true do |f| %>
   <div class="col-md-12" data-turbolinks-temporary>
-    <div class="comment-from">
-      <% if current_user.nil? %>
-        <%= f.label :name %>
-        <%= f.text_field :name, class: "form-control" %>
+    <% if current_user.nil? %>
+      <div class="col-md-10">
+        <%= f.text_field :name, class: "form-control", placeholder: "Name" %><br />
+      </div>
       <% else %>
         <%= f.hidden_field :name, value: current_user.name %>
       <% end %>
-      <%= f.label :content %>
-      <%= f.text_area :content, class: "form-control"  %>
-      <%= f.hidden_field :id, value: @project.id %> 
+    <div class="col-md-10">
+    <%= f.text_area :content, class: "form-control", placeholder: "Content"  %>
+    <%= f.hidden_field :id, value: @project.id %>
     </div>
-  </div>
-  <div class="col-md-12">
     <div class="col-md-2">
       <%= f.submit "comment", class: "btn btn-info" %>
-    </div>
-    <div class="col-md-10">
     </div>
   </div>
 <% end %>

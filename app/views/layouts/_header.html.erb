@@ -37,17 +37,19 @@
                 <%= link_to t("header.menu.project"), projects_path(I18n.locale) %>
               </li>
               <li>
-                <%= link_to t("header.menu.new"), "#" %>
+                <%= link_to t("header.menu.new"),  news_index_path(I18n.locale)  %>
               </li>
               <li>
-                <%= link_to t("header.menu.blog"), "#" %>
+                <%= link_to t("header.menu.blog"), blogs_path(I18n.locale) %>
               </li>
               <li>
                 <%= link_to t("header.menu.idea"), "#" %>
               </li>
-              <li>
-                <%= link_to t("header.menu.contact"), "#" %>
-              </li>
+              <% if user_signed_in? %>
+                <li>
+                  <%= link_to t("header.menu.createproject"), new_project_path(I18n.locale) %>
+                </li>
+              <% end %>
               <li>
                 <%= link_to t("header.menu.about_team"), "#", id:"about_team-button" %>
               </li>

@@ -1,3 +1,68 @@
+<style type="text/css">
+ a:hover, :focus {
+  text-decoration: none;
+ }
+.panel-shadow {
+    box-shadow: rgba(0, 0, 0, 0.3) 7px 7px 7px;
+}
+.panel-white {
+  border: 1px solid #dddddd;
+}
+.panel-white  .panel-heading {
+  color: #333;
+  background-color: #fff;
+  border-color: #ddd;
+}
+.panel-white  .panel-footer {
+  background-color: #fff;
+  border-color: #ddd;
+}
+.post .post-footer {
+  border-top: 1px solid #ddd;
+  padding: 15px;
+}
+.post .post-footer .input-group-addon a {
+  color: #454545;
+}
+.post .post-footer .comments-list {
+  padding: 0;
+  margin-top: 20px;
+  list-style-type: none;
+  text-align: left;
+}
+.post .post-footer .comments-list .comment {
+  display: block;
+  width: 100%;
+  margin: 20px 0;
+}
+.post .post-footer .comments-list .comment .avatar {
+  width: 35px;
+  height: 35px;
+}
+.post .post-footer .comments-list .comment .comment-heading {
+  display: block;
+  width: 100%;
+}
+.post .post-footer .comments-list .comment .comment-heading .user {
+  font-size: 14px;
+  font-weight: bold;
+  display: inline;
+  margin-top: 0;
+  margin-right: 10px;
+}
+.post .post-footer .comments-list .comment .comment-heading .time {
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 0;
+  display: inline;
+}
+.post .post-footer .comments-list .comment .comment-body {
+  margin-left: 50px;
+}
+.post .post-footer .comments-list .comment > .comments-list {
+  margin-left: 50px;
+}
+</style>
 <div class="portfolio-modal modal fade" id="portfolioModal"
   tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog">
@@ -15,6 +80,8 @@
                 <h1 class="capitalize"><%= @project.name %></h1>
                 <hr />
               </div>
+              <%= rating_for @project, :rating, disable_after_rate: false %>
+              <%= social_share_button_tag(@project.name, :url => "http:/localhost:3000/projects/#{@project.id}") %>
               <p class="desc-portfolio"><%= @project.description %></p>
               <div class="portfolio">
                 <div class="three fourths wh-padding wh-content-inner left">
@@ -42,7 +109,6 @@
                       </div>
                     </div>
                   </figure>
-                  <div>
                     <br />
                     <span class="feature-project">
                       <b><%= t "feature_project" %></b>
@@ -63,15 +129,36 @@
                 </div>
                 <div class="wh-sidebar one fourth wh-padding left width-333">
                   <section class="course-meta course-enrolment">
-                    <button type="submit" class="button-member-join-project">
-                      <%= t "join_project" %>
-                    </button>
+                    <%= link_to "Chat with team", chats_path(project_id: @project.id), class: "button-member-join-project", type: "button" %>
                   </section>
                   <%= render "member_of_project", object: @members %>
+
+                   <%= render partial: "shared/like_project",  locals: {project: @project, like: @like}%>
+                   <% @user_likes.each do |key, value| %>
+                    <div class="work_profile_attribute">
+                      <%= value.name %>
+                    </div>
+                  <% end %>
                 </div>
-                <div class="clear"></div>
+                  <div class="container">
+                    <div class="col-md-12">
+                      <div class="panel panel-white post panel-shadow">
+                        <div class="post-footer">
+                          <h4 align="center"><%= t(".comment_list") %></h4>
+                          <ul class="comments-list entries" id="entries">
+                            <%= render @comments %>
+                          </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <%= render partial: "comments/comment_form",
+                    locals: {project: @project}%>
+                  </div>
+
               </div>
               </div>
+
               <button type="button" class="btn btn-primary" data-dismiss="modal">
                 <i class="fa fa-times"></i>
                 <%= t "close" %>

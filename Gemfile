@@ -25,6 +25,8 @@ gem "mini_magick"
 gem "bootstrap-modal-rails"
 gem "social-share-button", "~> 0.1.6"
 gem "ratyrate"
+gem "redis", "~> 3.2"
+gem "puma", "~> 3.0"
 group :development, :test do
   gem "pry-rails"
   gem "byebug", platform: :mri

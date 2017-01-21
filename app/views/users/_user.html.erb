@@ -4,7 +4,9 @@
       <%= link_to image_tag user.images.first.image.url,
         data: {toggle: "modal", target: "#myModal#{user.id}"} %>
       <div class="testimonial-writer">
-        <div class="testimonial-writer-name"><%= user.name %></div>
+        <div class="testimonial-writer-name">
+          <%= link_to user.name, user_path(I18n.locale, user) %>
+        </div>
         <div class="testimonial-writer-designation"><%= user.position %></div>
         <span class="glyphicon glyphicon-star" style="color:#f4b942"></span>
         <span class="glyphicon glyphicon-star" style="color:#f4b942"></span>

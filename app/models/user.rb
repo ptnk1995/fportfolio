@@ -6,6 +6,7 @@ class User < ApplicationRecord
   has_many :socials, dependent: :destroy
   has_many :posts, dependent: :destroy
   has_many :participates, dependent: :destroy
+  has_many :techniques, through: :target_techniques
   has_many :projects, through: :participates
   has_many :messages, dependent: :destroy
   has_many :certificate_users, dependent: :destroy

@@ -40,6 +40,7 @@ vi:
       blog: "Bài viết"
       idea: "Đề xuất ý tưởng"
       contact: "Liên hệ"
+      createproject: "Tạo Dự Án"
       about_team: "Chúng tôi"
   footer:
     menu:
@@ -139,3 +140,4 @@ vi:
         restrict_dependent_destroy:
           has_one: "Không thể xóa bản ghi này vì có phụ thuộc  %{record} "
           has_many: "Không thể xóa bản ghi này vì có các phụ thuộc  %{record} "
+  send: "Gửi"

@@ -26,9 +26,17 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find_by id: params[:id]
+    @message = Message.new
     if @project
       @images = @project.images
       @members = @project.users.merge(Participate.accepted)
+      @comments = @project.comments
+      @like = @project.likes.find_by(user_id: current_user.id)
+      @user_likes = Hash.new
+      @project.likes.each do |like|
+      @user = User.find_by(id: like.user_id)
+      @user_likes[like.user_id] = @user
+    end
     else
       flash[:warning] = t "record_isnt_exist"
       redirect_to root_url
