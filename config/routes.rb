@@ -8,7 +8,10 @@ Rails.application.routes.draw do
       resources :comments
     end
     resources :users
+
+    resources :blogs
     resources :participates
     resources :likes
+    resources :hots
   end
 end

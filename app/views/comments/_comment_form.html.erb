@@ -1,6 +1,7 @@
-<%= form_for project.comments.build, remote: true do |f| %>
+<%= form_for [project, project.comments.build], remote: true do |f| %>
   <div class="col-md-12" data-turbolinks-temporary>
     <div class="comment-from">
+     <%= binding.pry %>
       <% if current_user.nil? %>
         <%= f.label :name %>
         <%= f.text_field :name, class: "form-control" %>
@@ -9,7 +10,7 @@
       <% end %>
       <%= f.label :content %>
       <%= f.text_area :content, class: "form-control"  %>
-      <%= f.hidden_field :id, value: @project.id %> 
+      <%= f.hidden_field :id, value: @project.id %>
     </div>
   </div>
   <div class="col-md-12">

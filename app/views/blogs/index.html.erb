@@ -1,0 +1,60 @@
+<div class="body-blog">
+  <div id="content" class="site-content">
+    <div class="container container-blog main-content-area">
+      <div class="row">
+        <h3 class="title-blog"> ALL BLOG</h3>
+      </div>
+      <div class="row">
+        <div class="main-content-inner col-sm-12 col-md-8 side-right">
+          <div id="primary" class="content-area">
+            <main id="main" class="site-main page-1">
+              <% @blogs.each do |blog| %>
+              <article id="post-555" class="post-555 post">
+                <div class="blog-item-wrap">
+                  <div class="post-inner-content">
+                    <header class="entry-header">
+                      <li class="cat-item cat-item-38">
+                        <%= link_to blog.category.name, root_path %>
+                      </li>
+                      <h2 class="entry-title">
+                        <%= link_to blog.title, root_path %>
+                      </h2>
+                      <div class="entry-meta">
+                        <span class="posted-on">Posted on
+                          <a href="#" rel="bookmark">
+                            <time class="entry-date published">
+                              <%= blog.created_at %>
+                            </time>
+                        </span>
+                      </div>
+                    </header>
+                    <a href="" title="Post Format: Gallery">
+                      <img src="https://cdn.colorlib.com/activello/wp-content/uploads/sites/10/2015/11/photo-1429734160945-4f85244d6a5a-1170x550.jpg"
+                      class="single-featured wp-post-image" alt=""
+                      width="700" height="328">
+                    </a>
+                    <div class="entry-content">
+                      <p>
+                        <%= blog.content.truncate(500) %>
+                      </p>
+                      <div class="read-more">
+                        <%= link_to "Read more", blog_path(I18n.locale, blog),
+                          title: blog.title %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <hr />
+              <% end %>
+            </main>
+          </div>
+        </div>
+        <%= render "right" %>
+      </div>
+      <div class="center">
+        <%= paginate @blogs, theme: "twitter-bootstrap-3" %>
+      </div>
+    </div>
+  </div>
+</div>

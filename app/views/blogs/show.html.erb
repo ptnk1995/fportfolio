@@ -1,0 +1,47 @@
+<div class="body-blog">
+  <div id="content" class="site-content">
+    <div class="container container-blog main-content-area">
+      <div class="row">
+        <h3 class="title-blog"><%= @blog.title %></h3>
+      </div>
+      <div class="row">
+        <div class="main-content-inner col-md-12">
+          <div id="primary" class="content-area">
+            <main id="main" class="site-main page-1">
+              <article id="post-555" class="post-555 post">
+                <div class="blog-item-wrap">
+                  <div class="post-inner-content">
+                    <header class="entry-header">
+                      <li class="cat-item cat-item-38">
+                        <%= link_to @blog.category.name, root_path %>
+                      </li>
+                      <div class="entry-meta">
+                        <span class="posted-on">Posted on
+                          <a href="#" rel="bookmark">
+                            <time class="entry-date published">
+                              <%= @blog.created_at %>
+                            </time>
+                        </span>
+                      </div>
+                    </header>
+                    <a href="" title="Post Format: Gallery">
+                      <img src="https://cdn.colorlib.com/activello/wp-content/uploads/sites/10/2015/11/photo-1429734160945-4f85244d6a5a-1170x550.jpg"
+                      class="single-featured wp-post-image" alt=""
+                      width="900" height="428">
+                    </a>
+                    <div class="entry-content">
+                      <p>
+                        <%= @blog.content %>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <hr />
+            </main>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

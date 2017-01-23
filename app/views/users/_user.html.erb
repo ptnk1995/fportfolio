@@ -1,7 +1,7 @@
 <div class="col-sm-3">
   <div id="tb-testimonial" class="testimonial testimonial-primary">
     <div class="testimonial-desc">
-      <%= link_to image_tag user.images.first.image.url,
+      <%= link_to image_tag "",
         data: {toggle: "modal", target: "#myModal#{user.id}"} %>
       <div class="testimonial-writer">
         <div class="testimonial-writer-name"><%= user.name %></div>
@@ -28,7 +28,7 @@
         </div>
         <div class="modal-body">
           <center>
-            <%= image_tag user.images.first.image.url, class: "img-circle" %>
+            <%= image_tag "", class: "img-circle" %>
             <h1 class="media-heading"><%= user.name %></h1>
             <h2 class="media-heading"><%= user.position %></h2>
             <span class="glyphicon glyphicon-star" style="color:#f4b942"></span>
