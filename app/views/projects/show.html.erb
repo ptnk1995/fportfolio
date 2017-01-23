@@ -195,3 +195,27 @@
     </div>
   </div>
 </section>
+<div class="container">
+  <div class="row">
+    <div class="panel panel-chat panel-default">
+      <div class="panel-heading">
+        <a href="#" id="chatMinimize" onclick="return false"><span>
+          <%= t "chat_box" %></span></a>
+        <a href="#" id="chatClose" onclick="return false">
+          <i class="glyphicon glyphicon-remove"></i></a>
+        <div class="clearFix"></div>
+      </div>
+      <% if @project.messages.any? %>
+        <div class="panel-body msg_container_base" id="messages" data-chatroom= <%= @project.id %> >
+          <%= render @project.messages %>
+        </div>
+      <% else %>
+        <div class="panel-body hidden" id="messages" data-chatroom= <%= @project.id %> ></div>
+      <% end %>
+      <div class="panel-footer">
+        <%= render partial: "messages/message_form",
+          locals: {message: @message, project: @project} %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -43,6 +43,7 @@ en:
   contact_cofirmation: "Contact cofirmation"
   send_message: "Send the message"
   dear: "Dear"
+  chat_box: "Chat Box"
   send_mail_feedback: "Thank you for contacting Web.cc Customer Service.  We have received your email and our Customer Service team will be responding to you soon."
   comment_name: "Your name"
   comment_content: "Comment something"
@@ -158,6 +159,8 @@ en:
         realease_note: "Release Note"
         save: "Save"
         reset: "Reset"
+      messages:
+        content: "Type your messages here"
   introduce:
     portfolio: "Framgia Company has great opportunities to support amazing
       companies that are creating great values in their industries. Our active
@@ -175,6 +178,9 @@ en:
   server_informations: "Server information"
   core_features: "Core feature"
   record_isnt_exist: "Not found this action"
+  messages:
+    message:
+      chat_time: "%H:%M"
   errors:
     messages:
       required: "must exist"
