@@ -1,26 +1,6 @@
 <header class="header-width">
   <div class="header header-mobi-ext">
     <div class="container">
-      <div class="row login_header">
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-right">
-            <% if user_signed_in? %>
-              <li>
-                <%= link_to t("log_out"),
-                  destroy_user_session_path(locale: I18n.locale),
-                  method: :delete %>
-              </li>
-            <% else %>
-              <li>
-                <%= link_to "", data: {toggle: "modal", target: "#modalLogin"} do %>
-                  <span class="glyphicon glyphicon-log-in"></span>
-                    <%= t "login" %>
-                <% end %>
-              </li>
-            <% end %>
-          </ul>
-        </div>
-      </div>
       <div class="row">
         <div class="col-md-2 col-sm-2">
           <%= image_tag "cong-ty-tnhh-framgia.jpg", class: "logo" %>
@@ -33,6 +13,17 @@
             <%= link_to url_for(locale: "en") do %>
               <%= image_tag "en.png" %>
             <% end %>
+            <% if user_signed_in? %>
+              <%= link_to t("log_out"), destroy_user_session_path(locale: I18n.locale),
+                class: "btn btn-warning",
+                method: :delete %>
+            <% else %>
+              <%= link_to "", class: "btn btn-primary",
+                data: {toggle: "modal", target: "#modalLogin"} do %>
+                <span class="glyphicon glyphicon-log-in"></span>
+                <%= t "login" %>
+              <% end %>
+            <% end %>
           </div>
           <input type="checkbox" id="sidemenucheckbox" />
           <label id="sidemenutoggler" for="sidemenucheckbox"
@@ -43,8 +34,7 @@
                 <%= link_to t("header.menu.home"), root_path(I18n.locale) %>
               </li>
               <li>
-                <%= link_to t("header.menu.project"),
-                  projects_path(I18n.locale) %>
+                <%= link_to t("header.menu.project"), projects_path(I18n.locale) %>
               </li>
               <li>
                 <%= link_to t("header.menu.new"), "#" %>
@@ -59,19 +49,18 @@
                 <%= link_to t("header.menu.contact"), "#" %>
               </li>
               <li>
-                <%= link_to t("header.menu.about_team"), "#",
-                  id:"about_team-button" %>
+                <%= link_to t("header.menu.about_team"), "#", id:"about_team-button" %>
               </li>
             </ul>
-          <label id="closex" for="sidemenucheckbox"
-            onClick="legacybrowsertoggle()"><%= t("close") %></label>
+            <label id="closex" for="sidemenucheckbox"
+              onClick="legacybrowsertoggle()"><%= t("close") %></label>
           </nav>
           <div class="overlay"><label for="sidemenucheckbox"></label></div>
-          </div>
         </div>
+      </div>
     </div>
   </div>
-  <div class="modal fade bd-example-modal-lg" id="modalLogin"
+  <div class="modal fade login-modal-width bd-example-modal-lg" id="modalLogin"
     tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
     aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -91,22 +80,21 @@
               url: session_path(resource_name) do |f| %>
               <span class="glyphicon glyphicon-user"></span>
               <%= f.label :email %>
-              <%= f.email_field :email, autofocus: true,
-                class: "form-control" %>
+              <%= f.email_field :email, autofocus: true, class: "form-control" %>
               <span class="glyphicon glyphicon-eye-open"></span>
               <%= f.label :password %><br />
-              <%= f.password_field :password, autocomplete: "off",
-                class: "form-control" %>
+              <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
               <% if devise_mapping.rememberable? -%>
-                  <%= f.check_box :remember_me %>
-                  <%= f.label :remember_me %>
+                <%= f.check_box :remember_me %>
+                <%= f.label :remember_me %>
               <% end -%>
               <%= f.submit t("login"), class: "form-control btn btn-success" %>
             <% end %>
           </div>
           <div class="col-md-4">
             <p><%= t "social_login" %></p>
-            <%= link_to user_twitter_omniauth_authorize_path, class: "btn btn-danger bottom-30" do %>
+            <%= link_to user_twitter_omniauth_authorize_path, class: "btn btn-danger
+              social-button-width bottom-30" do %>
               <i class="fa fa-twitter-square" aria-hidden="true"></i>
               <%= t "login_twitter" %>
             <% end %>
