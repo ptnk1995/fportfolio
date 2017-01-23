@@ -128,3 +128,14 @@ vi:
   server_informations: "Cơ sở dữ liệu"
   core_features: "Công nghệ và framework"
   record_isnt_exist: "Không tìm thấy thao tác này"
+  errors:
+    messages:
+      required: "Phải tồn tại"
+      taken: "Đã tồn tại"
+  activerecord:
+    errors:
+      messages:
+        record_invalid: "Lỗi: %{errors}"
+        restrict_dependent_destroy:
+          has_one: "Không thể xóa bản ghi này vì có phụ thuộc  %{record} "
+          has_many: "Không thể xóa bản ghi này vì có các phụ thuộc  %{record} "

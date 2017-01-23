@@ -93,6 +93,7 @@
 
 .testimonial.testimonial-primary .testimonial-writer-name {
   color: #337AB7;
+  width: 133px;
 }
 
 .testimonial.testimonial-info .testimonial-section {
@@ -285,6 +286,15 @@
   width: 600px !important;
 }
 
+.login-modal-width {
+  width: 900px !important;
+  left: 40% !important;
+}
+
 .user-table {
   margin-bottom: 0px !important;
+}
+
+.social-button-width {
+  width: 215px !important;
 }
