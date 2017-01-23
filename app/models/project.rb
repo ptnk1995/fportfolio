@@ -4,7 +4,6 @@ class Project < ApplicationRecord
   has_many :participates, dependent: :destroy
   has_many :users, through: :participates
   has_many :messages, dependent: :destroy
-  has_many :rates, as: :target
   has_many :likes, as: :target
   has_many :images, as: :target
   has_many :targettechniques, as: :target
@@ -23,6 +22,8 @@ class Project < ApplicationRecord
   validates :server_information, presence: true
   validates :platform, presence: true
   validates :core_features, presence: true
+
+  ratyrate_rateable :rating
 
   private
   def check_max_files

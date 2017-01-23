@@ -9,7 +9,6 @@ class User < ApplicationRecord
   has_many :projects, through: :participates
   has_many :messages, dependent: :destroy
   has_many :certificate_users, dependent: :destroy
-  has_many :rates, as: :target
   has_many :likes, as: :target
   has_many :images, as: :target
   has_many :target_techniques, as: :target
@@ -18,10 +17,13 @@ class User < ApplicationRecord
 
   scope :order_by_newest, ->{order created_at: :desc}
 
+  ratyrate_rater
+
   def self.from_omniauth auth
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.provider = auth.provider
       user.uid = auth.uid
+      user.name = auth.info.name unless auth.info.name.nil?
       user.email = auth.info.email unless auth.info.email.nil?
       user.password = Devise.friendly_token[0,20]
     end
