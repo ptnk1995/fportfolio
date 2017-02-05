@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     resources :projects do
     end
     resources :users
+    resources :blogs
+    resources :news
     resources :participates
     resources :likes
     resources :comments

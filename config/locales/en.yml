@@ -29,7 +29,7 @@ en:
   about_us: "About us"
   close: "Close"
   login: "Login"
-  read_more: "Read more"
+  read_more: "View more"
   image_error: "should be less than 500KB"
   liked: "Liked"
   errors: "Errors"
@@ -57,6 +57,7 @@ en:
     description: "Framgia Vietnam is a company 100% Japan funded specializing
     in design, development applications such as mobile phone software, games,
     social and website applications."
+    follow_us: "Follow us"
   social:
     facebook: "https://www.facebook.com/FramgiaVietnam"
     github: "https://github.com/framgia/"
@@ -77,6 +78,8 @@ en:
     member3: "Nguyen Phuoc Tien"
     member4: "Nguyen Ngoc Thinh"
     member5: "Ky Huu Hai"
+    speak1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Amet dolore nesciunt natus ullam possimus quas obcaecati suscipit voluptate facilis cum"
   position:
     manage: "Manage"
     dev: "Developer"
@@ -139,3 +142,20 @@ en:
         restrict_dependent_destroy:
           has_one: "Cannot delete record because a dependent %{record} exists"
           has_many: "Cannot delete record because dependent %{record} exist"
+  sologan:
+    first: "Awesome with us"
+    second: "creative world"
+  employee: "Employees"
+  complete_project: "Completed Projects"
+  client: "Clients"
+  cup_of_coffee: "Cups of Coffee"
+  question:
+    title_1: "ARE YOU READY TO"
+    title_2: "MAKE IT AWESOME WITH US?"
+    description: "''Framgia'' is not a reserved word used to refer to the office where
+    you work, nor only those provisions, institutions, and especially not
+    only legal status or the company's charter capital. '' Framgia '' is the term used to
+    only individual among you, culture is due to your Framgia that out.
+    Let's connect a lot of fellow, and create lots
+    value ''awesome''. More! "
+  member: "Member"

@@ -56,6 +56,7 @@ vi:
     description: "Framgia Việt Nam là công ty IT Nhật Bản hoạt động trong lĩnh
     vực thiết kế, phát triển ứng dụng, games chạy trên nền tảng smartphone,
     nền tảng mạng xã hội, sản xuất và phát triển ứng dụng website."
+    follow_us: "Theo dõi chúng tôi"
   social:
     facebook: "https://www.facebook.com/FramgiaVietnam"
     github: "https://github.com/framgia/"
@@ -76,6 +77,8 @@ vi:
     member3: "Nguyễn Phước Tiên"
     member4: "Nguyễn Ngọc Thịnh"
     member5: "Kỳ Hữu Hải"
+    speak1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Amet dolore nesciunt natus ullam possimus quas obcaecati suscipit voluptate facilis cum"
   position:
     manage: "Quản lý"
     dev: "Nhà phát triển"
@@ -139,3 +142,20 @@ vi:
         restrict_dependent_destroy:
           has_one: "Không thể xóa bản ghi này vì có phụ thuộc  %{record} "
           has_many: "Không thể xóa bản ghi này vì có các phụ thuộc  %{record} "
+  sologan:
+    first: "Đến với chúng tôi"
+    second: "Framgia"
+  employee: "Nhân viên"
+  complete_project: "Dự án hoàn thành"
+  client: "Khách hàng"
+  cup_of_coffee: "Tách cafe"
+  question:
+    title: "ARE YOU READY TO"
+    title_2: "MAKE IT AWESOME WITH US?"
+    description: "''Framgia'' không phải là từ dành riêng dùng để chỉ văn phòng nơi
+    các bạn làm việc, cũng không phải chỉ những quy định, thể chế , càng không phải
+    chỉ tư cách pháp nhân hay vốn điều lệ của công ty. ''Framgia'' chính là từ dùng để
+    chỉ từng cá nhân trong số các bạn, văn hóa của Framgia chính là do các bạn mà ra.
+    Chúng ta hãy kết nối thật nhiều những người bạn đồng hành, cùng tạo ra thật nhiều
+    giá trị ''awesome'' hơn nữa! "
+  member: "Thành viên"
