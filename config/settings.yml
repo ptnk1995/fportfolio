@@ -15,3 +15,9 @@ employees: 10000
 completed_project: 173
 client: 106
 cup_of_coffee: 297345
+description: 20
+mail_from: "fportfolio.info@gmail.com"
+contact_phone: "+84-4-3795-5417"
+contact_mail: "email@framgia.com"
+contact_domain: "www.framgia.com"
+link_map: "https://maps.googleapis.com/maps/api/js?key="

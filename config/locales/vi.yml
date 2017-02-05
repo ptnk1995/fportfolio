@@ -32,6 +32,17 @@ vi:
   read_more: "Xem thêm"
   liked: "Thích"
   errors: "Lỗi"
+  contact_us: "Liên hệ với chúng tôi"
+  contact_detail: "Được thành lập từ năm 2012 tại Hà Nội, Framgia Việt Nam là công ty IT Nhật Bản hoạt động trong lĩnh vực thiết kế, phát triển ứng dụng, games chạy trên nền tảng smartphone, nền tảng mạng xã hội, sản xuất và phát triển ứng dụng website."
+  contact_address: "6F, Vinh Trung Plaza, 255~257 Hung Vuong Str., Vinh Trung ward, Thanh Khe district, Da Nang"
+  contact_cofirmation: "Xác nhận liên hệ"
+  send_message: "Gửi tin nhắn"
+  dear: "Chào"
+  send_mail_feedback: "Cảm ơn bạn đã liên hệ với dịch vụ khách hàng Web.cc. Chúng tôi đã nhận được email của bạn và đội ngũ dịch vụ khách hàng của chúng tôi sẽ được trả lời các bạn sớm."
+  contacts:
+    create:
+      success: "Cảm ơn bạn đã liên lạc với chúng tôi, vui lòng đợi nhóm dịch vụ khách hàng sẽ phản hồi với bạn sớm."
+      fail: "Rất tiếc! Đã xảy ra lỗi khi xử lý yêu cầu này, bạn cần gửi tin nhắn một lần nữa!"
   header:
     menu:
       home: "Trang chủ"

@@ -99,6 +99,17 @@ label {
 	opacity: 0.8;
 }
 
+.send-message-button {
+   background-color: #4CAF50; /* Green */
+   border: none;
+   color: black;
+   padding: 15px 32px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+ }
+ 
 .btn-send {
 	background-color: #383838;
 	border-radius: 0;
