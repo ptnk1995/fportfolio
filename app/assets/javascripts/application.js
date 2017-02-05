@@ -15,6 +15,7 @@
 //= require bootstrap-sprockets
 //= require jquery.turbolinks
 //= require login
+//= require project
 //= require jquery.raty
 //= require ratyrate
 //= require_tree .
@@ -23,3 +24,4 @@
 //= require social-share-button
 //= require underscore
 //= require gmaps/google
+//= require cocoon

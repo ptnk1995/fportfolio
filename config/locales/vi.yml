@@ -43,6 +43,8 @@ vi:
     create:
       success: "Cảm ơn bạn đã liên lạc với chúng tôi, vui lòng đợi nhóm dịch vụ khách hàng sẽ phản hồi với bạn sớm."
       fail: "Rất tiếc! Đã xảy ra lỗi khi xử lý yêu cầu này, bạn cần gửi tin nhắn một lần nữa!"
+  comment: "vừa bình luận"
+  send: "Gửi"
   header:
     menu:
       home: "Trang chủ"
@@ -94,11 +96,13 @@ vi:
     manage: "Quản lý"
     dev: "Nhà phát triển"
   projects:
+    remove: "Xóa"
     label: "Dự án"
     created: " Tạo dự án thành công ."
     create_failed: "Tạo dự án thất bại ."
     check_max_files: "Dự án chỉ bao gồm không quá 5 ảnh và ít nhất 1 ảnh."
     new:
+      add_a_photo: "Thêm ảnh"
       save: "Tạo dự án"
       reset: "Làm mới"
   users:

@@ -71,14 +71,16 @@
     </div>
 
     <div class="form-group">
-      <%= f.fields_for :images do |p| %>
-        <%= p.label :image, class: "col-md-4 control-label"%>
-        <div class="col-md-4">
-          <%= p.file_field :image %>
-        </div>
-      <% end %>
+      <%= f.label :images, class: "col-md-4 control-label"%>
+      <div class="col-md-4">
+        <table class="user-photo-form">
+          <%= f.fields_for :images do |image| %>
+            <%= render "image_fields", f: image %>
+          <% end %>
+          <%= link_to_add_association (t "add_a_photo"), f, :images, class: "btn btn-default" %>
+        </table>
+      </div>
     </div>
-
     <div class="form-group">
       <label class="col-md-4 control-label" for="save"></label>
       <div class="col-md-8">
