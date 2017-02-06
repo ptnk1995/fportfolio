@@ -25,6 +25,9 @@ gem "mini_magick"
 gem "bootstrap-modal-rails"
 gem "social-share-button", "~> 0.1.6"
 gem "ratyrate"
+gem 'therubyracer'
+gem 'less-rails-semantic_ui'
+gem 'autoprefixer-rails'
 group :development, :test do
   gem "pry-rails"
   gem "byebug", platform: :mri
