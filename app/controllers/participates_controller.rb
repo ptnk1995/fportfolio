@@ -19,11 +19,12 @@ class ParticipatesController < ApplicationController
 
   private
   def participate_params
-    params.require(:participate).permit :description, :user_id, :project_id
+    params.require(:participate).permit(:description, :user_id, :project_id)
+      .merge is_accept: true
   end
 
   def load_project
-    @project = Project.find_by participate_params[:project_id]
+    @project = Project.find_by id: participate_params[:project_id]
     unless @project
       flash[:danger] = t "project_not_found"
       redirect_to root_url
