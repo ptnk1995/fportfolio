@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  rolify
   devise :database_authenticatable, :registerable,
     :recoverable, :rememberable, :trackable, :validatable,
     :omniauthable, omniauth_providers: [:facebook, :twitter]
@@ -12,6 +13,8 @@ class User < ApplicationRecord
   has_many :likes, as: :target
   has_many :images, as: :target
   has_many :target_techniques, as: :target
+
+  ROLES = {admin: "Admin", user: "User"}
 
   validates :name, presence: true, length: {maximum: Settings.user.name}
 
