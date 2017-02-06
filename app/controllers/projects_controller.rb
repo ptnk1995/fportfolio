@@ -14,6 +14,7 @@ class ProjectsController < ApplicationController
 
   def create
     @project = current_user.projects.new project_params
+    check_private_attributes
     if current_user.save
       flash[:success] = t "projects.created"
       redirect_to users_path
@@ -39,8 +40,18 @@ class ProjectsController < ApplicationController
   end
 
   private
+  def check_private_attributes
+    private_value = Array.new
+    Project::PRIVATE_ATTRIBUTES.each do |key, value|
+      if params[key] == Settings.private
+        private_value.push value
+      end
+    end
+    @project.private_attributes = private_value.join(",")
+  end
+
   def project_params
-    params.require(:project).permit :name, :url, :description, :core_features,
+    params.require(:project).permit :name, :url, :description, :core_features, :pm_url,
       :realease_note, :git_repository, :server_information, :platform, :category_id,
       images_attributes: [:image]
   end

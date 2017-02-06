@@ -25,6 +25,9 @@ class Project < ApplicationRecord
 
   ratyrate_rateable :rating
 
+  PRIVATE_ATTRIBUTES = {server_information: "server_information",
+    git_repository: "git_repository", pm_url: "pm_url"}
+
   private
   def check_max_files
     if images.blank? || images.size > Settings.project.max_image_files
