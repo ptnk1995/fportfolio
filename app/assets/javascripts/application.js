@@ -13,7 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
-//= require turbolinks
+//= require jquery.turbolinks
 //= require login
 //= require jquery.raty
 //= require ratyrate
@@ -21,3 +21,5 @@
 //= require bootstrap-modal
 //= require bootstrap-modalmanager
 //= require social-share-button
+//= require underscore
+//= require gmaps/google
