@@ -35,8 +35,10 @@
           <li><%= link_to t("member"), users_path %></li>
           <li><%= link_to t("header.menu.contact"), "#" %></li>
           <% if user_signed_in? %>
-            <%= link_to t("log_out"), destroy_user_session_path(locale: I18n.locale),
+            <li>
+              <%= link_to t("log_out"), destroy_user_session_path(locale: I18n.locale),
               method: :delete %>
+            </li>
           <% else %>
             <li><%= link_to t("login"), new_user_session_path(locale: I18n.locale) %></li>
           <% end %>
