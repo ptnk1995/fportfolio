@@ -1,90 +1,220 @@
-<main>
-  <header>
-    <section>
-      <h1>
-        <span><%= t("manage.manage_project") %></span>
-        <span><%= t("manage.character.first") %></span>
-        <span><%= t("manage.character.second") %></span>
-      </h1>
-      <p>
-        <%= link_to t("manage.our_project"), root_path, class: "button soft",
-          href: "#readmore", id:"learn-more-button",
-          onclick: "$('html,body').animate({scrollTop:
-          $('#learnmore').offset().top}); return false;" %>
-      </p>
-    </section>
-  </header>
-  <div id="readmore">
-    <div class="portfolio-block content content-center" id="portfolio">
-      <div class="container">
-        <h2 class="margin-bottom-50">
-          <strong><%= t("projects.label") %></strong>
-        </h2>
-        <div class="row">
-          <div class="col-md-3 col-sm-6 bottommargin-lg">
-            <div class="iportfolio">
-              <div class="portfolio-image">
-                <%=link_to "#" do %>
-                  <%= image_tag "Ateam.jpg",
-                    class: "img-thumbnail noradius lazyLoadImage" %>
-                <% end %>
-              </div>
-              <div class="portfolio-desc center nobottompadding">
-                <h3>
-                  <%= link_to t("header.menu.home"), root_path %>
-                </h3>
-              </div>
+<section id="slider">
+  <div id="home-carousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="item active introduce-first">
+        <div class="carousel-caption container">
+        </div>
+      </div>
+      <div class="item introduce-second">
+        <div class="carousel-caption container">
+          <div class="row">
+            <div class="col-sm-7">
+              <h1><%= t "sologan.first" %></h1>
+              <h2><%= t "sologan.second" %></h2>
+              <p><%= t "footer.description" %></p>
             </div>
           </div>
         </div>
-        <div class="content-center">
-          <%= link_to t("read_more"), projects_path(I18n.locale),
-            class: "btn-more" %>
+      </div>
+      <div class="item introduce-third">
+        <div class="carousel-caption container">
+          <div class="row">
+            <div class="col-sm-7">
+              <h1><%= t "sologan.first" %></h1>
+              <h2><%= t "sologan.second" %></h2>
+              <p><%= t "footer.description" %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item introduce-fourth">
+        <div class="carousel-caption container">
+          <div class="row">
+            <div class="col-sm-7">
+              <h1><%= t "sologan.first" %></h1>
+              <h2><%= t "sologan.second" %></h2>
+              <p><%= t "footer.description" %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="home-carousel-left" href="#home-carousel" data-slide="prev">
+        <i class="fa fa-angle-left"></i>
+      </a>
+      <a class="home-carousel-right" href="#home-carousel" data-slide="next">
+        <i class="fa fa-angle-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
+<section id="our-works">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-title">
+          <h1><%= t "manage.our_project" %></h1>
+          <span class="st-border"></span>
+        </div>
+      </div>
+      <div class="portfolio-wrapper" >
+        <div class="portfolio-items">
+        <%= render "list_project" %>
         </div>
       </div>
     </div>
-    <div class="about-block content content-center" id="about_team">
-      <div class="container">
-        <h2 class="margin-bottom-50"><strong><%= t("about_us") %></strong></h2>
-        <div class="row margin-left-52">
-          <div class="staff-item col-md-2 left">
-            <div class="image-wrapper">
-              <%= image_tag "user/anh_trung.png" %>
+    <%= link_to t("read_more"), projects_path, class: "btn btn-send margin-45" %>
+  </div>
+</section>
+<section id="about-us">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="about-us text-center">
+          <h4><%= t "question.title_1" %><br/><%= t "question.title_2" %></h4>
+          <p>
+            <%= t "question.description" %>
+          </p>
+          <hr />
+        </div>
+      </div>
+      <div class="col-sm-6 our-office">
+        <div id="office-carousel" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="item active resize-culture">
+              <%= image_tag "/assets/cultural/vanhoa-2.jpg" %>
             </div>
-            <p class="name"><%= t("list_team.member1") %></p>
-            <p class="position"><%= t("position.manage") %></p>
-          </div>
-          <div class="staff-item col-md-2 left">
-            <div class="image-wrapper">
-              <%= image_tag "user/anh_trung.png" %>
+            <div class="item resize-culture">
+              <%= image_tag "/assets/cultural/vanhoa-2.jpg" %>
             </div>
-            <p class="name"><%= t("list_team.member2") %></p>
-            <p class="position"><%= t("position.manage") %></p>
-          </div>
-          <div class="staff-item col-md-2 left">
-            <div class="image-wrapper">
-              <%= image_tag "user/anh_trung.png" %>
+            <div class="item resize-culture">
+              <%= image_tag "/assets/cultural/vanhoa-2.jpg" %>
             </div>
-            <p class="name"><%= t("list_team.member3") %></p>
-            <p class="position"><%= t("position.dev") %></p>
-          </div>
-          <div class="staff-item col-md-2 left">
-            <div class="image-wrapper">
-              <%= image_tag "user/anh_trung.png" %>
+            <div class="item resize-culture">
+              <%= image_tag "/assets/cultural/vanhoa-2.jpg" %>
             </div>
-            <p class="name"><%= t("list_team.member4") %></p>
-            <p class="position"><%= t("position.dev") %></p>
-          </div>
-          <div class="staff-item col-md-2 left">
-            <div class="image-wrapper">
-              <%= image_tag "user/anh_trung.png" %>
+            <div class="item resize-culture">
+              <%= image_tag "/assets/cultural/vanhoa-2.jpg" %>
             </div>
-            <p class="name"><%= t("list_team.member5") %></p>
-            <p class="position"><%= t("position.dev") %></p>
+            <a class="office-carousel-left" href="#office-carousel" data-slide="prev">
+              <i class="fa fa-angle-left"></i>
+            </a>
+            <a class="office-carousel-right" href="#office-carousel" data-slide="next">
+              <i class="fa fa-angle-right"></i>
+            </a>
           </div>
         </div>
-        <div class="clear"></div>
       </div>
     </div>
   </div>
-</main>
+</section>
+<section id="introduce-team">
+  <div class="container">
+    <div class="row">
+      <div class="overlay"></div>
+      <div class="col-md-8 col-md-offset-2 col-sm-12">
+        <div class="st-introduce-teams">
+          <div id="fade-quote-carousel" class="carousel slide owl-wrapper" data-ride="carousel" data-interval="3000">
+            <ol class="carousel-indicators">
+              <li data-target="#fade-quote-carousel" data-slide-to="0"></li>
+              <li data-target="#fade-quote-carousel" data-slide-to="1"></li>
+              <li data-target="#fade-quote-carousel" data-slide-to="2" class="active"></li>
+              <li data-target="#fade-quote-carousel" data-slide-to="3"></li>
+              <li data-target="#fade-quote-carousel" data-slide-to="4"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="active item">
+                <div class="profile-circle left member1"></div>
+                <blockquote>
+                  <p><%= t "list_team.speak1" %></p>
+                <div class="st-border"></div>
+                <div class="client-info">
+                  <h5><%= t "list_team.member1" %></h5>
+                  <span><%= t "position.manage" %></span>
+                </div>
+                </blockquote>
+                <div class="clear"></div>
+              </div>
+              <div class="item">
+                <div class="profile-circle left member2"></div>
+                <blockquote>
+                  <p><%= t "list_team.speak1" %></p>
+                <div class="st-border"></div>
+                <div class="client-info">
+                  <h5><%= t "list_team.member2" %></h5>
+                  <span><%= t "position.manage" %></span>
+                </div>
+                </blockquote>
+              </div>
+              <div class="item">
+                <div class="profile-circle left member2"></div>
+                <blockquote>
+                  <p><%= t "list_team.speak1" %></p>
+                <div class="st-border"></div>
+                <div class="client-info">
+                  <h5><%= t "list_team.member3" %></h5>
+                  <span><%= t "position.dev" %></span>
+                </div>
+                </blockquote>
+              </div>
+              <div class="item">
+                <div class="profile-circle left member2"></div>
+                <blockquote>
+                  <p><%= t "list_team.speak1" %></p>
+                <div class="st-border"></div>
+                <div class="client-info">
+                  <h5><%= t "list_team.member4" %></h5>
+                  <span><%= t "position.dev" %></span>
+                </div>
+                </blockquote>
+              </div>
+              <div class="item">
+                <div class="profile-circle left member2"></div>
+                <blockquote>
+                  <p><%= t "list_team.speak1" %></p>
+                <div class="st-border"></div>
+                <div class="client-info">
+                  <h5><%= t "list_team.member5" %></h5>
+                  <span><%= t "position.dev" %></span>
+                </div>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="fun-facts">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-md-3">
+        <div class="fun-fact text-center">
+          <h3>
+            <i class="fa fa-thumbs-o-up"></i>
+            <span class="st-counter"><%= Settings.employees %></span>
+          </h3>
+          <p><%= t "employee" %></p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="fun-fact text-center">
+          <h3><i class="fa fa-briefcase fa-6"></i> <span class="st-counter"><%= Settings.completed_project %></span></h3>
+          <p><%= t "complete_project" %></p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="fun-fact text-center">
+          <h3><i class="fa fa-code"></i> <span class="st-counter"><%= Settings.client %></span></h3>
+          <p><%= t "client" %></p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="fun-fact text-center">
+          <h3><i class="fa fa-coffee"></i> <span class="st-counter"><%= Settings.cup_of_coffee %></span></h3>
+          <p><%= t "cup_of_coffee" %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<%= render "contacts/contact" %>

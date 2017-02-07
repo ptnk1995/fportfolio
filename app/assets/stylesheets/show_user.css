@@ -1,0 +1,308 @@
+.body-show-user {
+  padding: 0;
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.col-3-user {
+  width: 24.9999%;
+}
+
+.col-4-user {
+  width: 33.3333%;
+}
+
+.col-6-user {
+  width: 49.9998%;
+}
+
+.col-8-user {
+  width: 66.6667%;
+}
+
+.col-9-user {
+  width: 74.9997%;
+}
+
+.body-head-user {
+  padding: 150px 0px 35px 0px;
+  background-color: #252525;
+  color: #ffffff;
+  margin-bottom: 60px;
+}
+
+.body-head-user .bh-content {
+  display: block;
+  position: relative;
+  max-width: 1170px;
+  width: 100%;
+}
+
+.body-head-user .bh-content h1 {
+  padding-left: 30%;
+  font-size: 45px;
+  font-family: Roboto;
+  font-weight: 300;
+  line-height: 1.6em;
+  margin-bottom: 10px;
+}
+
+.body-head-user .bh-content .mainbh-content {
+  padding-left: 30%;
+}
+
+.body-head-user .bh-content .mainbh-content span {
+  margin-right: 45px;
+}
+
+.body-content-user {
+  display: block;
+  max-width: 1170px;
+  margin: auto;
+  width: 100%;
+}
+
+.body-content-user .main {
+  display: inline-block;
+  float: left;
+  padding-right: 30px;
+}
+
+.body-content-user .main .left-session {
+  display: block;
+  float: left;
+}
+
+.body-content-user .main .left-session .teacher-entry {
+  display: block;
+  margin-top: -180px;
+  box-shadow: 2px 2px 5px #262626;
+  background-color: #fff;
+  width: 100%;
+}
+
+.body-content-user .main .left-session .teacher-entry .teacher-thumbnail {
+  width: 100%;
+}
+.body-content-user .main .left-session .teacher-entry .teacher-thumbnail img {
+  width: 100%;
+  height: auto;
+}
+
+.body-content-user .main .left-session .teacher-entry .teacher-social {
+  padding: 30px 20px;
+}
+
+.body-content-user .main .left-session .teacher-entry .teacher-social ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.body-content-user .main .left-session .teacher-entry .teacher-social ul li {
+  display: block;
+  margin-top: 10px;
+}
+
+.body-content-user .main .left-session .teacher-entry .teacher-social ul li label {
+  display: block;
+}
+
+.body-content-user .main .left-session .teacher-entry .teacher-social ul li input {
+  display: block;
+  border: none;
+  font-weight: bold;
+  font-size: 15px;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.body-content-user .main .left-session .teacher-entry .teacher-social ul li:last-child {
+  margin-top: 15px;
+}
+
+.body-content-user .main .left-session .download {
+  padding: 30px 20px;
+}
+
+.body-content-user .main .left-session .download ul {
+  padding: 15px;
+  margin: 0;
+}
+
+.body-content-user .main .left-session .download ul li {
+  color: #666666;
+  margin-bottom: 8px;
+}
+
+.body-content-user .main .left-session .download ul li a {
+  text-decoration: none;
+  color: #666666;
+}
+
+.body-content-user .main .teacher-content {
+  font-family: Times New Roman;
+  color: #636363;
+  margin-left: 30%;
+  width: 100%;
+}
+
+.body-content-user .main .teacher-content h3 {
+  color: #333;
+  font-weight: bold;
+}
+
+.body-content-user .main .teacher-content .instructor {
+  display: block;
+  width: 100%;
+  margin: 0;
+}
+
+.body-content-user .main .teacher-content .instructor .ins-item {
+  display: block;
+}
+
+.body-content-user .main .teacher-content .instructor .ins-item ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.body-content-user .main .teacher-content .instructor .ins-item ul .item {
+  display: inline-block;
+  width: 35%;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.body-content-user .main .teacher-content .instructor .ins-item ul .item label {
+  width: 22%;
+  float: left;
+  padding-right: 10px;
+}
+
+.body-content-user .main .teacher-content .instructor .ins-item ul .item label
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.body-content-user .main .teacher-content .instructor .ins-item ul .item .caption {
+  display: inline-block;
+  width: 70%;
+}
+
+.body-content-user .main .teacher-content .instructor .ins-item ul .item .caption
+h4 {
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 0;
+}
+
+.body-content-user .main .teacher-content .contact {
+  display: inline-block;
+}
+
+.body-content-user .main .teacher-content .contact .addr {
+  display: inline-block;
+  float: left;
+}
+
+.body-content-user .main .teacher-content .contact .categr {
+  float: right;
+}
+
+.body-content-user .right-session {
+  display: inline-block;
+  float: right;
+}
+
+.body-content-user .right-session .count {
+  text-align: right;
+  float: right;
+  width: 15%;
+  color: #ccc;
+  padding: 15px 10px;
+}
+
+.body-content-user .right-session .embrace {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.body-content-user .right-session .embrace .parent {
+  background-color: #ebebeb;
+  display: inline-block;
+  width: 100%;
+}
+
+.body-content-user .right-session .embrace .parent .embrace-items {
+  float: left;
+  position: relative;
+  background-color: #ebebeb;
+  text-decoration: none;
+  color: #000;
+  font-weight: 700;
+  padding: 15px 24px;
+  width: 85%;
+  border-left: 3px solid #000066;
+}
+
+.body-content-user .right-session .embrace .parent .embrace-items:hover {
+  color: #000066;
+}
+
+.body-content-user .right-session .embrace .parent .count {
+  background-color: #ebebeb;
+}
+
+.body-content-user .right-session .embrace .parent .detail {
+  list-style: none;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+.body-content-user .right-session .embrace .parent .detail .children {
+  display: inline-block;
+  width: 100%;
+}
+
+.body-content-user .right-session .embrace .parent .detail .children .children-item {
+  text-decoration: none;
+  color: #959595;
+  float: left;
+  padding: 15px 24px;
+  width: 85%;
+}
+
+.body-content-user .right-session .embrace .parent .detail .children
+.children-item:hover {
+  color: #000066;
+}
+
+.body-content-user .right-session .embrace .parent .detail .children .count {
+  background-color: #f2f2f2;
+}
+
+.body-show-user a {
+  text-decoration: none;
+}
+
+
+.body-show-user a:hover {
+  text-decoration: none;
+  color: #3f51b5;
+}
+
+.item-show-user {
+  font-family: iinherit;
+  font-size: large;
+}

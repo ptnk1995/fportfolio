@@ -9,4 +9,9 @@ per_page:
 format:
   image: ["jpg", "jpeg", "gif", "png"]
   image_size: 0.5
-description: 20
+description: 82
+limit_project: 6
+employees: 10000
+completed_project: 173
+client: 106
+cup_of_coffee: 297345

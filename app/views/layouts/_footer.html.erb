@@ -1,57 +1,18 @@
-<footer class="footer-distributed">
-  <div class="footer-left">
-    <h3><span><%= t "company" %></span></h3>
-    <p class="footer-links">
-      <%= link_to t("footer.menu.home"), "#" %>
-      <%= link_to t("footer.menu.blog"), "#" %>
-      <%= link_to t("footer.menu.about"), "#" %>
-      <%= link_to t("footer.menu.faq"), "#" %>
-      <%= link_to t("footer.menu.contact"), "#" %>
-    </p>
-    <p class="footer-company-name">
-      <%= t "footer.company-name" %>
-    </p>
-  </div>
-  <div class="footer-center">
-    <div class="footer-icon">
-      <span>
-        <i class="fa fa-map-marker"></i>
-      </span>
-      <p>
-        <span>
-          <%= t "footer.address" %>
-        </span>
-      </p>
-    </div>
-    <div>
-      <i class="fa fa-phone"></i>
-      <p><%= t "footer.phone" %></p>
-    </div>
-    <div>
-      <i class="fa fa-envelope"></i>
-      <p>
-        <%= link_to t("footer.email"), "#" %>
-      </p>
-    </div>
-  </div>
-  <div class="footer-right">
-    <p class="footer-company-about">
-      <span><%= t "footer.introduce" %></span>
-      <%= t "footer.description" %>
-    </p>
-    <div class="footer-icons">
-      <%= link_to t "social.facebook", target: "_blank" do %>
-        <i class="fa fa-facebook"></i>
-      <% end %>
-      <%= link_to "#", target: "_blank" do %>
-        <i class="fa fa-twitter"></i>
-      <% end %>
-      <%= link_to t "social.github", target: "_blank" do %>
-        <i class="fa fa-github"></i>
-      <% end %>
-      <%= link_to t "social.link", target: "_blank" do %>
-        <i class="fa fa-linkedin"></i>
-      <% end %>
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-sm-push-6 footer-social-icons">
+        <span><%= t "footer.follow_us" %>:</span>
+        <%= link_to "https://www.facebook.com/FramgiaVietnam/", target: "blank" do %>
+          <i class="fa fa-facebook"></i>
+        <% end %>
+        <%= link_to root_path do %><i class="fa fa-twitter"></i><% end %>
+        <%= link_to root_path do %><i class="fa fa-google-plus"></i><% end %>
+        <%= link_to root_path do %><i class="fa fa-pinterest-p"></i><% end %>
+      </div>
+      <div class="col-sm-6 col-sm-pull-6 copyright">
+        <p><%= t "footer.company-name" %></p>
+      </div>
     </div>
   </div>
 </footer>
