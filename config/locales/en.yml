@@ -10,7 +10,7 @@ en:
   user_name: "User name"
   email: "Email*"
   user_position: "Position"
-  password: "PASSWORD *"
+  password: "Password *"
   password_confirmation: "REPEAT PASSWORD *"
   agree_account: "By creating an account you agree to our "
   terms_privacy: "Terms & Privacy"
