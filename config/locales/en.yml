@@ -33,6 +33,17 @@ en:
   image_error: "should be less than 500KB"
   liked: "Liked"
   errors: "Errors"
+  contact_us: "Contact us"
+  contact_detail: "Since our foundation in 2012, we have been combining innovation and global experience from various countries such as Vietnam, Bangladesh, Cambodia, Nigeria, Kazakhstan, Japan, etc."
+  contact_address: "6F, Vinh Trung Plaza, 255~257 Hung Vuong Str., Vinh Trung ward, Thanh Khe district, Da Nang"
+  contact_cofirmation: "Contact cofirmation"
+  send_message: "Send the message"
+  dear: "Dear"
+  send_mail_feedback: "Thank you for contacting Web.cc Customer Service.  We have received your email and our Customer Service team will be responding to you soon."
+  contacts:
+    create:
+      success: "Thank you for contact with us, plese wait Customer Service team will be responding to you soon."
+      fail: "sorry! something is wrong, you need send message again!"
   header:
     menu:
       home: "Home"
