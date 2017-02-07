@@ -1,0 +1,105 @@
+<section id="page-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-title">
+          <h2><%= @project.name %></h2>
+          <div class="post-meta text-uppercase">
+            <span><%= @project.created_at %></span>
+            <span><%= t "in" %> <%= link_to @project.category.name, "" %></span>
+          </div>
+          <button class="ui facebook button">
+            <i class="facebook icon"></i>
+            <%= t "facebook" %>
+          </button>
+          <button class="ui twitter button">
+            <i class="twitter icon"></i>
+            <%= t "twitter" %>
+          </button>
+          <button class="ui google plus button">
+            <i class="google plus icon"></i>
+            <%= t "google_plus" %>
+          </button>
+          <button class="ui vk button">
+            <i class="vk icon"></i>
+            <%= t "vk" %>
+          </button>
+          <button class="ui linkedin button">
+            <i class="linkedin icon"></i>
+            <%= t "linkedin" %>
+          </button>
+          <button class="ui instagram button">
+            <i class="instagram icon"></i>
+            <%= t "instagram" %>
+          </button>
+          <button class="ui youtube button">
+            <i class="youtube icon"></i>
+            <%= t "youtube" %>
+          </button>
+          <span class="st-border"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="project">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+        <div class="single-blog">
+          <article>
+            <div class="post-thumb">
+              <figure class="wpb_wrapper vc_figure">
+                <div class="vc_single_image-wrapper   vc_box_border_grey">
+                  <div id="portfolio_slide" class="carousel slide"
+                    data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                      <% @images.each_with_index do |image, index| %>
+                        <div class="item <%= set_class_by_index index %>">
+                            <%= image_tag image.image.url ,
+                              class: "img-responsive img-centered
+                            img-slide img-project" %>
+                        </div>
+                      <% end %>
+                      <ol class="carousel-indicators">
+                        <% @images.each_with_index do |image, index| %>
+                          <li data-target="#portfolio_slide"
+                            data-slide-to=<%= index %>
+                            class="<%= set_class_by_index index %>">
+                          </li>
+                        <% end %>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+              </figure>
+            </div>
+            <div class="post-article">
+              <div class="col-md-12 margin-20">
+                <span class="feature-project">
+                <b><%= t "feature_project" %>:</b>
+                </span><%= @project.description %>
+              </div>
+              <br />
+              <div class="col-md-6">
+                <p class="text-left">
+                <b> <%= t "server_informations" %>: </b><br />
+                <%= @project.server_information %></p>
+              </div>
+              <div class="col-md-6">
+                <p class="text-left">
+                <b> <%= t "core_features" %>: </b><br />
+                  <%= @project.core_features %>
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+        <hr>
+        <br/ >
+      </div>
+      <div class="col-md-3">
+      </div>
+    </div>
+  </div>
+</section>
