@@ -179,3 +179,11 @@ en:
   instagram: "instagram"
   youtube: "YouTube"
   like: "Like"
+  views:
+    pagination:
+      previous: "<"
+      first: "<<"
+      next: ">"
+      last: ">>"
+  format:
+    datetime_create: "%m, %d %Y"
