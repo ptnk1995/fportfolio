@@ -33,11 +33,14 @@
           <li><%= link_to t("header.menu.new"), news_index_path(I18n.locale) %></li>
           <li><%= link_to t("header.menu.about_team"), "#introduce-team" %></li>
           <li><%= link_to t("member"), users_path %></li>
-          <li><%= link_to t("header.menu.contact"), "#" %></li>
+          <li><%= link_to t("header.menu.contact"), new_contact_path(I18n.locale) %></li>
           <% if user_signed_in? %>
             <li>
               <%= link_to t("log_out"), destroy_user_session_path(locale: I18n.locale),
               method: :delete %>
+              <% if current_user.has_role? :admin %>
+                <li><%= link_to t("header.menu.create_account"), new_user_path(locale: I18n.locale) %></li>
+              <% end %>
             </li>
           <% else %>
             <li><%= link_to t("login"), new_user_session_path(locale: I18n.locale) %></li>

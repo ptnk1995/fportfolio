@@ -32,6 +32,7 @@ vi:
   read_more: "Xem thêm"
   liked: "Thích"
   errors: "Lỗi"
+  message: "Lời Nhắn"
   contact_us: "Liên hệ với chúng tôi"
   contact_detail: "Được thành lập từ năm 2012 tại Hà Nội, Framgia Việt Nam là công ty IT Nhật Bản hoạt động trong lĩnh vực thiết kế, phát triển ứng dụng, games chạy trên nền tảng smartphone, nền tảng mạng xã hội, sản xuất và phát triển ứng dụng website."
   contact_address: "6F, Vinh Trung Plaza, 255~257 Hung Vuong Str., Vinh Trung ward, Thanh Khe district, Da Nang"
@@ -52,6 +53,7 @@ vi:
       idea: "Đề xuất ý tưởng"
       contact: "Liên hệ"
       about_team: "Chúng tôi"
+      create_account: "Tạo tài khoản"
   footer:
     menu:
       home: "Trang chủ |"
@@ -68,6 +70,9 @@ vi:
     vực thiết kế, phát triển ứng dụng, games chạy trên nền tảng smartphone,
     nền tảng mạng xã hội, sản xuất và phát triển ứng dụng website."
     follow_us: "Theo dõi chúng tôi"
+  shared:
+    error_messages:
+      error: "lỗi"
   social:
     facebook: "https://www.facebook.com/FramgiaVietnam"
     github: "https://github.com/framgia/"
@@ -111,6 +116,10 @@ vi:
     skill: "Ruby on Rails , Java, Scrum"
     cetificate: "Toeic 250"
     biography: "Tiểu Sử :"
+    created: " Tạo thành Viên thành công ."
+    create_failed: "Tạo thành Viên thất bại ."
+    new:
+      save: "Tạo"
   participates:
     created: "Thêm thành viên thành công."
     create_failed: "Thêm thành viên thất bại ."
@@ -153,6 +162,15 @@ vi:
         restrict_dependent_destroy:
           has_one: "Không thể xóa bản ghi này vì có phụ thuộc  %{record} "
           has_many: "Không thể xóa bản ghi này vì có các phụ thuộc  %{record} "
+      models:
+        user:
+          attributes:
+            email:
+              blank: "không được trống"
+            password:
+              blank: "không được trống"
+            name:
+              blank: "không được trống"
   sologan:
     first: "Đến với chúng tôi"
     second: "Framgia"
