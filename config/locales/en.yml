@@ -33,6 +33,7 @@ en:
   image_error: "should be less than 500KB"
   liked: "Liked"
   errors: "Errors"
+  message: "Message"
   contact_us: "Contact us"
   contact_detail: "Since our foundation in 2012, we have been combining innovation and global experience from various countries such as Vietnam, Bangladesh, Cambodia, Nigeria, Kazakhstan, Japan, etc."
   contact_address: "6F, Vinh Trung Plaza, 255~257 Hung Vuong Str., Vinh Trung ward, Thanh Khe district, Da Nang"
@@ -53,6 +54,7 @@ en:
       idea: "Suggest idea"
       contact: "Contact"
       about_team: "About us"
+      create_account: "Create Account"
   footer:
     menu:
       home: "Home |"
@@ -69,6 +71,9 @@ en:
     in design, development applications such as mobile phone software, games,
     social and website applications."
     follow_us: "Follow us"
+  shared:
+    error_messages:
+      error: "error"
   social:
     facebook: "https://www.facebook.com/FramgiaVietnam"
     github: "https://github.com/framgia/"
@@ -110,6 +115,10 @@ en:
     like: "Like: 20"
     rate: "Rate: 30"
     biography: "Biography :"
+    created: "User was successfully created."
+    create_failed: "Project was create failed ."
+    new:
+      save: "Create"
   participates:
     created: "Member was successfully added."
     create_failed: "Member was add failed "
@@ -153,6 +162,15 @@ en:
         restrict_dependent_destroy:
           has_one: "Cannot delete record because a dependent %{record} exists"
           has_many: "Cannot delete record because dependent %{record} exist"
+      models:
+        user:
+          attributes:
+            email:
+              blank: "cannot be blank"
+            password:
+              blank: "cannot be blank"
+            name:
+              blank: "cannot be blank"
   sologan:
     first: "Awesome with us"
     second: "creative world"

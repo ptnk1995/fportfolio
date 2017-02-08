@@ -331,7 +331,8 @@ label {
 }
 
 .section-title {
-	margin-bottom: 50px;
+  margin-bottom: 50px;
+  padding-top: 50px;
 }
 
 .section-title h1 {
@@ -696,8 +697,24 @@ label {
 }
 
 #contact {
-	padding-top: 130px;
-	padding-bottom: 120px;
+  padding: 130px;
+  padding-bottom: 120px;
+}
+
+.add-account-button {
+  background-color: #0099cc; /* blue */
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+ }
+
+#map {
+  width: 600px; 
+  height: 400px;
 }
 
 .contact-info .contact-content {
@@ -1033,6 +1050,7 @@ label {
 
 .section-title {
   margin-bottom: 50px;
+  padding-top: 50px;
 }
 
 .section-title h1 {

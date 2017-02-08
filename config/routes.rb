@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   post "/rate" => "rater#create", as: "rate"
   devise_for :users, controllers: {omniauth_callbacks: "callbacks",
-    registrations: "users/registrations"}
+    registrations: "users"}
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   scope "(:locale)", locale: /en|vi/ do
     root "static_pages#home"
