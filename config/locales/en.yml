@@ -189,6 +189,7 @@ en:
     value ''awesome''. More! "
   member: "Member"
   in: "In"
+  by: "By"
   facebook: "Facebook"
   twitter: "Twitter"
   google_plus: "Google Plus"
@@ -197,3 +198,13 @@ en:
   instagram: "instagram"
   youtube: "YouTube"
   like: "Like"
+  views:
+    pagination:
+      previous: "<"
+      first: "<<"
+      next: ">"
+      last: ">>"
+  format:
+    datetime_create: "%m, %d %Y"
+  categories: "Categories"
+

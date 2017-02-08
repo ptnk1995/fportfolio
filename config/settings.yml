@@ -4,7 +4,8 @@ project:
   max_image_files: 5
   item: 3
 per_page:
-  project: 20
+  projects: 20
+  blog: 4
   user: 16
 format:
   image: ["jpg", "jpeg", "gif", "png"]
