@@ -1,0 +1,8 @@
+<div class="sidebar-widget">
+  <h4 class="sidebar-title"><%= t "categories" %></h4>
+  <ul>
+    <% @categories.each do |category| %>
+      <li><%= link_to category.name, blogs_path(category: category.id) %></li>
+    <% end %>
+  </ul>
+</div>

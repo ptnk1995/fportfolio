@@ -193,6 +193,7 @@ vi:
     giá trị ''awesome'' hơn nữa! "
   member: "Thành viên"
   in: "Trong"
+  by: "Đăng bởi"
   facebook: "Facebook"
   twitter: "Twitter"
   google_plus: "Google Plus"
@@ -201,3 +202,12 @@ vi:
   instagram: "instagram"
   youtube: "YouTube"
   like: "Thích"
+  views:
+    pagination:
+      previous: "<"
+      first: "<<"
+      next: ">"
+      last: ">>"
+  format:
+    datetime_create: "%m, %d %Y"
+  categories: "Thể loại"
