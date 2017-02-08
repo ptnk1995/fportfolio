@@ -39,21 +39,19 @@
       </div>
     </div>
 
-    <div class="form-group">
-      <%= f.label :server_information, class: "col-md-4 control-label" %>
-      <div class="col-md-4">
-        <%= f.text_field :server_information, class: "form-control input-md",
-          placeholder: true, required: true %>
+    <% Project::PRIVATE_ATTRIBUTES.each do |key, value| %>
+      <div class="form-group">
+        <%= f.label key, class: "col-md-4 control-label" %>
+        <div class="col-md-4">
+          <%= f.text_field key, class: "form-control input-md",
+            placeholder: true, required: true %>
+          <%= radio_button_tag key, Settings.public %>
+          <%= t "public" %>
+          <%= radio_button_tag key, Settings.private, checked: true %>
+          <%= t "private" %>
+        </div>
       </div>
-    </div>
-
-    <div class="form-group">
-      <%= f.label :git_repository, class: "col-md-4 control-label" %>
-      <div class="col-md-4">
-        <%= f.url_field :git_repository, class: "form-control input-md",
-         placeholder: true, required: true %>
-      </div>
-    </div>
+    <% end %>
 
     <div class="form-group">
       <%= f.label :realease_note, class: "col-md-4 control-label" %>
