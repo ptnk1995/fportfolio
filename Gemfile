@@ -27,6 +27,8 @@ gem "social-share-button", "~> 0.1.6"
 gem "ratyrate"
 gem "jquery-turbolinks"
 gem "gmaps4rails"
+gem "sidekiq"
+gem "rolify"
 group :development, :test do
   gem "pry-rails"
   gem "byebug", platform: :mri
