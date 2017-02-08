@@ -1,6 +1,6 @@
 class BlogsController < ApplicationController
   def index
-    @categories = Category.all
+    @categories = Category.blog
     if params[:category].blank?
       @blogs = Post.blog.order_by_newest.page(params[:page]).per Settings.per_page.blog
     else

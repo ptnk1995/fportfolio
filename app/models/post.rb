@@ -8,6 +8,9 @@ class Post < ApplicationRecord
 
   mount_uploader :image, ImageUploader
 
+  delegate :name, to: :category, prefix: :category, allow_nil: true
+  delegate :name, to: :user, prefix: :user, allow_nil: true
+
   enum target_type: {blog: 0, news: 1}
 
   scope :order_by_newest, ->{order created_at: :desc}

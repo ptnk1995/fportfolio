@@ -211,4 +211,6 @@ en:
   format:
     datetime_create: "%m, %d %Y"
   categories: "Categories"
-
+  news: "News"
+  format:
+    datetime_create: "%m, %d %Y"
