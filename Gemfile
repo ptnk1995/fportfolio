@@ -29,6 +29,8 @@ gem "jquery-turbolinks"
 gem "gmaps4rails"
 gem "sidekiq"
 gem "rolify"
+gem "cocoon"
+
 group :development, :test do
   gem "pry-rails"
   gem "byebug", platform: :mri

@@ -27,6 +27,7 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find_by id: params[:id]
+    @message = Message.new
     if @project
       @images = @project.images
       @members = @project.users.merge(Participate.accepted)
@@ -53,6 +54,6 @@ class ProjectsController < ApplicationController
   def project_params
     params.require(:project).permit :name, :url, :description, :core_features, :pm_url,
       :realease_note, :git_repository, :server_information, :platform, :category_id,
-      images_attributes: [:image]
+      :pm_url, images_attributes: [:id, :image, :image_cache, :_destroy]
   end
 end

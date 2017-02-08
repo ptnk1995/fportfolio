@@ -45,6 +45,8 @@ en:
     create:
       success: "Thank you for contact with us, plese wait Customer Service team will be responding to you soon."
       fail: "sorry! something is wrong, you need send message again!"
+  comment : "was comment"
+  send: "Send"
   header:
     menu:
       home: "Home"
@@ -100,11 +102,13 @@ en:
     manage: "Manage"
     dev: "Developer"
   projects:
+    remove: "Remove"
     label: "Project"
     created: "Project was successfully created."
     create_failed: "Project was create failed ."
     check_max_files: "Project must not contain more than 5 files and least one file"
     new:
+      add_a_photo: "Add a Photo"
       save: "Save"
       reset: "Reset"
   users:
