@@ -53,6 +53,8 @@
                 <div class="vc_single_image-wrapper   vc_box_border_grey">
                   <div id="portfolio_slide" class="carousel slide"
                     data-ride="carousel">
+                    <%= link_to (t "Edit"), edit_project_path(I18n.locale, @project),
+                      class: "btn btn-primary" %>
                     <div class="carousel-inner" role="listbox">
                       <% @images.each_with_index do |image, index| %>
                         <div class="item <%= set_class_by_index index %>">

@@ -3,7 +3,7 @@ class CreateProjects < ActiveRecord::Migration[5.0]
     create_table :projects do |t|
       t.string :name
       t.string :url
-      t.string :description
+      t.text :description
       t.string :core_features
       t.text :realease_note
       t.string :git_repository
@@ -12,6 +12,7 @@ class CreateProjects < ActiveRecord::Migration[5.0]
       t.references :category, foreign_key: true
       t.string :private_attributes
       t.boolean :is_suggest
+      t.string :pm_url
 
       t.timestamps
     end

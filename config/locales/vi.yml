@@ -1,4 +1,7 @@
 vi:
+  dictionary:
+  too_long: &too_long " quá dài"
+  blank: &blank " không được trống"
   project_not_found: "Du An khong ton tai"
   available: "Thành Viên này đã có trong dự án của bạn ! "
   log_out: "Đăng xuất"
@@ -110,6 +113,9 @@ vi:
       add_a_photo: "Thêm ảnh"
       save: "Tạo dự án"
       reset: "Làm mới"
+    edit:
+      save: "Lưu"
+      cancel: "Hủy bỏ"
   users:
     label_position: "Vị trí của họ trong project "
     about_you: "Một số thông tin về người này"
@@ -170,11 +176,37 @@ vi:
         user:
           attributes:
             email:
-              blank: "không được trống"
+              blank: *blank
             password:
-              blank: "không được trống"
+              blank: *blank
             name:
-              blank: "không được trống"
+              blank: *blank
+        project:
+          attributes:
+            name:
+              too_long: *too_long
+              blank: *blank
+            url:
+              too_long: *too_long
+              blank: *blank
+            realease_note:
+              too_long: *too_long
+              blank: *blank
+            git_repository:
+              too_long: *too_long
+              blank: *blank
+            server_information:
+              too_long: *too_long
+              blank: *blank
+            platform:
+              too_long: *too_long
+              blank: *blank
+            core_features:
+              too_long: *too_long
+              blank: *blank
+            pm_url:
+              too_long: *too_long
+              blank: *blank
   sologan:
     first: "Đến với chúng tôi"
     second: "Framgia"

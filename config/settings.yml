@@ -3,6 +3,15 @@ user:
 project:
   max_image_files: 5
   item: 3
+  name_length: 50
+  url_length: 100
+  git_repository_length: 100
+  core_features_length: 100
+  description_length: 300
+  realease_note_length: 100
+  server_information_length: 100
+  platform_length: 100
+  pm_url_length: 100
 per_page:
   projects: 20
   blog: 4
