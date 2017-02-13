@@ -14,14 +14,10 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require jquery.turbolinks
-//= require login
-//= require project
-//= require jquery.raty
-//= require ratyrate
-//= require_tree .
+//= require_tree ./te
 //= require bootstrap-modal
 //= require bootstrap-modalmanager
 //= require social-share-button
-//= require underscore
 //= require gmaps/google
 //= require cocoon
+//= require simplemde.min

@@ -30,6 +30,9 @@ gem "gmaps4rails"
 gem "sidekiq"
 gem "rolify"
 gem "cocoon"
+gem "pygments.rb", "~> 0.6.3"
+gem "redcarpet", "~> 3.3", ">= 3.3.4"
+gem "simplemde-rails"
 
 group :development, :test do
   gem "pry-rails"

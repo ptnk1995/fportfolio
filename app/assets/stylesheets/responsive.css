@@ -22,8 +22,10 @@
   }
 
   #our-team, #pricing, #our-works, #services, #contact{
-    padding-top: 110px;
+    /*padding-top: 110px;*/
     padding-bottom: 100px;
+    background-color: white !important;
+
   }
 }
 
@@ -66,7 +68,7 @@
   }
 
   #our-team, #pricing, #our-works, #services, #contact {
-    padding-top: 100px;
+    /*padding-top: 100px;*/
     padding-bottom: 100px;
   }
 
@@ -164,7 +166,7 @@
   }
 
   #our-team, #pricing, #our-works, #services {
-    padding-top: 100px;
+    /*padding-top: 100px;*/
     padding-bottom: 100px;
   }
 

@@ -4,3 +4,7 @@ $(document).ready(function() {
     $('#about_team').offset().top}); return false;
   });
 });
+
+$(document).ready(function() {
+  var simplemde = new SimpleMDE();
+});

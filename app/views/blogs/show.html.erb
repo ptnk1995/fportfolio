@@ -57,8 +57,8 @@
               <%= image_tag @blog.image.url, class: "img-responsive resize-img-show-blog" %>
             </div>
             <br />
-            <div class="post-article">
-              <%= @blog.content %>
+            <div class="post-article markdown">
+              <%= markdown @blog.content %>
             </div>
           </article>
         </div>

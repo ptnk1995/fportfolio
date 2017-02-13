@@ -2,6 +2,7 @@ class Post < ApplicationRecord
   belongs_to :category
   belongs_to :user
   has_many :attachments, dependent: :destroy
+  #has_many :rates, as: :target
   has_many :likes, as: :target
   has_many :comments, as: :target
 
@@ -9,6 +10,9 @@ class Post < ApplicationRecord
 
   delegate :name, to: :category, prefix: :category, allow_nil: true
   delegate :name, to: :user, prefix: :user, allow_nil: true
+
+  validates :title, presence: true
+  validates :content, presence: true
 
   enum target_type: {blog: 0, news: 1}
 

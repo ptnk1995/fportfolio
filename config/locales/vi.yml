@@ -270,3 +270,7 @@ vi:
   name: "Họ tên"
   phone-user: "Số điện thoại"
   online: "Đang hoạt động"
+  blogs:
+    created: " Tạo bài viết thành công ."
+    create_failed: "Tạo bài viết thất bại ."
+  title: "Tiêu đề"
