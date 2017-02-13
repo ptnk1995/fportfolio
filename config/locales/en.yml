@@ -214,3 +214,6 @@ en:
   news: "News"
   format:
     datetime_create: "%m, %d %Y"
+  view:
+    blog: "View blog"
+    new: "View new"

@@ -214,3 +214,6 @@ vi:
   news: "Thông báo"
   format:
     datetime_create: "%m, %d %Y"
+  view:
+    blog: "Xem bài viết"
+    new: "Xem tin tức"

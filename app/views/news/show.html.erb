@@ -46,10 +46,10 @@
     </div>
   </div>
 </section>
-<section id="new">
+<section id="new" class="margin-bottom-50">
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-9">
         <div class="single-new">
           <article>
             <div class="post-article">
@@ -60,6 +60,11 @@
         <hr>
         <br/ >
       </div>
+      <div class="col-md-3">
+        <%= render "categories/list_category", object: "new" %>
+      </div>
     </div>
+    <h3><%= t "blog_relate" %></h3>
+    <%= render "related/related_post", object: "new" %>
   </div>
 </section>

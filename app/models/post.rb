@@ -17,4 +17,7 @@ class Post < ApplicationRecord
   scope :post_by_category_and_type, -> category_id, target_type do
     where category: category_id, target_type: target_type
   end
+  scope :except_id, ->id do
+    where("id != ?", id).limit Settings.related_item
+  end
 end
