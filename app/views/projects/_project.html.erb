@@ -1,12 +1,11 @@
 <div class="col-md-4 col-sm-6 portfolio-item">
-  <%= link_to project_path(I18n.locale, project), class: "portfolio-link",
-    data: {toggle: "modal"}, remote: true  do %>
+  <%= link_to project_path(I18n.locale, project), class: "portfolio-link" do %>
     <div class="portfolio-hover">
       <div class="portfolio-hover-content">
         <i class="fa fa-plus fa-3x"></i>
       </div>
     </div>
-    <%= image_tag "portfolio/roundicons.png", class: "img-responsive" %>
+    <%= image_tag project.images.first.image.url, class: "img-responsive resize-project"%>
   <% end %>
   <div class="portfolio-caption">
     <h4 class="font-weight-700"><%= project.name %></h4>

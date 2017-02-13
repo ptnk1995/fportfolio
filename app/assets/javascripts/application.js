@@ -25,3 +25,5 @@
 //= require underscore
 //= require gmaps/google
 //= require cocoon
+//= require simplemde.min
+

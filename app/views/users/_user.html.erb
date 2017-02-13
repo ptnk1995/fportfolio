@@ -1,22 +1,32 @@
-<div class="col-sm-3">
-  <div id="tb-testimonial" class="testimonial testimonial-primary">
-    <div class="testimonial-desc">
-      <%= link_to image_tag user.images.first.image.url,
-        data: {toggle: "modal", target: "#myModal#{user.id}"} %>
-      <div class="testimonial-writer">
-        <div class="testimonial-writer-name"><%= user.name %></div>
-        <div class="testimonial-writer-designation"><%= user.position %></div>
-        <span class="glyphicon glyphicon-star" style="color:#f4b942"></span>
-        <span class="glyphicon glyphicon-star" style="color:#f4b942"></span>
-        <span class="glyphicon glyphicon-star" style="color:#f4b942"></span>
-        <span class="glyphicon glyphicon-star" style="color:#f4b942"></span>
-        <span class="glyphicon glyphicon-star" style="color:#f4b942"></span>
-        <br><%= t "users.like" %><br><%= t "users.rate" %>
-      </div>
+<div class="card" style="width: 270px; height: 400px;">
+  <div class="image">
+    <%=  image_tag user.images.first.image.url,
+        data: {toggle: "modal", target: "#myModal#{user.id}"}, style: "width: 270px; height: 280px;" %>
+  </div>
+  <div class="content">
+    <div class="header"><%= user.name %></div>
+    <div class="meta">
+      <%= user.position %>
+    </div>
+    <span class="glyphicon glyphicon-star" style="color:#f4b942"></span>
+      <span class="glyphicon glyphicon-star" style="color:#f4b942"></span>
+      <span class="glyphicon glyphicon-star" style="color:#f4b942"></span>
+      <span class="glyphicon glyphicon-star" style="color:#f4b942"></span>
+      <span class="glyphicon glyphicon-star" style="color:#f4b942"></span>
+    <div class="description">
+      <%= user.biography %>
     </div>
   </div>
+  <div class="extra content">
+    <span class="right floated">
+      Joined in 2013
+    </span>
+    <span>
+      <i class="user icon"></i>
+      <%= user.projects.count %> projects
+    </span>
+  </div>
 </div>
-
 <div class="modal member-modal-width fade" id="myModal<%= user.id %>" tabindex="-1" role="dialog",
   aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">

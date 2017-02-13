@@ -166,6 +166,7 @@ GEM
       rack
     orm_adapter (0.5.0)
     pg (0.18.4)
+    posix-spawn (0.3.12)
     pry (0.10.4)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -173,6 +174,9 @@ GEM
     pry-rails (0.3.4)
       pry (>= 0.9.10)
     puma (3.7.0)
+    pygments.rb (0.6.3)
+      posix-spawn (~> 0.3.6)
+      yajl-ruby (~> 1.2.0)
     rack (2.0.1)
     rack-protection (1.5.3)
       rack
@@ -206,6 +210,7 @@ GEM
     rb-fsevent (0.9.8)
     rb-inotify (0.9.8)
       ffi (>= 0.5.0)
+    redcarpet (3.3.4)
     redis (3.3.3)
     responders (2.3.0)
       railties (>= 4.2.0, < 5.1)
@@ -222,6 +227,7 @@ GEM
       connection_pool (~> 2.2, >= 2.2.0)
       rack-protection (>= 1.5.0)
       redis (~> 3.2, >= 3.2.1)
+    simplemde-rails (1.10.2)
     slop (3.6.0)
     social-share-button (0.1.10)
       coffee-rails
@@ -258,6 +264,7 @@ GEM
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
+    yajl-ruby (1.2.1)
 
 PLATFORMS
   ruby
@@ -290,11 +297,14 @@ DEPENDENCIES
   pg (= 0.18.4)
   pry-rails
   puma (~> 3.0)
+  pygments.rb (~> 0.6.3)
   rails (~> 5.0.0, >= 5.0.0.1)
   ratyrate
+  redcarpet (~> 3.3, >= 3.3.4)
   rolify
   sass-rails (~> 5.0)
   sidekiq
+  simplemde-rails
   social-share-button (~> 0.1.6)
   spring
   spring-watcher-listen (~> 2.0.0)

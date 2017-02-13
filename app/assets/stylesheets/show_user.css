@@ -14,7 +14,7 @@
 }
 
 .col-4-user {
-  width: 33.3333%;
+  width: 105.333% !important;
 }
 
 .col-6-user {
@@ -34,6 +34,8 @@
   background-color: #252525;
   color: #ffffff;
   margin-bottom: 60px;
+  margin-left: -7%;
+  width: 114%;
 }
 
 .body-head-user .bh-content {

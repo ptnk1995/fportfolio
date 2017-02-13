@@ -1,13 +1,17 @@
-<div id="portfolio" class="bg-light-gray">
+<section id="page-header">
   <div class="container">
     <div class="row">
-      <div class="col-lg-12 text-center">
-        <h2 class="section-heading"><%= t "portfolio" %></h2>
-        <h3 class="section-subheading text-muted">
-          <%= t "introduce.portfolio" %>
-        </h3>
+      <div class="col-md-12">
+        <div class="section-title">
+          <h1><%= t "portfolio" %></h1>
+          <span class="st-border"></span>
+        </div>
       </div>
     </div>
+  </div>
+</section>
+<div id="portfolio" class="bg-light-gray">
+  <div class="container">
     <div class="row">
       <%= render @projects %>
     </div>

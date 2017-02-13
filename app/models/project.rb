@@ -26,7 +26,7 @@ class Project < ApplicationRecord
   ratyrate_rateable :rating
 
   PRIVATE_ATTRIBUTES = {server_information: "server_information",
-    git_repository: "git_repository", pm_url: "pm_url"}
+    git_repository: "git_repository"}
 
   private
   def check_max_files
