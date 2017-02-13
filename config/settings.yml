@@ -7,6 +7,7 @@ per_page:
   projects: 20
   blog: 4
   user: 16
+  blog: 2
 format:
   image: ["jpg", "jpeg", "gif", "png"]
   image_size: 0.5

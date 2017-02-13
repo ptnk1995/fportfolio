@@ -3,7 +3,6 @@
   <head>
     <title><%= t("title_home") %></title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag "application", media: "all",
     "data-turbolinks-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
@@ -13,7 +12,9 @@
     <% flash.each do |message_type, message| %>
       <%= content_tag :div, message, class: "alert alert-#{message_type}" %>
     <% end %>
-    <%= yield %>
+    <div id="wrapper" class="wrapper">
+      <%= yield %>
+    </div>
     <%= render "layouts/footer" %>
   </body>
 </html>

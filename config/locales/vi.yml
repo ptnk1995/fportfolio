@@ -211,3 +211,6 @@ vi:
   format:
     datetime_create: "%m, %d %Y"
   categories: "Thể loại"
+  news: "Thông báo"
+  format:
+    datetime_create: "%m, %d %Y"
