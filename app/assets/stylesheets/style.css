@@ -1459,7 +1459,7 @@ label {
 }
 
 .single-blog {
-  margin-top: 35px;
+  margin-top: 110px;
   margin-bottom: 35px;
 }
 
@@ -1501,31 +1501,6 @@ label {
   position: relative;
   margin-bottom: 50px;
   margin-top: 80px;
-}
-
-.single-blog {
-  margin-top: 35px;
-  margin-bottom: 35px;
-}
-
-.post-title {
-  margin-top: 20px;
-  margin-bottom: 5px;
-}
-
-.post-meta {
-  margin-bottom: 15px;
-}
-
-.post-meta span {
-  margin-right: 6px;
-  font-size: 12px;
-  font-weight: 600;
-  opacity: 0.6;
-}
-
-.post-meta span:hover {
-  opacity: 1;
 }
 
 .post-carousel-left,
@@ -2131,4 +2106,23 @@ ul.content-flickr li {
 .wrapper {
   min-height: 100%;
   position: relative;
+}
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
+}
+
+.edit_project {
+  margin-bottom: 50px;
 }

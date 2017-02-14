@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:show, :index]
+  before_action :load_project, only: [:edit, :update]
 
   def new
     @categories = Category.all
@@ -37,7 +38,18 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
   def update
+    @project.update_attributes project_params
+    if @project.save
+      flash[:success] = t "succeed"
+      redirect_to project_path(I18n.locale, @project)
+    else
+      render :edit
+    end
+
   end
 
   private
@@ -49,6 +61,14 @@ class ProjectsController < ApplicationController
       end
     end
     @project.private_attributes = private_value.join(",")
+  end
+
+  def load_project
+    @project = Project.find_by id: params[:id]
+    unless @project
+      flash[:danger] = t "project_not_found"
+      redirect_to root_url
+    end
   end
 
   def project_params
