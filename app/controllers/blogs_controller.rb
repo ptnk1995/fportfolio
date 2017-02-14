@@ -1,6 +1,6 @@
 class BlogsController < ApplicationController
+  before_action :load_categories
   def index
-    @categories = Category.blog
     if params[:category].blank?
       @blogs = Post.blog.order_by_newest.page(params[:page]).per Settings.per_page.blog
     else
@@ -17,9 +17,16 @@ class BlogsController < ApplicationController
 
   def show
     @blog = Post.find_by id: params[:id]
-    unless @blog
+    if @blog
+      @posts_relate = @blog.category.posts.blog.except_id(@blog.id).order_by_newest
+    else
       flash[:warning] = t "record_isnt_exist"
       redirect_to root_url
     end
+  end
+
+  private
+  def load_categories
+    @categories = Category.blog
   end
 end
