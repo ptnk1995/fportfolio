@@ -11,11 +11,22 @@
   </div>
 </section>
 <div class="container">
-  <div class="ui link cards" id= "users">
-    <%= render @users %>
-  </div>
-  <center>
-  <%= link_to_next_page @users, (t "load_more"), remote: true, id: "load_more",
-    class: "btn btn-primary" %>
-  </center>
+  <% if @users.present? %>
+    <%= search_form_for @q, id: "search_form" do |f| %>
+      <div class="ui input icon search-form">
+        <%= f.search_field :name_or_email_cont, placeholder: (t".search_user"),
+          id: "user_search" %>
+      </div>
+      <%= f.submit (t ".search"), class: "ui blue button" %>
+    <% end %>
+    <div class="ui link cards" id= "users">
+      <%= render @users %>
+    </div>
+    <center>
+      <%= link_to_next_page @users, (t "load_more"), remote: true, id: "load_more",
+        class: "btn btn-primary" %>
+    </center>
+  <% else %>
+    <p><%= t ".no_user_found" %> <%= params[:search] %>.</p>
+  <% end %>
 </div>

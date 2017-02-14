@@ -128,6 +128,10 @@ en:
     create_failed: "Project was create failed ."
     new:
       save: "Create"
+    index:
+      search: "Search"
+      search_user: "Search Users"
+      no_user_found: "There are no users containing the term(s) "
   participates:
     created: "Member was successfully added."
     create_failed: "Member was add failed "

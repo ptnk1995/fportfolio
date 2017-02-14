@@ -135,6 +135,10 @@ vi:
     create_failed: "Tạo thành Viên thất bại ."
     new:
       save: "Tạo"
+    index:
+      search: "Tìm kiếm"
+      search_user: "Tìm kiếm thành viên"
+      no_user_found: "Không tìm thấy bắt cứ thành viên nào có kì tự "
   participates:
     created: "Thêm thành viên thành công."
     create_failed: "Thêm thành viên thất bại ."

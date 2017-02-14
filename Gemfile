@@ -30,6 +30,8 @@ gem "gmaps4rails"
 gem "sidekiq"
 gem "rolify"
 gem "cocoon"
+gem "semantic-ui-sass", git: "https://github.com/doabit/semantic-ui-sass.git"
+gem "ransack"
 
 group :development, :test do
   gem "pry-rails"
