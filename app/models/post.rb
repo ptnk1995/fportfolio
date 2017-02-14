@@ -2,7 +2,6 @@ class Post < ApplicationRecord
   belongs_to :category
   belongs_to :user
   has_many :attachments, dependent: :destroy
-  has_many :rates, as: :target
   has_many :likes, as: :target
   has_many :comments, as: :target
 
@@ -20,4 +19,6 @@ class Post < ApplicationRecord
   scope :except_id, ->id do
     where("id != ?", id).limit Settings.related_item
   end
+
+  ratyrate_rateable :rating
 end
