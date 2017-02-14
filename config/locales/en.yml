@@ -47,6 +47,9 @@ en:
       fail: "sorry! something is wrong, you need send message again!"
   comment : "was comment"
   send: "Send"
+  projects: "Projects"
+  joined_in: "Joined in"
+  member_framgia: "Member"
   header:
     menu:
       home: "Home"
@@ -104,6 +107,7 @@ en:
   projects:
     remove: "Remove"
     label: "Project"
+    add_member: "Add Member"
     created: "Project was successfully created."
     create_failed: "Project was create failed ."
     check_max_files: "Project must not contain more than 5 files and least one file"

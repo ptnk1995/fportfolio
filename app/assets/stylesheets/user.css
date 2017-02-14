@@ -283,7 +283,8 @@
 }
 
 .member-modal-width {
-  width: 600px !important;
+  top: -4% !important;
+  position: fixed !important;
 }
 
 .login-modal-width {
@@ -316,4 +317,14 @@
 
 .button-edit {
   float: right !important;
+}
+
+.image-modal {
+  width: 270px;
+  height: 190px;
+}
+
+#list_user_image {
+  width: 270px;
+  height: 230px;
 }

@@ -5,16 +5,16 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   scope "(:locale)", locale: /en|vi/ do
     root "static_pages#home"
-
-    resources :projects
+    resources :projects do
+      resources :users
+    end
     resources :users
     resources :blogs
     resources :news
-    resources :participates
     resources :likes
+    resources :participates
     resources :comments
     resources :contacts
     resources :categories
   end
-
 end
