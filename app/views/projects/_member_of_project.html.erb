@@ -1,27 +1,15 @@
-<aside id="k2t_member-2" class="widget k2t_widget_member">
-  <h4 class="widget-title"><span><%= t "member_of_project" %></span></h4>
-  <div class="scroll">
-    <ul class="listing-member">
-      <% @members.each do |member| %>
-        <li>
-          <div>
-            <div style="float: left;">
-              <%= link_to "#", class: "member-thumb" do %>
-                <%= image_tag member.images.first.image.url ,
-                  class: "img-member" %>
-              <% end %>
-            </div>
-            <div style="float: left;">
-              <h4>
-              <%= link_to "#{member.name}", "#", class: "name-of-member-project",
-                title: "#{member.name}" %>
-              </h4>
-              <span class="position"><%= member.position %></span>
-            </div>
-            <div class="clear"></div>
-          </div>
-        </li>
+<% @participates.each do |participate| %>
+  <div class="col-md-3 margin-top-20">
+    <div class="left">
+      <%= link_to "#" do %>
+        <%= image_tag participate.user.images.first.image.url ,
+          class: "img-member-of-project" %>
       <% end %>
-    </ul>
+    </div>
+    <div class="left item-member-project">
+      <%= link_to "#{participate.user.name}", "#",
+                title: "#{participate.user.name}" %><br/>
+      <span><%= participate.description %></span>
+    </div>
   </div>
-</aside>
+<% end %>

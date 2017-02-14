@@ -1,4 +1,4 @@
-<div id="portfolio" class="bg-light-gray">
+<div id="portfolio" class="bg-light-gray margin-top-150">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
@@ -8,8 +8,11 @@
         </h3>
       </div>
     </div>
-    <div class="row">
+    <hr />
+    <div class="portfolio-wrapper" >
+      <div class="portfolio-items">
       <%= render @projects %>
+      </div>
     </div>
     <div class="center">
       <%= paginate @projects, theme: "twitter-bootstrap-3" %>

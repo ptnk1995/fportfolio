@@ -217,3 +217,7 @@ en:
   view:
     blog: "View blog"
     new: "View new"
+  comments: "Write comments"
+  edit_project: "Edit project"
+  delete_project: "Delete this project"
+  add_member_project: "Add member into project"

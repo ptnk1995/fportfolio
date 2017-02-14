@@ -249,3 +249,7 @@ vi:
   view:
     blog: "Xem bài viết"
     new: "Xem tin tức"
+  comments: "Viết bình luận"
+  edit_project: "Chỉnh sửa dự án"
+  delete_project: "Xóa dự án này"
+  add_member_project: "Thêm thành viên vào dự án"

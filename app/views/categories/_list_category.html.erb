@@ -2,7 +2,13 @@
   <h4 class="sidebar-title"><%= t "categories" %></h4>
   <ul>
     <% @categories.each do |category| %>
-      <li><%= link_to category.name, blogs_path(category: category.id) %></li>
+      <li>
+        <% if object == "blog" %>
+          <%= link_to category.name, blogs_path(category: category.id) %>
+        <% else %>
+          <%= link_to category.name, news_index_path(category: category.id) %>
+        <% end %>
+      </li>
     <% end %>
   </ul>
 </div>
