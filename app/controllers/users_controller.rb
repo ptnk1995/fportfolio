@@ -19,6 +19,17 @@ class UsersController < ApplicationController
     end
   end
 
+  def show
+    @user = User.find_by id: params[:id]
+    if @user
+      @certificate_users = @user.certificate_users
+      @techniques = @user.techniques
+    else
+      flash[:warning] = t "record_isnt_exist"
+      redirect_to root_url
+    end
+  end
+
   private
 
   def user_params
