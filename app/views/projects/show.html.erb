@@ -3,7 +3,34 @@
     <div class="row">
       <div class="col-md-12">
         <div class="section-title">
-          <h2><%= @project.name %></h2>
+          <div>
+            <div class="left">
+              <h2 class="font-size-40"><%= @project.name %></h2>
+            </div>
+            <div class="right">
+              <div class="slideouticons">
+                <input type="checkbox" id="togglebox" />
+                <label for="togglebox" class="mainlabel fa fa-share-alt"></label>
+                <div class="iconswrapper">
+                  <% if user_signed_in? %>
+                    <ul>
+                      <li>
+                        <%= link_to "", edit_project_path(I18n.locale, @project),
+                          class: "fa fa-pencil-square-o", title: t("edit_project") %>
+                      </li>
+                      <li>
+                        <%= link_to "", "", class: "fa fa-plus-square", title: t("add_member_project") %>
+                      </li>
+                      <li>
+                        <%= link_to "", "", class: "fa fa-trash-o", title: t("delete_project") %>
+                      </li>
+                    </ul>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
           <div class="post-meta text-uppercase">
             <span><%= @project.created_at %></span>
             <span><%= t "in" %> <%= link_to @project.category.name, "" %></span>
@@ -45,16 +72,13 @@
 <section id="project">
   <div class="container">
     <div class="row">
-      <div class="col-md-9">
-        <div class="single-blog">
+      <div class="col-md-8">
+        <div>
           <article>
             <div class="post-thumb">
-              <figure class="wpb_wrapper vc_figure">
                 <div class="vc_single_image-wrapper   vc_box_border_grey">
                   <div id="portfolio_slide" class="carousel slide"
                     data-ride="carousel">
-                    <%= link_to (t "Edit"), edit_project_path(I18n.locale, @project),
-                      class: "btn btn-primary" %>
                     <div class="carousel-inner" role="listbox">
                       <% @images.each_with_index do |image, index| %>
                         <div class="item <%= set_class_by_index index %>">
@@ -74,33 +98,56 @@
                     </div>
                   </div>
                 </div>
-              </figure>
-            </div>
-            <div class="post-article">
-              <div class="col-md-12 margin-20">
-                <span class="feature-project">
-                <b><%= t "feature_project" %>:</b>
-                </span><%= @project.description %>
-              </div>
-              <br />
-              <div class="col-md-6">
-                <p class="text-left">
-                <b> <%= t "server_informations" %>: </b><br />
-                <%= @project.server_information %></p>
-              </div>
-              <div class="col-md-6">
-                <p class="text-left">
-                <b> <%= t "core_features" %>: </b><br />
-                  <%= @project.core_features %>
-                </p>
-              </div>
             </div>
           </article>
         </div>
         <hr>
         <br/ >
       </div>
-      <div class="col-md-3">
+      <div class="col-md-4">
+        <div class="row info-project">
+          <div class="col-md-12">
+            <span class="feature-project">
+            </span><%= @project.description %>
+          </div>
+          <div class="col-md-12 padding-top-10">
+            <p class="text-left">
+            <b> <%= t "server_informations" %>: </b><br />
+            <%= @project.server_information %></p>
+          </div>
+          <div class="col-md-12 padding-top-10">
+            <p class="text-left">
+            <b> <%= t "core_features" %>: </b><br />
+              <%= @project.core_features %>
+            </p>
+          </div>
+          <div class="col-md-12 padding-top-10">
+            <p class="text-left">
+            <b> <%= t "core_features" %>: </b><br />
+              <%= @project.core_features %>
+            </p>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="row margin-bottom-50">
+    <div class="nav-tabs-custom">
+      <ul class="nav nav-tabs">
+        <li class="active">
+          <%= link_to t("member_of_project") , "#member_of_project", data: {toggle: "tab"} %>
+        </li>
+        <li class="">
+          <%= link_to t("comments"), "#comment", data: {toggle: "tab"} %>
+        </li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane active" id="member_of_project">
+          <div class="row margin-bottom-50">
+            <%= render "member_of_project", object: @project.users %>
+          </div>
+        </div>
+        <div class="tab-pane" id="comment">
+        </div>
       </div>
     </div>
   </div>

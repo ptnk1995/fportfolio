@@ -31,7 +31,7 @@ class ProjectsController < ApplicationController
     @message = Message.new
     if @project
       @images = @project.images
-      @members = @project.users.merge(Participate.accepted)
+      @participates = @project.participates.merge(Participate.accepted)
     else
       flash[:warning] = t "record_isnt_exist"
       redirect_to root_url

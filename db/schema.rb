@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170213035005) do
+ActiveRecord::Schema.define(version: 20170206060406) do
 
   create_table "attachments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "path"
@@ -131,8 +131,8 @@ ActiveRecord::Schema.define(version: 20170213035005) do
     t.text     "content",     limit: 65535
     t.integer  "target_type"
     t.string   "image"
-    t.integer  "category_id"
     t.integer  "user_id"
+    t.integer  "category_id"
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
     t.index ["category_id"], name: "index_posts_on_category_id", using: :btree
@@ -151,9 +151,9 @@ ActiveRecord::Schema.define(version: 20170213035005) do
     t.integer  "category_id"
     t.string   "private_attributes"
     t.boolean  "is_suggest"
+    t.string   "pm_url"
     t.datetime "created_at",                       null: false
     t.datetime "updated_at",                       null: false
-    t.string   "pm_url"
     t.index ["category_id"], name: "index_projects_on_category_id", using: :btree
   end
 
@@ -254,6 +254,7 @@ ActiveRecord::Schema.define(version: 20170213035005) do
   add_foreign_key "participates", "projects"
   add_foreign_key "participates", "users"
   add_foreign_key "posts", "categories"
+  add_foreign_key "posts", "users"
   add_foreign_key "projects", "categories"
   add_foreign_key "socials", "users"
   add_foreign_key "target_techniques", "techniques"
