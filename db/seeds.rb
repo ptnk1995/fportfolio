@@ -12,22 +12,28 @@ Category.create(name: "Embedded")
 Category.create(name: "Game")
 Category.create(name: "Multi Platform")
 
-u = User.create(name: "Bin", email:"admin@gmail.com",
+u = User.create(name: "Bin", email:"admin@gmail.com", user_name: "Admin",
   password: "password123",
-  is_admin: "true")
+  position: "PM",
+  biography: "Rooms oh fully taken by worse do.
+   Points afraid but may end law lasted.
+  Was out laughter raptures returned outweigh.")
+
+u.add_role :admin
 
 4.times do |i|
   name  = "User #{i+1}"
   email = "user#{i+1}@gmail.com"
+  user_name = "Username #{i+1}"
   password = "password123"
-  is_admin = "false"
+  position = "Developer"
+  biography = "Rooms oh fully taken by worse do. Points afraid but may end law lasted.
+  Was out laughter raptures returned outweigh."
+
   u = User.create!(name:  name,
                email: email,
                password: password,
-               is_admin: is_admin)
+               position: position,
+               biography: biography,
+               user_name: user_name)
 end
-
-User.all.each do |user|
-  user.images.create
-end
-
