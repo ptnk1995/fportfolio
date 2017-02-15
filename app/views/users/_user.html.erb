@@ -1,93 +1,99 @@
-<div class="col-sm-3">
-  <div id="tb-testimonial" class="testimonial testimonial-primary">
-    <div class="testimonial-desc">
-      <%= link_to image_tag user.images.first.image.url,
-        data: {toggle: "modal", target: "#myModal#{user.id}"} %>
-      <div class="testimonial-writer">
-        <div class="testimonial-writer-name"><%= user.name %></div>
-        <div class="testimonial-writer-designation"><%= user.position %></div>
-        <span class="glyphicon glyphicon-star" style="color:#f4b942"></span>
-        <span class="glyphicon glyphicon-star" style="color:#f4b942"></span>
-        <span class="glyphicon glyphicon-star" style="color:#f4b942"></span>
-        <span class="glyphicon glyphicon-star" style="color:#f4b942"></span>
-        <span class="glyphicon glyphicon-star" style="color:#f4b942"></span>
-        <br><%= t "users.like" %><br><%= t "users.rate" %>
-      </div>
+<div class="card" style="width: 270px; height: 380px; margin-bottom: 30px">
+  <div class="image">
+    <%= image_tag user.images.first.image.url,
+      data: {toggle: "modal", target: "#user_modal#{user.id}"} %>
+  </div>
+  <div class="content">
+    <div class="header">
+      <%= link_to user.name, user_path(I18n.locale, user) %>
     </div>
+
+    <div class="meta">
+      <%= user.position %>
+    </div>
+
+    <% if !user.biography.nil? %>
+      <div class="description">
+        <%= user.biography.truncate(Settings.truncate.biography) %>
+      </div>
+    <% end %>
+  </div>
+  <div class="extra content">
+    <span class="right floated">
+      <%= t "joined_in" %> <%= user.created_at.year %>
+    </span>
+    <span>
+      <i class="user icon"></i>
+      <%= user.projects.count %> <%= t ".projects" %>
+    </span>
   </div>
 </div>
-
-<div class="modal member-modal-width fade" id="myModal<%= user.id %>" tabindex="-1" role="dialog",
+<div class="modal member-modal-width fade" id="user_modal<%= user.id %>" tabindex="-1" role="dialog",
   aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-      <%= form_for Participate.new do |f| %>
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-          <h4 class="modal-title" id="myModalLabel"><%= t "users.about_you" %></h4>
-        </div>
-        <div class="modal-body">
-          <center>
-            <%= image_tag user.images.first.image.url, class: "img-circle" %>
-            <h1 class="media-heading"><%= user.name %></h1>
-            <h2 class="media-heading"><%= user.position %></h2>
-            <span class="glyphicon glyphicon-star" style="color:#f4b942"></span>
-            <span class="glyphicon glyphicon-star" style="color:#f4b942"></span>
-            <span class="glyphicon glyphicon-star" style="color:#f4b942"></span>
-            <span class="glyphicon glyphicon-star" style="color:#f4b942"></span>
-            <span class="glyphicon glyphicon-star" style="color:#f4b942"></span>
-          </center>
-          <div class="row clearfix">
-            <div class="table-responsive">
-              <table class="table user-table text-left">
-                <tr >
-                  <td class="first"><h4>
-                    <span class="glyphicon glyphicon-thumbs-up" style="color:#f4b942">
-                    </span><%= t "users.like" %></h4>
-                  </td>
-                  <td class="first"><h4>
-                    <span class="glyphicon glyphicon-ok-sign" style="color:#f4b942">
-                    </span><%= t "users.rate" %></h4>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="first"><h4>
-                    <span class="glyphicon glyphicon-certificate" style="color:#f4b942">
-                    </span><%= t "users.skill" %></h4>
-                  </td>
-                  <td class="second"><h4>
-                    <span class="glyphicon glyphicon-certificate" style="color:#f4b942">
-                    </span><%= t "users.cetificate" %></h4>
-                  </td>
-                </tr>
-              </table>
-            </div>
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+        <h4 class="modal-title" id="myModalLabel"><%= t "users.about_you" %></h4>
+      </div>
+      <div class="modal-body">
+        <center>
+          <%= image_tag user.images.first.image.url, class: "image-modal img-circle" %>
+          <h1 class="media-heading"><%= user.name %></h1>
+          <h2 class="media-heading"><%= user.position %></h2>
+          <span class="glyphicon glyphicon-star" style="color:#f4b942"></span>
+          <span class="glyphicon glyphicon-star" style="color:#f4b942"></span>
+          <span class="glyphicon glyphicon-star" style="color:#f4b942"></span>
+          <span class="glyphicon glyphicon-star" style="color:#f4b942"></span>
+          <span class="glyphicon glyphicon-star" style="color:#f4b942"></span>
+        </center>
+        <div class="row clearfix">
+          <div class="table-responsive">
+            <table class="table user-table text-left">
+              <tr >
+                <td class="first"><h4>
+                  <span class="glyphicon glyphicon-thumbs-up" style="color:#f4b942">
+                  </span><%= t "users.like" %></h4>
+                </td>
+                <td class="first"><h4>
+                  <span class="glyphicon glyphicon-ok-sign" style="color:#f4b942">
+                  </span><%= t "users.rate" %></h4>
+                </td>
+              </tr>
+              <tr>
+                <td class="first"><h4>
+                  <span class="glyphicon glyphicon-list-alt" style="color:#f4b942">
+                  </span><%= t "users.skill" %></h4>
+                </td>
+                <td class="second"><h4>
+                  <span class="glyphicon glyphicon-certificate" style="color:#f4b942">
+                  </span><%= t "users.cetificate" %></h4>
+                </td>
+              </tr>
+            </table>
+            <hr>
           </div>
-
-          <hr>
-          <center>
-            <h4 class="text-left"><strong><%= t "users.biography" %> </strong><br>
-              <%= user.biography %></h4><br>
-          </center>
-          <% if user_signed_in? %>
-            <strong>
-              <%= t "users.label_position" %>
-              <%= f.select :project_id, options_for_select(
-                current_user.projects.map{|c| [c.name, c.id]},
-                f.object.project_id), {},
-                {class: "form-control selectpicker", "data-live-search": true}%>
-            </strong><br>
-            <%= f.text_field :description, class: "form-control input-md", placeholder: true %>
+        </div>
+        <center>
+          <h5 class="text-left"><strong>
+            <span class="glyphicon glyphicon-user" >
+                <%= t "users.biography" %>
+              <h5><%= user.biography %></h5><br>
+            </span></strong>
+          </h5>
+        </center>
+        <% if user_signed_in? && params.has_key?(:project_id) %>
+          <%= form_for Participate.new do |f| %>
+            <%= f.text_field :position, class: "form-control input-md", placeholder: true %>
             <%= f.hidden_field :user_id, value: user.id %>
-            <br>
+            <div class="modal-footer">
+              <center>
+                <%= f.submit t("users.add_member"), class: "btn btn-primary" if user_signed_in? %>
+              </center>
+            </div>
           <% end %>
-        </div>
-        <div class="modal-footer">
-          <center>
-            <%= f.submit t("users.add_member"), class: "btn btn-primary" if user_signed_in? %>
-          </center>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

@@ -49,6 +49,9 @@ vi:
       fail: "Rất tiếc! Đã xảy ra lỗi khi xử lý yêu cầu này, bạn cần gửi tin nhắn một lần nữa!"
   comment: "vừa bình luận"
   send: "Gửi"
+  projects: "Dự Án "
+  joined_in: "Tham gia từ"
+  member: "Thành Viên"
   header:
     menu:
       home: "Trang chủ"
@@ -109,6 +112,7 @@ vi:
     created: " Tạo dự án thành công ."
     create_failed: "Tạo dự án thất bại ."
     check_max_files: "Dự án chỉ bao gồm không quá 5 ảnh và ít nhất 1 ảnh."
+    add_member: "Thêm Thành Viên"
     new:
       add_a_photo: "Thêm ảnh"
       save: "Tạo dự án"

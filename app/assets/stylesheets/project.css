@@ -206,4 +206,7 @@ div.slideouticons.horizontal input:checked~ div.iconswrapper ul li {
   width: 36px;
   height: 36px;
   border-radius: 50%;
+
+.form-project-new {
+  margin-top: 100px;
 }

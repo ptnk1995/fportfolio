@@ -35,3 +35,5 @@ link_map: "https://maps.googleapis.com/maps/api/js?key="
 public: "public"
 private: "private"
 related_item: 3
+truncate:
+  biography: 55

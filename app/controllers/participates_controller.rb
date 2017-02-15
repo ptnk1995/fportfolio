@@ -14,12 +14,12 @@ class ParticipatesController < ApplicationController
         flash[:danger] = t "participates.create_failed"
       end
     end
-    redirect_to users_path
+    redirect_to project_users_path(I18n.locale, @project)
   end
 
   private
   def participate_params
-    params.require(:participate).permit(:description, :user_id, :project_id)
+    params.require(:participate).permit(:position, :user_id, :project_id)
       .merge is_accept: true
   end
 

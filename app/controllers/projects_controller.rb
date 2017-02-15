@@ -18,7 +18,7 @@ class ProjectsController < ApplicationController
     check_private_attributes
     if current_user.save
       flash[:success] = t "projects.created"
-      redirect_to users_path
+      redirect_to project_path(I18n.locale, @project)
     else
       @categories = Category.all
       flash[:danger] = t "images.create_failed"
