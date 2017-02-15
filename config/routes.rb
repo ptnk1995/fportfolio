@@ -16,5 +16,6 @@ Rails.application.routes.draw do
     resources :comments
     resources :contacts
     resources :categories
+    resources :like_blogs
   end
 end

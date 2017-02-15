@@ -19,6 +19,7 @@ class BlogsController < ApplicationController
     @blog = Post.find_by id: params[:id]
     if @blog
       @posts_relate = @blog.category.posts.blog.except_id(@blog.id).order_by_newest
+      @like = @blog.likes.find_by(user_id: current_user.id)
     else
       flash[:warning] = t "record_isnt_exist"
       redirect_to root_url
