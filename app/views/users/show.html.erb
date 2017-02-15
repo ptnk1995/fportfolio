@@ -30,7 +30,7 @@
                         <strong><%= t "phone-user" %>:</strong>
                       </td>
                       <td>
-                        <p><b><%= t "footer.phone" %></b></p>
+                        <p><b><%= @user.phone %></b></p>
                       </td>
                     </tr>
                   </tbody>
@@ -78,13 +78,13 @@
     <div class="col-lg-3 col-md-4 col-sm-4 card margin-left-25">
       <div class="main-box clearfix">
         <header class="main-box-header clearfix">
-          <h2><%= @user.name %></h2>
+          <h3><%= @user.name %></h3>
         </header>
         <div class="main-box-body clearfix">
-          <div class="profile-status">
-            <i class="fa fa-circle"></i> <%= t "online" %>
+          <div class="profile-status text-center">
+            <i class="fa fa-circle "></i> <%= t "online" %>
           </div>
-          <%= image_tag @user.images.first.image.url, class: "profile-img img-responsive
+          <%= image_tag @user.avatar.url, class: "profile-img img-responsive
             center-block img-profile-user" %>
           <div class="profile-stars center">
             <i class="fa fa-star"></i>
@@ -96,12 +96,6 @@
           <div class="profile-since center">
             <%= t "date_member_join" %>: <%= I18n.l @user.created_at,
               format: t("format.datetime_create")  %>
-          </div>
-          <div class="profile-message-btn center-block text-center">
-            <a href="#" class="btn btn-success">
-            <i class="fa fa-envelope"></i>
-              <%= t "send_message" %>
-            </a>
           </div>
         </div>
       </div>

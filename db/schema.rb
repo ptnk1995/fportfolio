@@ -224,6 +224,7 @@ ActiveRecord::Schema.define(version: 20170206060406) do
     t.string   "uid"
     t.string   "avatar"
     t.string   "cover_photo"
+    t.string   "phone"
     t.string   "email",                                default: "", null: false
     t.string   "encrypted_password",                   default: "", null: false
     t.string   "reset_password_token"

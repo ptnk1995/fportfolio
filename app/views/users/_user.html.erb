@@ -1,6 +1,6 @@
 <div class="card" style="width: 270px; height: 380px; margin-bottom: 30px">
   <div class="image">
-    <%= image_tag user.images.first.image.url,
+    <%= image_tag user.avatar.url,
       data: {toggle: "modal", target: "#user_modal#{user.id}"} %>
   </div>
   <div class="content">
@@ -38,7 +38,7 @@
       </div>
       <div class="modal-body">
         <center>
-          <%= image_tag user.images.first.image.url, class: "image-modal img-circle" %>
+          <%= image_tag user.avatar.url, class: "image-modal img-circle" %>
           <h1 class="media-heading"><%= user.name %></h1>
           <h2 class="media-heading"><%= user.position %></h2>
           <span class="glyphicon glyphicon-star" style="color:#f4b942"></span>

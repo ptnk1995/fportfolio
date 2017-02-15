@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!, except: [:show, :index]
+  before_action :correct_user, only: [:edit, :update]
 
   def index
     @q = User.ransack params[:q]
@@ -24,6 +26,19 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    @user.update_attributes user_params
+    if @user.save
+      flash[:success] = t "succeed"
+      redirect_to user_path(I18n.locale, @user)
+    else
+      render :edit
+    end
+  end
+
   def show
     @user = User.find_by id: params[:id]
     if @user
@@ -36,9 +51,13 @@ class UsersController < ApplicationController
   end
 
   private
+  def correct_user
+    @user = User.find_by id: params[:id]
+    redirect_to root_url unless @user == current_user
+  end
 
   def user_params
     params.require(:user).permit :name, :user_name, :email, :password,
-      :password_confirmation
+      :password_confirmation, :avatar, :biography, :position, :phone
   end
 end
