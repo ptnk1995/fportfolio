@@ -714,7 +714,7 @@ label {
 
 #map {
   width: 600px;
-  height: 400px;
+  height: 200px;
   padding-top: 130px;
   padding-bottom: 120px;
 }
@@ -1417,8 +1417,8 @@ label {
 }
 
 #contact {
-  padding-top: 130px;
-  padding-bottom: 120px;
+  padding-top: 120px;
+  padding-bottom: 20px;
 }
 
 .contact-info .contact-content {
