@@ -6,6 +6,10 @@
           <div>
             <div class="left">
               <h2 class="font-size-40"><%= @project.name %></h2>
+              <div class="disable-cancela">
+                <%= rating_for @project, :rating, disable_after_rate: false, enable_half: true, cancel: false %>
+              </div>
+              <%= render partial: "shared/like_project",  locals: {project: @project, like: @support.likes(current_user)} %>
             </div>
             <div class="right">
               <div class="slideouticons">
@@ -81,7 +85,7 @@
                   <div id="portfolio_slide" class="carousel slide"
                     data-ride="carousel">
                     <div class="carousel-inner" role="listbox">
-                      <% @images.each_with_index do |image, index| %>
+                      <% @support.images.each_with_index do |image, index| %>
                         <div class="item <%= set_class_by_index index %>">
                             <%= image_tag image.image.url ,
                               class: "img-responsive img-centered
@@ -89,7 +93,7 @@
                         </div>
                       <% end %>
                       <ol class="carousel-indicators">
-                        <% @images.each_with_index do |image, index| %>
+                        <% @support.images.each_with_index do |image, index| %>
                           <li data-target="#portfolio_slide"
                             data-slide-to=<%= index %>
                             class="<%= set_class_by_index index %>">
@@ -145,6 +149,15 @@
         <div class="tab-pane active" id="member_of_project">
           <div class="row margin-bottom-50">
             <%= render "member_of_project", object: @project.users %>
+          </div>
+        </div>
+        <div class="tab-pane" id="comment">
+          <div class="row margin-bottom-50">
+            </br>
+            <%= render partial: "comments/comment_form", locals: {project: @project}%>
+          </div>
+          <div class="entries" id="entries">
+            <%= render @support.comments %>
           </div>
         </div>
         <div class="tab-pane" id="comment">
