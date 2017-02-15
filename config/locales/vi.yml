@@ -201,6 +201,14 @@ vi:
               blank: *blank
             name:
               blank: *blank
+        contact:
+          attributes:
+            email:
+              blank: *blank
+            title:
+              blank: *blank
+            name:
+              blank: *blank
         project:
           attributes:
             name:

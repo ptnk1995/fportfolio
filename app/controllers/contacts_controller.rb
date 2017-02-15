@@ -1,5 +1,6 @@
 class ContactsController < ApplicationController
   def new
+    @contact = Contact.new
     @key = Settings.link_map + ENV["GOOGLE_API_KEY"]
   end
 
@@ -11,7 +12,7 @@ class ContactsController < ApplicationController
       redirect_to root_path
     else
       flash[:error] = t ".fail"
-      redirect_to :back
+      render :new
     end
   end
 

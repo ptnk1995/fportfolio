@@ -12,6 +12,10 @@ project:
   server_information_length: 100
   platform_length: 100
   pm_url_length: 100
+contact:
+  name_length: 50
+  email_length: 30
+  title_length: 60
 per_page:
   projects: 20
   blog: 4

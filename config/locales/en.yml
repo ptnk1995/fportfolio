@@ -195,6 +195,14 @@ en:
               blank: "cannot be blank"
             name:
               blank: "cannot be blank"
+        contact:
+          attributes:
+            email:
+              blank: "cannot be blank"
+            title:
+              blank: "cannot be blank"
+            name:
+              blank: "cannot be blank"
   sologan:
     first: "Awesome with us"
     second: "creative world"
