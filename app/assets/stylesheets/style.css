@@ -218,10 +218,6 @@ img.raty-cancel {
   border-radius: 0;
 }
 
-#slider{
-  margin-top: 80px;
-}
-
 #home-carousel  .item {
   background-position: center top;
   background-repeat: no-repeat;
@@ -407,7 +403,6 @@ img.raty-cancel {
 }
 
 #our-works {
-  padding-top: 100px;
   padding-bottom: 120px;
 }
 
@@ -1126,11 +1121,6 @@ label {
   transition-property:transform, opacity;
 }
 
-#our-works {
-  padding-top: 100px;
-  padding-bottom: 120px;
-}
-
 .portfolio-wrapper ul.filter {
   list-style: none;
   padding: 0;
@@ -1441,11 +1431,6 @@ label {
 
 #fun-facts .fun-fact p {
   font-size: 16px;
-}
-
-#contact {
-  padding-top: 120px;
-  padding-bottom: 20px;
 }
 
 .contact-info .contact-content {
