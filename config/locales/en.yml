@@ -16,6 +16,7 @@ en:
   terms_privacy: "Terms & Privacy"
   sign_in: "Sign in"
   show: "Show"
+  load_more: "Load More"
   lg_field_email: "youremail@gmail.com"
   lg_field_pass: "12345678"
   lg_field_name: "john kerry"
