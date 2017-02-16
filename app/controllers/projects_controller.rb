@@ -31,6 +31,12 @@ class ProjectsController < ApplicationController
     @message = Message.new
     if @project
       @support = Supports::ProjectSupport.new(@project)
+      @comments = @support.comments.order_by_newest
+        .page(params[:page]).per Settings.per_page.comment
+      respond_to do |format|
+        format.html
+        format.js
+      end
     else
       flash[:warning] = t "record_isnt_exist"
       redirect_to root_url

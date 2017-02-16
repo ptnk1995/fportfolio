@@ -9,6 +9,7 @@
               <div class="disable-cancela">
                 <%= rating_for @project, :rating, disable_after_rate: false, enable_half: true, cancel: false %>
               </div>
+              </br>
               <%= render partial: "shared/like_project",  locals: {project: @project, like: @support.likes(current_user)} %>
             </div>
             <div class="right">
@@ -157,8 +158,12 @@
             <%= render partial: "comments/comment_form", locals: {project: @project}%>
           </div>
           <div class="entries" id="entries">
-            <%= render @support.comments %>
+            <%= render @comments %>
           </div>
+          <center>
+            <%= link_to_next_page @comments, (t "load_more"), remote: true,
+             id: "load_more",class: "btn btn-primary" %>
+           </center>
         </div>
         <div class="tab-pane" id="comment">
         </div>

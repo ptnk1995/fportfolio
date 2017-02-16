@@ -45,6 +45,7 @@ en:
   send_mail_feedback: "Thank you for contacting Web.cc Customer Service.  We have received your email and our Customer Service team will be responding to you soon."
   comment_name: "Your name"
   comment_content: "Comment something"
+  like_button: "Like"
   contacts:
     create:
       success: "Thank you for contact with us, plese wait Customer Service team will be responding to you soon."
