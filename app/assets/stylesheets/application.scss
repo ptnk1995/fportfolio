@@ -27,3 +27,13 @@
 .margin-bottom-50 {
   margin-bottom: 50px !important;
 }
+
+.text-transform-none a {
+  text-transform: none !important;
+  font-weight: 0 !important;
+}
+
+.st-navbar ul li a:hover {
+  font-weight: 0 !important;
+  color: green;
+}
