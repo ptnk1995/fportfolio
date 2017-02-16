@@ -20,21 +20,17 @@
           <div class="row">
             <% if current_user.present? %>
               <div class="col-sm-6">
-                <%= f.label :name %>
-                <%= f.text_field :name, value: current_user.name, class: "form-control" %>
+                <%= f.text_field :name, value: current_user.name, class: "form-control", placeholder: t("name") %>
               </div>
               <div class="col-sm-6">
-                <%= f.label :email %>
-                <%= f.email_field :email, value: current_user.email, class: "form-control" %>
+                <%= f.email_field :email, value: current_user.email, class: "form-control", placeholder: t("email") %>
               </div>
             <% else %>
               <div class="col-sm-6">
-                <%= f.label :name %>
-                <%= f.text_field :name, class: "form-control" %>
+                <%= f.text_field :name, class: "form-control", placeholder: t("name") %>
               </div>
               <div class="col-sm-6">
-                <%= f.label :email %>
-                <%= f.email_field :email, class: "form-control" %>
+                <%= f.email_field :email, class: "form-control", placeholder: t("email") %>
               </div>
             <% end %>
             <div class="col-sm-12">
@@ -47,7 +43,7 @@
             </div>
             <div class="col-sm-12">
               </br>
-              <%= f.submit (t "send_message"), class: "send-message-button" %>
+              <%= f.submit (t "send_message"), class: "btn btn-send" %>
             </div>
           </div>
         <% end %>

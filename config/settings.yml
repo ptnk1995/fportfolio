@@ -37,3 +37,4 @@ private: "private"
 related_item: 3
 truncate:
   biography: 55
+languages: {en: "English", vi: "Tiếng Việt", ja: "日本語"}

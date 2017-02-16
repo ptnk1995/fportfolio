@@ -22,7 +22,6 @@
   }
 
   #our-team, #pricing, #our-works, #services, #contact{
-    padding-top: 110px;
     padding-bottom: 100px;
   }
 }
@@ -63,11 +62,6 @@
 
   .scroll-up {
     display: none !important;
-  }
-
-  #our-team, #pricing, #our-works, #services, #contact {
-    padding-top: 100px;
-    padding-bottom: 100px;
   }
 
   #fun-facts .col-md-3:nth-child(2) .fun-fact {
@@ -133,7 +127,6 @@
   }
 
   #contact {
-    padding-top: 100px;
     padding-bottom: 100px;
   }
 
