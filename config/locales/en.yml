@@ -1,5 +1,6 @@
 en:
   project_not_found: "Project not found"
+  user_not_found: "User not found"
   available: "User is available in your project"
   log_out: "Log out"
   social_login: "Login with social"
@@ -134,6 +135,9 @@ en:
       search: "Search"
       search_user: "Search Users"
       no_user_found: "There are no users containing the term(s) "
+    edit:
+      save: "Edit"
+      cancel: "Cancel"
   participates:
     created: "Member was successfully added."
     create_failed: "Member was add failed "

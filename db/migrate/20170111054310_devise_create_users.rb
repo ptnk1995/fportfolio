@@ -10,6 +10,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       t.string :uid
       t.string :avatar
       t.string :cover_photo
+      t.string :phone
       ## Database authenticatable
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""

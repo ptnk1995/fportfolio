@@ -85,9 +85,25 @@
   width: 100%;
 }
 
+.main-box-header {
+  margin: auto;
+  width: 150px;
+}
+
+.file-field-user {
+  margin: 10px;
+}
+
 .job-company-info {
   padding: 0 10px;
   width: 80%;
+  border-right: dotted 1px #fff;
+  display: inline-block;
+}
+
+.job-company-info-edit {
+  padding: 0 10px;
+  width: 100%;
   border-right: dotted 1px #fff;
   display: inline-block;
 }

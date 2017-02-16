@@ -2,7 +2,8 @@ vi:
   dictionary:
   too_long: &too_long " quá dài"
   blank: &blank " không được trống"
-  project_not_found: "Du An khong ton tai"
+  project_not_found: "Dự án không tồn tại"
+  user_not_found: "Người dùng không tồn tại"
   available: "Thành Viên này đã có trong dự án của bạn ! "
   log_out: "Đăng xuất"
   social_login: "Đăng nhập qua tài khoản Mạng Xã Hội"
@@ -12,7 +13,7 @@ vi:
   user: "User"
   user_name: "User name"
   email: "Email "
-  user_position: "vị trí"
+  user_position: "Vị Trí"
   password: "Mật khẩu *"
   password_confirmation: "nhập lại password *"
   agree_account: "đồng ý tạo tài khoản "
@@ -121,7 +122,7 @@ vi:
       save: "Tạo dự án"
       reset: "Làm mới"
     edit:
-      save: "Lưu"
+      save: "Xác nhận lưu"
       cancel: "Hủy bỏ"
   users:
     label_position: "Vị trí của họ trong project "
@@ -141,6 +142,9 @@ vi:
       search: "Tìm kiếm"
       search_user: "Tìm kiếm thành viên"
       no_user_found: "Không tìm thấy bắt cứ thành viên nào có kì tự "
+    edit:
+      save: "Xác nhận lưu"
+      cancel: "Hủy bỏ"
   participates:
     created: "Thêm thành viên thành công."
     create_failed: "Thêm thành viên thất bại ."
