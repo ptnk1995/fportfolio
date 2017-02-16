@@ -8,6 +8,9 @@ Rails.application.routes.draw do
     resources :projects do
       resources :users
     end
+    namespace :admin do
+      root "static_pages#index"
+    end
     resources :users
     resources :blogs
     resources :news
