@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170213035005) do
+ActiveRecord::Schema.define(version: 20170206060406) do
 
   create_table "attachments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "path"
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20170213035005) do
 
   create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
-    t.integer  "target_type"
+    t.string   "target_type"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(version: 20170213035005) do
 
   create_table "comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "target_id"
-    t.integer  "target_type"
+    t.string   "target_type"
     t.string   "name"
     t.text     "content",     limit: 65535
     t.datetime "created_at",                null: false
@@ -82,7 +82,7 @@ ActiveRecord::Schema.define(version: 20170213035005) do
 
   create_table "images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "target_id"
-    t.integer  "target_type"
+    t.string   "target_type"
     t.string   "image"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
@@ -90,7 +90,7 @@ ActiveRecord::Schema.define(version: 20170213035005) do
 
   create_table "likes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "target_id"
-    t.integer  "target_type"
+    t.string   "target_type"
     t.integer  "user_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
@@ -117,10 +117,10 @@ ActiveRecord::Schema.define(version: 20170213035005) do
 
   create_table "participates", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.boolean  "is_accept"
-    t.string   "description"
+    t.string   "position"
     t.integer  "project_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.integer  "user_id"
     t.index ["project_id"], name: "index_participates_on_project_id", using: :btree
     t.index ["user_id"], name: "index_participates_on_user_id", using: :btree
@@ -129,10 +129,10 @@ ActiveRecord::Schema.define(version: 20170213035005) do
   create_table "posts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
     t.text     "content",     limit: 65535
-    t.integer  "target_type"
+    t.string   "target_type"
     t.string   "image"
-    t.integer  "category_id"
     t.integer  "user_id"
+    t.integer  "category_id"
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
     t.index ["category_id"], name: "index_posts_on_category_id", using: :btree
@@ -151,9 +151,9 @@ ActiveRecord::Schema.define(version: 20170213035005) do
     t.integer  "category_id"
     t.string   "private_attributes"
     t.boolean  "is_suggest"
+    t.string   "pm_url"
     t.datetime "created_at",                       null: false
     t.datetime "updated_at",                       null: false
-    t.string   "pm_url"
     t.index ["category_id"], name: "index_projects_on_category_id", using: :btree
   end
 
@@ -201,7 +201,7 @@ ActiveRecord::Schema.define(version: 20170213035005) do
 
   create_table "target_techniques", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "target_id"
-    t.integer  "target_type"
+    t.string   "target_type"
     t.integer  "technique_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
@@ -220,21 +220,22 @@ ActiveRecord::Schema.define(version: 20170213035005) do
     t.string   "position"
     t.text     "biography",              limit: 65535
     t.string   "private_attribute"
-    t.boolean  "is_admin",                             default: false
     t.string   "provider"
     t.string   "uid"
-    t.string   "email",                                default: "",    null: false
-    t.string   "encrypted_password",                   default: "",    null: false
+    t.string   "avatar"
+    t.string   "cover_photo"
+    t.string   "email",                                default: "", null: false
+    t.string   "encrypted_password",                   default: "", null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",                        default: 0,     null: false
+    t.integer  "sign_in_count",                        default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at",                                           null: false
-    t.datetime "updated_at",                                           null: false
+    t.datetime "created_at",                                        null: false
+    t.datetime "updated_at",                                        null: false
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
@@ -254,6 +255,7 @@ ActiveRecord::Schema.define(version: 20170213035005) do
   add_foreign_key "participates", "projects"
   add_foreign_key "participates", "users"
   add_foreign_key "posts", "categories"
+  add_foreign_key "posts", "users"
   add_foreign_key "projects", "categories"
   add_foreign_key "socials", "users"
   add_foreign_key "target_techniques", "techniques"

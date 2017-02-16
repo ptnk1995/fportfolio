@@ -6,10 +6,10 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       t.string :position
       t.text :biography
       t.string :private_attribute
-      t.boolean :is_admin, default: false
       t.string :provider
       t.string :uid
-
+      t.string :avatar
+      t.string :cover_photo
       ## Database authenticatable
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
