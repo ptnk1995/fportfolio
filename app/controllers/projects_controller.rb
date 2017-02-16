@@ -30,8 +30,7 @@ class ProjectsController < ApplicationController
     @project = Project.find_by id: params[:id]
     @message = Message.new
     if @project
-      @images = @project.images
-      @participates = @project.participates.merge(Participate.accepted)
+      @support = Supports::ProjectSupport.new(@project)
     else
       flash[:warning] = t "record_isnt_exist"
       redirect_to root_url

@@ -44,6 +44,8 @@ vi:
   send_message: "Gửi tin nhắn"
   dear: "Chào"
   send_mail_feedback: "Cảm ơn bạn đã liên hệ với dịch vụ khách hàng Web.cc. Chúng tôi đã nhận được email của bạn và đội ngũ dịch vụ khách hàng của chúng tôi sẽ được trả lời các bạn sớm."
+  comment_name: "Tên của bạn"
+  comment_content: "Nội dung bình luận"
   contacts:
     create:
       success: "Cảm ơn bạn đã liên lạc với chúng tôi, vui lòng đợi nhóm dịch vụ khách hàng sẽ phản hồi với bạn sớm."
