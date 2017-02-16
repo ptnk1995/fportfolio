@@ -11,8 +11,11 @@
   </div>
 </section>
 <div class="container">
-  <div class="ui link cards">
+  <div class="ui link cards" id= "users">
     <%= render @users %>
   </div>
-  <%= paginate @users %>
+  <center>
+  <%= link_to_next_page @users, (t "load_more"), remote: true, id: "load_more",
+    class: "btn btn-primary" %>
+  </center>
 </div>
