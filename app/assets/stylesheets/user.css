@@ -2,7 +2,7 @@
 /*----------------- Testimonials CSS -----------------*/
 /*----------------------------------------------------*/
 .testimonial{
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .testimonial-section {
@@ -332,4 +332,32 @@
 .search-form {
   margin-bottom: 30px;
   margin-top: 30px;
+}
+
+.custom-card {
+  width: 270px !important;
+  height: 380px !important;
+  margin-bottom: 30px !important;
+}
+
+.user-index-avatar {
+  min-height: 193px;
+}
+
+.ui.celled.table tr td {
+  border-left: none !important;
+}
+
+.img-profile-user {
+  height: 200px !important;
+  width: 200px;
+  margin-top: 20px;
+}
+
+.width-100 {
+  width: 100% !important;
+}
+
+.float-right {
+  float: right;
 }

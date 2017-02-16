@@ -1,22 +1,13 @@
 <section id="slider">
   <div id="home-carousel" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
-      <div class="item active introduce-first">
+      <div class="item active">
+        <%= image_tag "framgia.png", class: "resize-slide" %>
         <div class="carousel-caption container">
         </div>
       </div>
-      <div class="item introduce-second">
-        <div class="carousel-caption container">
-          <div class="row">
-            <div class="col-sm-7">
-              <h1><%= t "sologan.first" %></h1>
-              <h2><%= t "sologan.second" %></h2>
-              <p><%= t "footer.description" %></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="item introduce-third">
+      <div class="item">
+        <%= image_tag "framgia.png", class: "resize-slide" %>
         <div class="carousel-caption container">
           <div class="row">
             <div class="col-sm-7">
@@ -27,7 +18,20 @@
           </div>
         </div>
       </div>
-      <div class="item introduce-fourth">
+      <div class="item">
+        <%= image_tag "framgia.png", class: "resize-slide" %>
+        <div class="carousel-caption container">
+          <div class="row">
+            <div class="col-sm-7">
+              <h1><%= t "sologan.first" %></h1>
+              <h2><%= t "sologan.second" %></h2>
+              <p><%= t "footer.description" %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <%= image_tag "framgia.png", class: "resize-slide" %>
         <div class="carousel-caption container">
           <div class="row">
             <div class="col-sm-7">
@@ -191,27 +195,27 @@
         <div class="fun-fact text-center">
           <h3>
             <i class="fa fa-thumbs-o-up"></i>
-            <span class="st-counter"><%= Settings.employees %></span>
+            <span class="st-counter"><%= User.count %></span>
           </h3>
           <p><%= t "employee" %></p>
         </div>
       </div>
       <div class="col-sm-6 col-md-3">
         <div class="fun-fact text-center">
-          <h3><i class="fa fa-briefcase fa-6"></i> <span class="st-counter"><%= Settings.completed_project %></span></h3>
+          <h3><i class="fa fa-briefcase fa-6"></i> <span class="st-counter"><%= Project.count %></span></h3>
           <p><%= t "complete_project" %></p>
         </div>
       </div>
       <div class="col-sm-6 col-md-3">
         <div class="fun-fact text-center">
-          <h3><i class="fa fa-code"></i> <span class="st-counter"><%= Settings.client %></span></h3>
-          <p><%= t "client" %></p>
+          <h3><i class="fa fa-code"></i> <span class="st-counter"><%= Post.news.count %></span></h3>
+          <p><%= t "news" %></p>
         </div>
       </div>
       <div class="col-sm-6 col-md-3">
         <div class="fun-fact text-center">
-          <h3><i class="fa fa-coffee"></i> <span class="st-counter"><%= Settings.cup_of_coffee %></span></h3>
-          <p><%= t "cup_of_coffee" %></p>
+          <h3><i class="fa fa-coffee"></i> <span class="st-counter"><%= Post.blog.count %></span></h3>
+          <p><%= t "blogs" %></p>
         </div>
       </div>
     </div>

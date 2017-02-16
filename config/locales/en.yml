@@ -1,4 +1,5 @@
 en:
+  succeed: "Succeed"
   project_not_found: "Project not found"
   user_not_found: "User not found"
   available: "User is available in your project"
@@ -66,6 +67,7 @@ en:
       contact: "Contact"
       about_team: "About us"
       create_account: "Create Account"
+      create_project: "Create Project"
   footer:
     menu:
       home: "Home |"
@@ -251,3 +253,10 @@ en:
   name: "Name"
   phone-user: "Phone"
   online: "Online"
+  datetime:
+    distance_in_words:
+      x_minutes:
+        one: "1 minutes ago"
+        other: "%{count} minutes ago"
+      less_than_x_minutes: "just now"
+      about_x_hours: "%{count} hours ago"

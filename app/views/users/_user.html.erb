@@ -1,6 +1,6 @@
-<div class="card" style="width: 270px; height: 380px; margin-bottom: 30px">
+<div class="card custom-card"">
   <div class="image">
-    <%= image_tag user.avatar.url,
+    <%= image_tag user.avatar.url, class: "user-index-avatar",
       data: {toggle: "modal", target: "#user_modal#{user.id}"} %>
   </div>
   <div class="content">
