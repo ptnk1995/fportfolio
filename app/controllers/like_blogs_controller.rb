@@ -4,6 +4,7 @@ class LikeBlogsController < ApplicationController
   def create
     @like = @blog.likes.build user_id: current_user.id
     if @like.save
+      @notification = create_notification @like
       respond_to do |format|
         format.js
       end
@@ -20,6 +21,12 @@ class LikeBlogsController < ApplicationController
   end
 
   private
+
+  def create_notification like
+    return if like.target.user_id == current_user.id
+      like.target.notifications.create! user_id: like.target.user_id, 
+      user_create_id: like.user_id, notice_type: Settings.like
+  end
 
   def load_blog
     @blog = Post.find_by id: params[:id]

@@ -1,0 +1,11 @@
+<div class = "notification">
+  <div class = "checked-<%= notification.checked %>">
+    <%= image_tag notification.user_create.avatar.url, 
+      class: "img-notification" %><%= notification.user_create.name %> 
+    <%= notification.notice_type %> 
+    <%= link_to notification.notificationable.title, 
+      blog_path(id: notification.notificationable.id, 
+      notification_id: notification.id) %>
+    <%= time_ago_in_words(notification.created_at) %>
+  </div>
+</div>

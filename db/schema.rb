@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170206060406) do
+ActiveRecord::Schema.define(version: 20170214044735) do
 
   create_table "attachments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "path"
@@ -105,6 +105,22 @@ ActiveRecord::Schema.define(version: 20170206060406) do
     t.datetime "updated_at", null: false
     t.index ["project_id"], name: "index_messages_on_project_id", using: :btree
     t.index ["user_id"], name: "index_messages_on_user_id", using: :btree
+  end
+
+  create_table "notifications", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "user_create_id"
+    t.integer  "notificationable_id"
+    t.string   "notificationable_type"
+    t.string   "notice_type"
+    t.boolean  "read",                  default: false
+    t.boolean  "checked",               default: false
+    t.integer  "user_id"
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
+    t.index ["notificationable_id", "notificationable_type"], name: "fk_notificationables", using: :btree
+    t.index ["read", "checked"], name: "index_notifications_on_read_and_checked", using: :btree
+    t.index ["user_create_id"], name: "index_notifications_on_user_create_id", using: :btree
+    t.index ["user_id"], name: "index_notifications_on_user_id", using: :btree
   end
 
   create_table "overall_averages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -253,6 +269,7 @@ ActiveRecord::Schema.define(version: 20170206060406) do
   add_foreign_key "likes", "users"
   add_foreign_key "messages", "projects"
   add_foreign_key "messages", "users"
+  add_foreign_key "notifications", "users"
   add_foreign_key "participates", "projects"
   add_foreign_key "participates", "users"
   add_foreign_key "posts", "categories"
