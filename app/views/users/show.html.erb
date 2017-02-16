@@ -1,10 +1,26 @@
+<style type="text/css">
+  .ui.celled.table tr td {
+    border-left: none !important;
+  }
+
+  .img-profile-user {
+    height: 200px !important;
+    width: 200px;
+    margin-top: 20px;
+
+  }
+
+  .width-100 {
+    width: 100% !important;
+  }
+</style>
 <div class="container margin-top-2">
   <div class="row margin-top-100">
     <div class="col-lg-8 col-md-7 col-sm-7 card margin-left-25">
       <div class="mywork-reg">
         <div class="mywork-form-reg main-detail-job">
           <div class="company-info">
-            <div class="job-company-info">
+            <div class="">
               <h1 class="comp-name"><%= t "profile" %></h1>
               <div class="boxcontact-copmpany">
                 <table class="ui very basic collapsing celled table width-100">
@@ -75,17 +91,15 @@
         </div>
       </div>
     </div>
-    <div class="col-lg-3 col-md-4 col-sm-4 card margin-left-25">
+    <div class="col-lg-3 col-md-4 col-sm-4 card margin-left-25" style="height: 350px;">
       <div class="main-box clearfix">
-        <header class="main-box-header clearfix">
-          <h3><%= @user.name %></h3>
-        </header>
         <div class="main-box-body clearfix">
-          <div class="profile-status text-center">
-            <i class="fa fa-circle "></i> <%= t "online" %>
-          </div>
           <%= image_tag @user.avatar.url, class: "profile-img img-responsive
             center-block img-profile-user" %>
+          <header class="main-box-header clearfix text-center">
+            <h3><%= @user.name %></h3>
+          </header>
+
           <div class="profile-stars center">
             <i class="fa fa-star"></i>
             <i class="fa fa-star"></i>

@@ -1823,22 +1823,6 @@ ul.content-flickr li {
   width: 600px !important;
 }
 
-.introduce-first {
-  background-image: url(/assets/slider/1.jpg);
-}
-
-.introduce-second {
-  background-image: url('/assets/slider/1.jpg');
-}
-
-.introduce-third {
-  background-image: url('/assets/slider/3.jpg') !important;
-}
-
-.introduce-fourth {
-  background-image: url('/assets/slider/4.jpg') !important;
-}
-
 .left {
   float: left;
 }
