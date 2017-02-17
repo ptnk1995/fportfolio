@@ -28,6 +28,24 @@
               <% if current_user.has_role? :admin %>
                 <li><%= link_to t("header.menu.create_account"), new_user_path(locale: I18n.locale) %></li>
               <% end %>
+              <li class="dropdown">
+                <%= link_to root_path, class: "dropdown-toggle", id: "noti-count", data: {toggle: "dropdown"},
+                  aria: {haspopup: "true", expanded: "false"} do %>
+                  <span class="fa fa-globe"></span>
+                  <span class="badge badge-danger" data-noti-count="<%= user_signed_in? ? current_user.notifications.uncheck : 0 %>">
+                    <%= user_signed_in? ? current_user.notifications.uncheck : 0 %>
+                  </span>
+                  <span class="caret"></span>
+                <% end %>
+                <% if user_signed_in? %>
+                  <ul class="dropdown-menu dropdown-notification scrollable-menu ui list" id="user-notifications">
+                    <div class="pre-scrollable">
+                      <p><%= t "notification" %></p>
+                      <%= render current_user.notifications.order_by_newest %>
+                    </div>
+                  </ul>
+                <% end %>
+              </li>
             </li>
           <% else %>
             <li><%= link_to t("login"), new_user_session_path(locale: I18n.locale) %></li>

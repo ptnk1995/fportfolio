@@ -14,6 +14,7 @@ class User < ApplicationRecord
   has_many :certifications, through: :certificate_users
   has_many :likes, as: :target
   has_many :target_techniques, as: :target
+  has_many :notifications, dependent: :destroy
 
   mount_uploader :avatar, ImageUploader
   mount_uploader :cover_photo, ImageUploader

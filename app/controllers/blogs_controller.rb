@@ -24,6 +24,10 @@ class BlogsController < ApplicationController
       flash[:warning] = t "record_isnt_exist"
       redirect_to root_url
     end
+    if params[:notification_id]
+      @notification = Notification.find_by id: params[:notification_id]
+      @notification.update(checked: true) unless @notification.nil?
+    end
   end
 
   private
