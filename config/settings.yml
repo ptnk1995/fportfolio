@@ -17,6 +17,7 @@ per_page:
   blog: 4
   user: 16
   blog: 2
+  comment: 4
 format:
   image: ["jpg", "jpeg", "gif", "png"]
   image_size: 0.5
