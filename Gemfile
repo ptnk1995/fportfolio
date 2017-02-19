@@ -32,7 +32,11 @@ gem "rolify"
 gem "cocoon"
 gem "semantic-ui-sass", git: "https://github.com/doabit/semantic-ui-sass.git"
 gem "ransack"
-
+gem "ckeditor"
+gem "paperclip"
+gem 'wow-rails'
+gem "rails-assets-growl", source: "https://rails-assets.org"
+gem "animate-rails"
 group :development, :test do
   gem "pry-rails"
   gem "byebug", platform: :mri

@@ -55,6 +55,56 @@
               <% end %>
             </ul>
           </li>
+          <li class="menu_notifications">
+            <%= link_to "#" do %>
+              <i class="fa fa-bell" aria-hidden="true"></i>
+              <%= t ".menu_notifications" %>
+            <% end %>
+            <ul class="dropdown-menu noti-custom">
+              <li class="external">
+                  <h3><%= t ".menu_notifications" %></h3>
+                  <%= link_to t(".view_all"), "#" %>
+              </li>
+              <li>
+                <ul class="dropdown-menu-list scroller"
+                  data-handle-color="#637283">
+                  <li>
+                    <%= link_to "#" do %>
+                      <span class="photo">
+                        <%= image_tag "", class: "img-circle" %>
+                      </span>
+                      <span class="subject">
+                        <span class="time"><%= t ".time_now" %></span>
+                      </span>
+                      <span class="message"><%= t ".message" %></span>
+                    <% end %>
+                  </li>
+                  <li>
+                    <%= link_to "#" do %>
+                      <span class="photo">
+                        <%= image_tag "", class: "img-circle" %>
+                      </span>
+                      <span class="subject">
+                        <span class="time"><%= t ".time_now" %></span>
+                      </span>
+                      <span class="message"><%= t ".message" %></span>
+                    <% end %>
+                  </li>
+                  <li>
+                    <%= link_to "#" do %>
+                      <span class="photo">
+                        <%= image_tag "framgia.png", class: "img-circle" %>
+                      </span>
+                      <span class="subject">
+                        <span class="time"><%= t ".time_now" %></span>
+                      </span>
+                      <span class="message"><%= t ".message" %></span>
+                    <% end %>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>

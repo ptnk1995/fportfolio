@@ -18,10 +18,15 @@
 //= require project
 //= require jquery.raty
 //= require ratyrate
-//= require_tree .
 //= require bootstrap-modal
 //= require bootstrap-modalmanager
 //= require social-share-button
 //= require underscore
 //= require gmaps/google
 //= require cocoon
+//= require ckeditor/init
+//= require bootstrap
+//= require wow
+//= require growl
+//= require turbolinks
+//= require_tree .

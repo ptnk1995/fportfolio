@@ -25,7 +25,26 @@ class NewsController < ApplicationController
     end
   end
 
+  def new
+  end
+
+  def create
+    @new = current_user.posts.new new_params
+    if current_user.save
+      flash[:success] = t "blogs.created"
+      redirect_to news_index_path
+    else
+      flash[:danger] = t "blogs.create_failed"
+      render :new
+    end
+end
+
   private
+  def new_params
+    params.require(:post).permit(:title, :content, :image,
+      :user_id, :category_id).merge(target_type: Post.target_types[:news])
+  end
+
   def load_categories
     @categories = Category.news
   end

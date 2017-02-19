@@ -42,7 +42,7 @@
                   </div>
               </div>
               <p class="description">
-                <%= new_item.content.truncate(Settings.description) %>...
+                <%= raw new_item.content.truncate(Settings.description) %>...
               </p>
             </div>
           </li>

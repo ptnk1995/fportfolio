@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
   post "/rate" => "rater#create", as: "rate"
   devise_for :users, controllers: {omniauth_callbacks: "callbacks",
     registrations: "users"}
@@ -17,5 +18,6 @@ Rails.application.routes.draw do
     resources :contacts
     resources :categories
     resources :like_blogs
+    resources :posts
   end
 end
