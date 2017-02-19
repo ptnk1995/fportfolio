@@ -225,7 +225,10 @@ en:
   views:
     pagination:
       previous: "<"
-      first: "<<"
+      first: "
+
+
+      "
       next: ">"
       last: ">>"
   format:
@@ -261,6 +264,8 @@ en:
         other: "%{count} minutes ago"
       less_than_x_minutes: "just now"
       about_x_hours: "%{count} hours ago"
+  notifications: "Notifications"
+  view_all: "View all"
   back_home: "Back home"
   write_blog: "Write blog"
   write_new: "Write new"

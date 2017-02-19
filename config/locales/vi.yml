@@ -296,6 +296,8 @@ vi:
       x_days:
         one: "1 ngày trước"
         other: "%{count} ngày trước"
+  notifications: "Các thông báo"
+  view_all: "Xem tất cả"
   back_home: "Trở lại trang chủ"
   write_blog: "Viết bài viết"
   write_new: "Viết tin tức"
