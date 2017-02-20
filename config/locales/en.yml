@@ -125,6 +125,9 @@ en:
       add_a_photo: "Add a Photo"
       save: "Save"
       reset: "Reset"
+    index:
+      search_project: "Search Projects"
+      all: "All"
   users:
     label_position: "Position of him/her for your project:"
     about_you: "More about him/her"
@@ -278,6 +281,9 @@ en:
         other: "%{count} minutes ago"
       less_than_x_minutes: "just now"
       about_x_hours: "%{count} hours ago"
+      x_days:
+        one: "1 day ago"
+        other: "%{count} days ago"
   notifications: "Notifications"
   view_all: "View all"
   back_home: "Back home"

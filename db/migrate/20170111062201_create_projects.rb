@@ -13,6 +13,7 @@ class CreateProjects < ActiveRecord::Migration[5.0]
       t.string :private_attributes
       t.boolean :is_suggest
       t.string :pm_url
+      t.integer :branch
 
       t.timestamps
     end

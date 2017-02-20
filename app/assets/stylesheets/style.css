@@ -19,6 +19,10 @@ body {
   width: 20%;
 }
 
+.rate-project {
+  text-align: center;
+}
+
 .like-button {
   height: 20px;
   width: 20px;
