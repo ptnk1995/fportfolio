@@ -1,4 +1,5 @@
 vi:
+  succeed: "Thành công"
   dictionary:
   too_long: &too_long " quá dài"
   blank: &blank " không được trống"
@@ -28,7 +29,7 @@ vi:
   rg_field_position: "Ruby on Rails"
   menu_sign_in: "Đăng nhập"
   menu_sign_up: "Đăng ký"
-  menu_edit_profile: "Chỉnh sửa trang cá nhân"
+  menu_edit_profile: "Chỉnh sửa"
   menu_sign_out: "Đăng xuất"
   title_home: "Danh mục đầu tư"
   about_us: "Đội ngũ phát triển"
@@ -68,6 +69,7 @@ vi:
       contact: "Liên hệ"
       about_team: "Chúng tôi"
       create_account: "Tạo tài khoản"
+      create_project: "Tạo dự án"
   footer:
     menu:
       home: "Trang chủ |"
@@ -175,7 +177,7 @@ vi:
   member_of_project: "Thành viên của dự án"
   close: "Đóng"
   join_project: "Tham gia"
-  server_informations: "Cơ sở dữ liệu"
+  server_informations: "Thông tin máy chủ"
   core_features: "Công nghệ và framework"
   record_isnt_exist: "Không tìm thấy thao tác này"
   errors:
@@ -266,7 +268,7 @@ vi:
   view:
     blog: "Xem bài viết"
     new: "Xem tin tức"
-  comments: "Viết bình luận"
+  comments: "Bình luận"
   edit_project: "Chỉnh sửa dự án"
   delete_project: "Xóa dự án này"
   add_member_project: "Thêm thành viên vào dự án"
@@ -279,7 +281,17 @@ vi:
   rank: "Cấp bậc"
   send_message: "Gởi tin nhắn"
   date_member_join: "Ngày tham gia"
-  profile: "Thông tin cá nhân"
+  profile: "Hồ sơ"
   name: "Họ tên"
   phone-user: "Số điện thoại"
   online: "Đang hoạt động"
+  datetime:
+    distance_in_words:
+      x_minutes:
+        one: "1 phút trước"
+        other: "%{count} phút trước"
+      less_than_x_minutes: "ít hơn một phút"
+      about_x_hours: "%{count} giờ trước"
+      x_days:
+        one: "1 ngày trước"
+        other: "%{count} ngày trước"

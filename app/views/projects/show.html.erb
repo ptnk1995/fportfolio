@@ -10,7 +10,7 @@
                 <%= rating_for @project, :rating, disable_after_rate: false, enable_half: true, cancel: false %>
               </div>
               </br>
-              <%= render partial: "shared/like_project",  locals: {project: @project, like: @support.likes(current_user)} %>
+
             </div>
             <div class="right">
               <div class="slideouticons">
@@ -114,58 +114,82 @@
         <div class="row info-project">
           <div class="col-md-12">
             <span class="feature-project">
-            </span><%= @project.description %>
+            </span><p id="project-description"><%= @project.description %></p>
           </div>
           <div class="col-md-12 padding-top-10">
             <p class="text-left">
-            <b> <%= t "server_informations" %>: </b><br />
-            <%= @project.server_information %></p>
+              <span class="glyphicon glyphicon glyphicon-th-large gold"></span>
+              <b> <%= t "server_informations" %>: </b><br />
+              <%= @project.server_information %>
+            </p>
           </div>
           <div class="col-md-12 padding-top-10">
             <p class="text-left">
-            <b> <%= t "core_features" %>: </b><br />
+              <span class="glyphicon glyphicon-star gold"></span>
+              <b> <%= t "core_features" %>: </b><br />
               <%= @project.core_features %>
             </p>
           </div>
           <div class="col-md-12 padding-top-10">
             <p class="text-left">
-            <b> <%= t "core_features" %>: </b><br />
-              <%= @project.core_features %>
+              <span class="glyphicon glyphicon-list-alt gold"></span>
+              <b> <%= t "platform" %>: </b><br />
+              <%= @project.platform %>
             </p>
           </div>
-      </div>
-    </div>
-  </div>
-  <div class="row margin-bottom-50">
-    <div class="nav-tabs-custom">
-      <ul class="nav nav-tabs">
-        <li class="active">
-          <%= link_to t("member_of_project") , "#member_of_project", data: {toggle: "tab"} %>
-        </li>
-        <li class="">
-          <%= link_to t("comments"), "#comment", data: {toggle: "tab"} %>
-        </li>
-      </ul>
-      <div class="tab-content">
-        <div class="tab-pane active" id="member_of_project">
-          <div class="row margin-bottom-50">
-            <%= render "member_of_project", object: @project.users %>
+          <div class="col-md-12 padding-top-10">
+            <p class="text-left">
+              <span class="glyphicon glyphicon-cloud gold"></span>
+              <b> <%= t "url" %>: </b><br />
+              <%= link_to @project.url, @project.url %>
+            </p>
+          </div>
+          <div class="col-md-12 padding-top-10">
+            <p class="text-left">
+              <span class="glyphicon glyphicon-globe gold"></span>
+              <b> <%= t "pm_url" %>: </b><br />
+              <%= link_to @project.pm_url, @project.pm_url %>
+            </p>
+          </div>
+          <div class="col-md-12 padding-top-10">
+            <p class="text-left">
+              <span class="glyphicon glyphicon-star gold"></span>
+              <b> <%= t "git_repository" %>: </b><br />
+              <%= link_to @project.git_repository, @project.git_repository %>
+            </p>
           </div>
         </div>
-        <div class="tab-pane" id="comment">
-          <div class="row margin-bottom-50">
-            </br>
-            <%= render partial: "comments/comment_form", locals: {project: @project}%>
+      </div>
+    </div>
+    <div class="row margin-bottom-50">
+      <div class="nav-tabs-custom">
+        <ul class="nav nav-tabs">
+          <li class="active">
+            <%= link_to t("member_of_project") , "#member_of_project", data: {toggle: "tab"} %>
+          </li>
+          <li class="">
+            <%= link_to t("comments"), "#comment", data: {toggle: "tab"} %>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="member_of_project">
+            <div class="row margin-bottom-50">
+              <%= render "member_of_project", object: @project.users %>
+            </div>
           </div>
-          <div class="entries" id="entries">
+          <div class="tab-pane" id="comment">
+            <div class="row margin-bottom-50">
+              </br>
+              <%= render partial: "comments/comment_form", locals: {project: @project}%>
+            </div>
+            <div class="entries" id="entries">
             <%= render @comments %>
           </div>
           <center>
             <%= link_to_next_page @comments, (t "load_more"), remote: true,
              id: "load_more",class: "btn btn-primary" %>
            </center>
-        </div>
-        <div class="tab-pane" id="comment">
+          </div>
         </div>
       </div>
     </div>

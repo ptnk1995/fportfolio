@@ -6,6 +6,16 @@
   border-radius: 7px;
 }
 
+.card-size {
+  width: 270px !important;
+  height: 380px !important;
+  margin-bottom: 50px !important;
+}
+
+.avatar-min-height {
+  min-height: 200px !important;
+}
+
 .detail-profile {
   float: left;
   margin-left: 10px;

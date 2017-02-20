@@ -50,22 +50,14 @@ u.add_role :admin
 end
 
 30.times do |i|
-  name  = "Member #{i+1}"
-  email = "Member#{i+1}@gmail.com"
+  name  = "member #{i+1}"
+  email = "user#{i+1}@gmail.com"
   user_name = "Username #{i+1}"
   password = "password123"
   position = "Developer"
   biography = "Rooms oh fully taken by worse do. Points afraid but may end law lasted.
   Was out laughter raptures returned outweigh."
   phone = "01212129827"
-
-  u = User.create!(name:  name,
-               email: email,
-               password: password,
-               position: position,
-               biography: biography,
-               user_name: user_name,
-               phone: phone)
 
   u = User.create!(name:  name, email: email, password: password, position: position,
     biography: biography, user_name: user_name, phone: phone)

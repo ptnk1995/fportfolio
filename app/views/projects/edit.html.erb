@@ -1,3 +1,15 @@
+<section id="page-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-title">
+          <h1><%= t "edit_project" %></h1>
+          <span class="st-border"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <%= form_for @project, url: project_path, html: {method: :put} do |f| %>
   <%= render "shared/error_messages", object: @project %>
   <section id="project">
@@ -69,7 +81,7 @@
                 </div>
                 <div class="form-group">
                   <div class="col-md-6">
-                    <table class="user-photo-form-edit">
+                    <table class="user-photo-form">
                       <%= f.fields_for :images do |image| %>
                         <%= render "image_fields", f: image %>
                       <% end %>

@@ -7,7 +7,7 @@ project:
   url_length: 100
   git_repository_length: 100
   core_features_length: 100
-  description_length: 300
+  description_length: 65555
   realease_note_length: 100
   server_information_length: 100
   platform_length: 100
