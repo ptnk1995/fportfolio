@@ -13,6 +13,7 @@ class Post < ApplicationRecord
 
   validates :title, presence: true
   validates :content, presence: true
+  validates :category, presence: true
 
   enum target_type: {blog: 0, news: 1}
 

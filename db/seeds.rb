@@ -1,4 +1,4 @@
-# This file should contain all the record creation needed to seed the database with its default values.
+=begin# This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
 # Examples:
@@ -67,3 +67,6 @@ end
     u.certificate_users.create!(user_id: u.id, certification_id: "#{e+1}")
   end
 end
+=end
+
+Project.new(name: "WSM", description: "Managing timesheet, leave,... in a working space", core_features: "Ruby", pm_url: "http://wsm.framgia.vn", is_suggest: true)

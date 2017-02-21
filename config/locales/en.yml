@@ -209,6 +209,14 @@ en:
               blank: "cannot be blank"
             name:
               blank: "cannot be blank"
+        post:
+          attributes:
+            title:
+              blank: "cannot be blank"
+            content:
+              blank: "cannot be blank"
+            category:
+              blank: "cannot be blank"
   sologan:
     first: "Awesome with us"
     second: "creative world"
@@ -290,3 +298,8 @@ en:
     created: "Blog was successfully created."
     create_failed: "Blog was create failed ."
   title: "Title"
+  flash:
+    news_created: "New was successfully created."
+    news_create_failed: "New was create failed ."
+  button:
+    save_new: "Save New"

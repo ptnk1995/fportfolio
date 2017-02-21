@@ -48,3 +48,4 @@ message_notice: "notice"
 message_alert: "alert"
 message_danger: "danger"
 description_markdown: 100
+description_new: 100

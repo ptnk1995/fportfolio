@@ -215,6 +215,14 @@ vi:
               blank: *blank
             name:
               blank: *blank
+        post:
+          attributes:
+            title:
+              blank: *blank
+            content:
+              blank: *blank
+            category:
+              blank: *blank
         project:
           attributes:
             name:
@@ -322,3 +330,8 @@ vi:
     created: " Tạo bài viết thành công ."
     create_failed: "Tạo bài viết thất bại ."
   title: "Tiêu đề"
+  flash:
+    news_created: "Đăng thông báo thành công ."
+    create_failed: "Đăng thông báo thất bại ."
+  button:
+    save_new: "Lưu tin tức"

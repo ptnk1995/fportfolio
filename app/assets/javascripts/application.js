@@ -31,3 +31,4 @@
 //= require cable
 //= require_tree ./channels
 //= require simplemde.min
+//= require ckeditor/init
