@@ -20,5 +20,8 @@ Rails.application.routes.draw do
     namespace :admin do
       root "static_pages#index", as: "root"
     end
+    resources :messages
   end
+
+  mount ActionCable.server => "/cable"
 end

@@ -314,6 +314,7 @@ DEPENDENCIES
   rails-assets-growl!
   ransack
   ratyrate
+  redis (~> 3.2)
   rolify
   sass-rails (~> 5.0)
   semantic-ui-sass!

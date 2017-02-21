@@ -45,6 +45,7 @@ vi:
   contact_cofirmation: "Xác nhận liên hệ"
   send_message: "Gửi tin nhắn"
   dear: "Chào"
+  chat_box: "Hộp Thoại"
   send_mail_feedback: "Cảm ơn bạn đã liên hệ với dịch vụ khách hàng Web.cc. Chúng tôi đã nhận được email của bạn và đội ngũ dịch vụ khách hàng của chúng tôi sẽ được trả lời các bạn sớm."
   comment_name: "Tên của bạn"
   comment_content: "Nội dung bình luận"
@@ -163,6 +164,8 @@ vi:
         server_information: "Server Thông Tin"
         git_repository: "Git Repository"
         realease_note: "Phiên Bản Hiện Tại"
+      messages:
+        content : "Nhập tin nhắn"
   introduce:
     portfolio: "Chúng tôi rất vinh dự khi có cơ hội hợp tác với các công ty
       hàng đầu, những đơn vị đã và đang đóng góp các giá trị to lớn trong ngành
@@ -181,6 +184,9 @@ vi:
   server_informations: "Thông tin máy chủ"
   core_features: "Công nghệ và framework"
   record_isnt_exist: "Không tìm thấy thao tác này"
+  messages:
+    message:
+      chat_time: "%H:%M"
   errors:
     messages:
       required: "Phải tồn tại"

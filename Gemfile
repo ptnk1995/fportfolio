@@ -35,6 +35,8 @@ gem "semantic-ui-sass", git: "https://github.com/doabit/semantic-ui-sass.git"
 gem "ransack"
 gem "wow-rails"
 gem "animate-rails"
+gem "redis", "~> 3.2"
+gem "puma", "~> 3.0"
 
 group :development, :test do
   gem "pry-rails"

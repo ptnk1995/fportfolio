@@ -15,7 +15,6 @@ Rails.application.configure do
   # Enable/disable caching. By default caching is disabled.
   if Rails.root.join('tmp/caching-dev.txt').exist?
     config.action_controller.perform_caching = true
-
     config.cache_store = :memory_store
     config.public_file_server.headers = {
       'Cache-Control' => 'public, max-age=172800'
@@ -26,6 +25,9 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+  Rails.application.configure do
+    config.action_cable.url = "ws://localhost:3000/cable"
+  end
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 
@@ -44,7 +46,7 @@ Rails.application.configure do
 
   # Suppress logger output for asset requests.
   config.assets.quiet = true
-
+  config.enable_processing = true
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 

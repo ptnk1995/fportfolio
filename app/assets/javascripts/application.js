@@ -16,6 +16,7 @@
 //= require jquery.turbolinks
 //= require login
 //= require project
+//= require chatbox
 //= require jquery.raty
 //= require ratyrate
 //= require wow
@@ -27,3 +28,5 @@
 //= require gmaps/google
 //= require cocoon
 //= require growl
+//= require cable
+//= require_tree ./channels
