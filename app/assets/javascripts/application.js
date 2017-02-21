@@ -30,3 +30,4 @@
 //= require growl
 //= require cable
 //= require_tree ./channels
+//= require simplemde.min

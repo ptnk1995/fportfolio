@@ -318,3 +318,7 @@ vi:
   slide: "Slide"
   admin:
     home: "Trang chủ quản lý"
+  blogs:
+    created: " Tạo bài viết thành công ."
+    create_failed: "Tạo bài viết thất bại ."
+  title: "Tiêu đề"

@@ -286,3 +286,7 @@ en:
   slide: "Slide"
   admin:
     home: "Admin home"
+  blogs:
+    created: "Blog was successfully created."
+    create_failed: "Blog was create failed ."
+  title: "Title"

@@ -37,6 +37,9 @@ gem "wow-rails"
 gem "animate-rails"
 gem "redis", "~> 3.2"
 gem "puma", "~> 3.0"
+gem "pygments.rb", "~> 0.6.3"
+gem "redcarpet", "~> 3.3", ">= 3.3.4"
+gem "simplemde-rails"
 
 group :development, :test do
   gem "pry-rails"
