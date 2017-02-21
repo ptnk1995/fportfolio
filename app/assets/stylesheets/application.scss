@@ -21,6 +21,7 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 @import 'semantic-ui';
+@import 'simplemde.min';
 
 .bottom-30 {
   margin-bottom: 30px !important;
@@ -49,4 +50,12 @@
 
 .height-100-px {
   height: 100px;
+}
+
+.margin-minus-top {
+  margin-top: -80px !important;
+}
+
+.background-white {
+  background-color: white !important;
 }

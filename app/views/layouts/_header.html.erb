@@ -1,5 +1,5 @@
 <header id="header">
-  <nav class="navbar st-navbar navbar-fixed-top">
+  <nav class="navbar st-navbar">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#st-navbar-collapse">
@@ -19,7 +19,6 @@
           <li><%= link_to t("header.menu.blog"), blogs_path(I18n.locale) %></li>
           <li><%= link_to t("header.menu.new"), news_index_path(I18n.locale) %></li>
           <li><%= link_to t("member"), users_path %></li>
-          <li><%= link_to t("header.menu.contact"), new_contact_path(I18n.locale) %></li>
           <% if user_signed_in? %>
             <li class = "menu_notifications">
               <%= link_to "#" do %>
@@ -42,15 +41,6 @@
                 </li>
               </ul>
             </li>
-            <li>
-              <%= link_to t("log_out"), destroy_user_session_path(locale: I18n.locale),
-                method: :delete %>
-              <% if current_user.has_role? :admin %>
-                <li><%= link_to t("header.menu.create_account"), new_user_path(locale: I18n.locale) %></li>
-              <% end %>
-            </li>
-          <% else %>
-            <li><%= link_to t("login"), new_user_session_path(locale: I18n.locale) %></li>
           <% end %>
           <li class="dropdown chosen-language">
             <% if params[:locale].present? %>
@@ -102,6 +92,9 @@
                       <%= link_to destroy_user_session_path(locale: I18n.locale), method: :delete do %>
                         <%= t "log_out" %>
                         <span class="glyphicon glyphicon-log-out pull-right"></span>
+                      <% end %>
+                      <% if current_user.has_role? :admin %>
+                        <li><%= link_to t("header.menu.create_account"), new_user_path(locale: I18n.locale) %></li>
                       <% end %>
                     </li>
                   </ul>

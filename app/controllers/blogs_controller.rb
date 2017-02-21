@@ -1,5 +1,7 @@
 class BlogsController < ApplicationController
   before_action :load_categories
+  before_action :authenticate_user!, only: [:create, :new]
+
   def index
     if params[:category].blank?
       @blogs = Post.blog.order_by_newest.page(params[:page]).per Settings.per_page.blog
@@ -30,7 +32,26 @@ class BlogsController < ApplicationController
     end
   end
 
+  def new
+  end
+
+  def create
+    @blog = current_user.posts.new post_params
+    if blog.save
+      flash[:success] = t "blogs.created"
+      redirect_to blogs_path
+    else
+      flash[:danger] = t "blogs.create_failed"
+      render :new
+    end
+  end
+
   private
+  def post_params
+    params.require(:post).permit(:title, :content, :image,
+      :user_id, :category_id).merge(target_type: Post.target_types[:blog])
+  end
+
   def load_categories
     @categories = Category.blog
   end

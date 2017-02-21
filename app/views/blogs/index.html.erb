@@ -3,8 +3,18 @@
     <div class="row">
       <div class="col-md-12">
         <div class="section-title">
-          <h1><%= t "header.menu.blog" %></h1>
-          <span class="st-border"></span>
+          <div>
+            <div class="left">
+              <h1><%= t "header.menu.blog" %></h1>
+              <span class="st-border"></span>
+            </div>
+            <div class="right">
+              <%= link_to new_blog_path(I18n.locale) , class: "ui primary basic button" do %>
+                <i class="fa fa-pencil"> <%= t "write_blog" %></i>
+              <% end %>
+            </div>
+            <div class="clear"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -26,8 +36,8 @@
                 <span><%= t "in" %> <%= link_to blog.category_name, blogs_path(category: blog.category.id) %></span>
                 <span><%= t "by" %> <%= link_to blog.user_name, user_path(I18n.locale, blog.user) %></span>
               </div>
-              <div class="post-article">
-                <%= blog.content.truncate(Settings.description) %>...
+              <div class="post-article markdown">
+                <%= markdown blog.content.truncate(Settings.description_markdown) %>...
               </div>
               <%= link_to t("read_more"), blog_path(I18n.locale, blog), class: "btn btn-readmore" %>
             </article>
