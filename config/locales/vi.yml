@@ -11,7 +11,7 @@ vi:
   login_twitter: "Đăng nhập qua Twitter"
   login_facebook: "Đăng nhập qua Facebook"
   sign_up: "Đăng ký"
-  user: "User"
+  user: "Người dùng"
   user_name: "User name"
   email: "Email "
   user_position: "Vị Trí"
@@ -100,6 +100,7 @@ vi:
   manage:
     manage_project: "Quản lý project"
     our_project: "Dự án của chúng tôi"
+    manage: "Quản lý chung"
     character:
       first: "Với điểm riêng."
       second: "Tạo phần mềm chuyên nghiệp."
@@ -295,3 +296,9 @@ vi:
       x_days:
         one: "1 ngày trước"
         other: "%{count} ngày trước"
+  back_home: "Trở lại trang chủ"
+  write_blog: "Viết bài viết"
+  write_new: "Viết tin tức"
+  slide: "Slide"
+  admin:
+    home: "Trang chủ quản lý"

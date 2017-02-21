@@ -90,6 +90,7 @@ ja:
   manage:
     manage_project: "Manage project"
     our_project: "Our Projects"
+    manage: "Manage"
     character:
       first: "With personality."
       second: "For software professionals."
@@ -238,3 +239,9 @@ ja:
   name: "Name"
   phone-user: "Phone"
   online: "Online"
+  back_home: "Back home"
+  write_blog: "Write blog"
+  write_new: "Write new"
+  slide: "Slide"
+  admin:
+    home: "Admin home"
