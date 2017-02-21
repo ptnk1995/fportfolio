@@ -98,6 +98,7 @@ en:
   manage:
     manage_project: "Manage project"
     our_project: "Our Projects"
+    manage: "Manage"
     character:
       first: "With personality."
       second: "For software professionals."
@@ -260,3 +261,9 @@ en:
         other: "%{count} minutes ago"
       less_than_x_minutes: "just now"
       about_x_hours: "%{count} hours ago"
+  back_home: "Back home"
+  write_blog: "Write blog"
+  write_new: "Write new"
+  slide: "Slide"
+  admin:
+    home: "Admin home"
