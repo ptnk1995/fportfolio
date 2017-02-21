@@ -1,4 +1,5 @@
 class LikeBlogsController < ApplicationController
+  before_action :authenticate_user!, only: [:create, :destroy]
   before_action :load_blog, only: [:create, :destroy]
 
   def create

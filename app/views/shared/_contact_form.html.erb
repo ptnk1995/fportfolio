@@ -17,8 +17,9 @@
         <p class="st-email"><i class="fa fa-envelope-o"></i><strong><%= Settings.contact_mail %></strong></p>
         <p class="st-website"><i class="fa fa-globe"></i><strong><%= Settings.contact_domain %></strong></p>
       </div>
-      <div class="col-sm-7 col-sm-offset-1 wow fadeInRight">
-        <%= form_for Contact.new do |f| %>
+      <div class="col-sm-7 col-sm-offset-1">
+        <%= form_for @contact do |f| %>
+        <%= render "shared/error_messages", object: @contact %>
           <div class="row">
             <% if current_user.present? %>
               <div class="col-sm-6">

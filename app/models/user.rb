@@ -25,6 +25,8 @@ class User < ApplicationRecord
 
   scope :order_by_newest, ->{order created_at: :desc}
 
+  ratyrate_rateable :rating
+
   ratyrate_rater
 
   def self.from_omniauth auth
