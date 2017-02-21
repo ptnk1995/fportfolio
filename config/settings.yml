@@ -51,3 +51,10 @@ message_notice: "notice"
 message_alert: "alert"
 message_danger: "danger"
 description_markdown: 100
+array_image: 
+  second: 1
+  last: -1
+language:
+  vi: "vi"
+  ja: "ja"
+  en: "en"

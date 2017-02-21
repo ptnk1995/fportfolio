@@ -51,6 +51,7 @@ vi:
   comment_content: "Nội dung bình luận"
   notification: "Thông báo"
   like_button: "Thích"
+  edit_home: "Thiết kế trang chủ website"
   contacts:
     create:
       success: "Cảm ơn bạn đã liên lạc với chúng tôi, vui lòng đợi nhóm dịch vụ khách hàng sẽ phản hồi với bạn sớm."
@@ -154,6 +155,9 @@ vi:
     edit:
       save: "Xác nhận lưu"
       cancel: "Hủy bỏ"
+  homes:
+    new:
+      save: "Lưu"
   participates:
     created: "Thêm thành viên thành công."
     create_failed: "Thêm thành viên thất bại ."

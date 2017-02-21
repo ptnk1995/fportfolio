@@ -17,6 +17,7 @@ Rails.application.routes.draw do
     resources :contacts
     resources :categories
     resources :like_blogs
+    resources :homes
     namespace :admin do
       root "static_pages#index", as: "root"
     end
