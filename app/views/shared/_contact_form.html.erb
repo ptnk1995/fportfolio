@@ -1,21 +1,23 @@
 <!-- CONTACT -->
-<section id="contact">
+<section id="contact" class="padding-top-40">
   <div class="contact">
     <div class="row">
       <div class="col-md-12">
         <div class="section-title">
-          <h1><%= t("contact_us") %></h1>
+          <h1 class="font-family"><%= t("contact_us") %></h1>
           <span class="st-border"></span>
         </div>
       </div>
-      <div class="col-sm-4 contact-info">
+    </div>
+    <div class="row">
+      <div class="col-sm-4 contact-info wow fadeInLeft">
         <p class="contact-content"><%= t("contact_detail") %></p>
         <p class="st-address"><i class="fa fa-map-marker"></i><strong><%= t("contact_address") %></strong></p>
         <p class="st-phone"><i class="fa fa-mobile"></i><strong><%= Settings.contact_phone %></strong></p>
         <p class="st-email"><i class="fa fa-envelope-o"></i><strong><%= Settings.contact_mail %></strong></p>
         <p class="st-website"><i class="fa fa-globe"></i><strong><%= Settings.contact_domain %></strong></p>
       </div>
-      <div class="col-sm-7 col-sm-offset-1">
+      <div class="col-sm-7 col-sm-offset-1 wow fadeInRight">
         <%= form_for Contact.new do |f| %>
           <div class="row">
             <% if current_user.present? %>
@@ -39,7 +41,7 @@
             </div>
             <div class="col-sm-12">
               <%= f.label :content %>
-              <%= f.text_area :content, class: "form-control" %>
+              <%= f.text_area :content, class: "form-control height-200-px" %>
             </div>
             <div class="col-sm-12">
               </br>

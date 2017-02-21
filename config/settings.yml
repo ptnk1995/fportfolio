@@ -40,3 +40,6 @@ truncate:
   biography: 55
 languages: {en: "English", vi: "Tiếng Việt", ja: "日本語"}
 like: "like"
+message_notice: "notice"
+message_alert: "alert"
+message_danger: "danger"

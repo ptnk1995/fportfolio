@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
 gem "rails", "~> 5.0.0", ">= 5.0.0.1"
+gem "rails-assets-growl", source: "https://rails-assets.org"
 gem "kaminari"
 gem "bootstrap-kaminari-views"
 gem "bootstrap-sass", "3.3.6"
@@ -32,6 +33,8 @@ gem "rolify"
 gem "cocoon"
 gem "semantic-ui-sass", git: "https://github.com/doabit/semantic-ui-sass.git"
 gem "ransack"
+gem "wow-rails"
+gem "animate-rails"
 
 group :development, :test do
   gem "pry-rails"

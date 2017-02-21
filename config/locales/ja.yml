@@ -239,6 +239,8 @@ ja:
   name: "Name"
   phone-user: "Phone"
   online: "Online"
+  notifications: "Notifications"
+  view_all: "View all"
   back_home: "Back home"
   write_blog: "Write blog"
   write_new: "Write new"

@@ -18,6 +18,7 @@
 //= require project
 //= require jquery.raty
 //= require ratyrate
+//= require wow
 //= require_tree .
 //= require bootstrap-modal
 //= require bootstrap-modalmanager
@@ -25,3 +26,4 @@
 //= require underscore
 //= require gmaps/google
 //= require cocoon
+//= require growl
