@@ -9,8 +9,10 @@ class ProjectsController < ApplicationController
   end
 
   def index
-    @projects = Project.order_by_newest.page(params[:page])
-      .per Settings.per_page.projects
+    @q = Project.ransack params[:q]
+    @projects = Kaminari.paginate_array(@q.result.show_for_rating)
+      .page(params[:page]).per(Settings.per_page.projects)
+    @categories = Category.all
   end
 
   def create

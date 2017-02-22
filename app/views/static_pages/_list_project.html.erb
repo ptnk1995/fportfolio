@@ -8,6 +8,9 @@
         <% end %>
         <h5><%= project.name %></h5>
         <p><%= project.description.truncate(Settings.description) %></p>
+        <div class="rate-project">    
+          <%= rating_for project, :rating, disable_after_rate: false, enable_half: true, cancel: false %>
+        </div>
       </div>
     </div>
   </div>

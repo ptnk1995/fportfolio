@@ -38,10 +38,16 @@ class Project < ApplicationRecord
   PRIVATE_ATTRIBUTES = {server_information: "server_information",
     git_repository: "git_repository", pm_url: "pm_url"}
 
+  BRANCH = [[Settings.branch.hanoi, 0],[Settings.branch.danang, 1]]
   private
+
   def check_max_files
     if images.blank? || images.size > Settings.project.max_image_files
       errors.add(:dagger, I18n.t("projects.check_max_files"))
     end
+  end
+
+  def self.show_for_rating
+    Project.all.sort_by {|u| [u.average(:rating) ? u.average(:rating).avg : 0, u.average(:rating)]}.reverse
   end
 end

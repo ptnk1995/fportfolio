@@ -130,6 +130,9 @@ vi:
     edit:
       save: "Xác nhận lưu"
       cancel: "Hủy bỏ"
+    index:
+      search_project: "Tìm kiếm dự án"
+      all: "Tất cả"
   users:
     label_position: "Vị trí của họ trong project "
     about_you: "Một số thông tin về người này"
