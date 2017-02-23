@@ -52,7 +52,7 @@
 
 .scroll {
   overflow-y: scroll;
-  max-height: 400px;
+  /*max-height: 400px;*/
 }
 
 .img-member {

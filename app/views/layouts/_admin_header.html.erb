@@ -1,0 +1,20 @@
+<nav class="navbar navbar-default header navbar-fixed-top">
+  <div class="col-md-12 nav-wrapper">
+    <div class="navbar-header navbar-header-custom">
+      <%= link_to t("index"), "#", {class: "navbar-brand"} %>
+      <ul class="nav navbar-nav navbar-right user-nav">
+        <li class="user-name"><span>Current User's name</span></li>
+        <li class="dropdown avatar-dropdown">
+          <%= image_tag "admin/avatar3.png", class: "img-circle avatar",
+            data: {toggle: "dropdown"},
+            aria: {haspopup: "true", expanded: "true"} %>
+          <ul class="dropdown-menu user-dropdown">
+            <li><%= link_to t("account_setting"), "#" %></li>
+            <li role="separator" class="divider"></li>
+            <li><%= link_to t("account_logout"), "#" %></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

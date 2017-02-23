@@ -1,24 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title><%= t("title_home") %></title>
+    <title><%= t "index" %></title><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= stylesheet_link_tag "application", media: "all",
+      "data-turbolinks-track": true %>
+    <%= javascript_include_tag "application",
+      "data-turbolinks-track": true %>
     <%= csrf_meta_tags %>
+    <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag "application", media: "all",
     "data-turbolinks-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"/>
   </head>
-  <body >
-    <div class="height-100-percent">
-      <%= render "layouts/header_admin" %>
-      <div class="container-fluid-full">
-        <div class="row style-container-admin">
-          <%= render "layouts/side_bar_left" %>
-          <div class="col-md-10 col-sm-9 col-xs-9">
-            <%= render "layouts/breadcrumb" %>
-            <%= yield %>
-          </div>
-        </div>
-      </div>
-    </div>
+  <style type="text/css">
+
+  </style>
+  <body id="mimin" class="dashboard">
+    <%= render "layouts/admin_header" %>
+    <%= render "layouts/admin_leftbar" %>
+    <%= yield %>
   </body>
 </html>

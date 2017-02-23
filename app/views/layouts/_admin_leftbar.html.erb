@@ -1,0 +1,24 @@
+<div id="left-menu">
+  <div class="sub-left-menu scroll">
+    <ul class="nav nav-list">
+      <li>
+        <div class="left-bg"></div>
+      </li>
+      <li class="ripple"><%= link_to t("menu_home"), "#" %></li>
+      <li class="ripple"><%= link_to t("menu_cate"), "#" %></li>
+      <li class="ripple"><%= link_to t("menu_user"), "#" %></li>
+      <li class="ripple"><%= link_to t("menu_request"), "#" %></li>
+      <li data-toggle="collapse" data-target="#products" class="collapsed active">
+    <a href="#"><i class="fa fa-gift fa-lg"></i> <%= t "manage.manage" %><span class="arrow"></span></a>
+  </li>
+  <ul class="sub-menu collapse" id="products">
+    <li class="active"><%= link_to t("all") %></li>
+    <li><%= link_to "" do %><%= t("header.menu.project") %><% end %></li>
+    <li><%= link_to "" do %><%= t("user") %><% end %></li>
+    <li><%= link_to t("header.menu.blog") %></li>
+    <li><%= link_to t("header.menu.new") %></li>
+    <li><%= link_to t("slide") %></li>
+  </ul>
+    </ul>
+  </div>
+</div>

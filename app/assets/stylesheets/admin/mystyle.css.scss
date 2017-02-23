@@ -1,0 +1,53 @@
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+.navbar-header-custom {
+  width: 100%;
+}
+.form-group-custom {
+  margin-top: 40px !important;
+}
+.text-center-custom {
+  padding: 5px;
+}
+.col-md-12-custom {
+  padding:20px
+}
+.table-custom {
+  width: 100%;
+  td {
+    border: 1px solid #ddd !important;
+    vertical-align: middle !important;
+  }
+  th {
+    border: 1px solid #ddd !important;
+    vertical-align: middle !important;
+  }
+}
+.first-column {
+  width: 10%;
+  text-align: center;
+}
+.last-column {
+  width: 20%;
+  text-align: center;
+}
+.custom-div {
+  text-align: right;
+}
+.alert-custom {
+  position: relative;
+}
+.closeNotify {
+  position: absolute;
+  top: 0px;
+  right: 5px;
+}
+a.btn-warning:hover, a.btn-danger:hover, a.btn-info:hover {
+  font-weight: normal;
+}
+.col-md-12-custom {
+  margin:10px 0px;
+}
+.new_image {
+  max-width: 100%;
+}
