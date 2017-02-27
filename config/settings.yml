@@ -20,7 +20,8 @@ per_page:
   projects: 9
   blog: 4
   user: 16
-  blog: 2
+  project: 6
+  member_of_project: 4
   comment: 4
 format:
   image: ["jpg", "jpeg", "gif", "png"]

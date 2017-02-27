@@ -13,6 +13,10 @@ class ProjectsController < ApplicationController
     @projects = Kaminari.paginate_array(@q.result.show_for_rating)
       .page(params[:page]).per(Settings.per_page.projects)
     @categories = Category.all
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def create
@@ -33,6 +37,7 @@ class ProjectsController < ApplicationController
     @message = Message.new
     if @project
       @support = Supports::ProjectSupport.new(@project)
+      @participates_project = @support.participates.page(params[:page]).per Settings.per_page.member_of_project
       @comments = @support.comments.order_by_newest
         .page(params[:page]).per Settings.per_page.comment
       respond_to do |format|

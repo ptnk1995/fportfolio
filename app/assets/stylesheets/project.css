@@ -219,3 +219,15 @@ div.slideouticons.horizontal input:checked~ div.iconswrapper ul li {
 .gold {
   color: #f4b942;
 }
+
+.portfolio-content.scale:hover img {
+  transform: scale(1.2);
+  transition: .3s ease-in-out !important;
+}
+.scale {
+  overflow: hidden;
+}
+
+.portfolio-overlay {
+  transform: scale(1) !important;
+}
