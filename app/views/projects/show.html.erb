@@ -40,34 +40,7 @@
             <span><%= @project.created_at %></span>
             <span><%= t "in" %> <%= link_to @project.category.name, "" %></span>
           </div>
-          <button class="ui facebook button">
-            <i class="facebook icon"></i>
-            <%= t "facebook" %>
-          </button>
-          <button class="ui twitter button">
-            <i class="twitter icon"></i>
-            <%= t "twitter" %>
-          </button>
-          <button class="ui google plus button">
-            <i class="google plus icon"></i>
-            <%= t "google_plus" %>
-          </button>
-          <button class="ui vk button">
-            <i class="vk icon"></i>
-            <%= t "vk" %>
-          </button>
-          <button class="ui linkedin button">
-            <i class="linkedin icon"></i>
-            <%= t "linkedin" %>
-          </button>
-          <button class="ui instagram button">
-            <i class="instagram icon"></i>
-            <%= t "instagram" %>
-          </button>
-          <button class="ui youtube button">
-            <i class="youtube icon"></i>
-            <%= t "youtube" %>
-          </button>
+          <%= social_share_button_tag(@project.name, url: "http://localhost:3000/#{I18n.locale}/projects/#{@project.id}") %>
           <span class="st-border"></span>
         </div>
       </div>
