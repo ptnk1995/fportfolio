@@ -1,5 +1,5 @@
 <header id="header">
-  <nav class="navbar st-navbar">
+  <nav class="navbar st-navbar navbar-fixed-top a border-top-header">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#st-navbar-collapse">
@@ -12,7 +12,7 @@
           <%= image_tag "/assets/logo.png", class: "logo-framgia" %>
         <% end %>
       </div>
-      <div class="collapse navbar-collapse" id="st-navbar-collapse">
+      <div class="collapse navbar-collapse" id="st-navbar-collapse" style="padding-bottom: 25px;">
         <ul class="nav navbar-nav navbar-right">
           <li><%= link_to t("header.menu.home"), root_path(I18n.locale) %></li>
           <li><%= link_to t("header.menu.project"), projects_path(I18n.locale) %></li>

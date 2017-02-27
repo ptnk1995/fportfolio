@@ -31,3 +31,10 @@
 //= require cable
 //= require_tree ./channels
 //= require simplemde.min
+//= require jquery.infinitescroll
+
+$(document).ready(function(){
+  $(function() {
+    $('.ui.dropdown').dropdown();
+});
+});

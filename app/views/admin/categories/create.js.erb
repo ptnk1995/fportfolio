@@ -1,0 +1,10 @@
+<% if @category.errors.any? %>
+  notify = $(".mess-area-add");
+  notify.html("<%= j render "admin/shared/message_add", object: @category %>");
+<% else %>
+  tbody = $("#body_table_data");
+  notify = $(".mess-area-add");
+  tbody.prepend("<%= j render "admin/categories/category" %>")
+  notify.html("<%= j render "admin/shared/message_add", object: @category %>");
+  $(".reset-input").val("");
+<% end %>

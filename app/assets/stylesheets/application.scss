@@ -37,7 +37,7 @@
 }
 
 .font-family {
-  font-family: serif !important;
+  font-family: "Dancing Script" !important;
 }
 
 .height-200-px {
@@ -53,9 +53,31 @@
 }
 
 .margin-minus-top {
-  margin-top: -80px !important;
+  margin-top: 120px !important;
 }
 
 .background-white {
   background-color: white !important;
+}
+
+.border-top-header {
+  border-top: solid 2px #e6a117;
+}
+
+#header a {
+  color: black;
+  font-family: "Dancing Script" !important;
+  font-size: 16px;
+}
+
+.border-top-header {
+  border-top: solid 2px #e6a117;
+}
+
+#header a:hover {
+  border-bottom: 1px solid #e6a117;
+}
+
+#slider {
+  margin-top: -30px;
 }

@@ -1,5 +1,5 @@
 <!-- CONTACT -->
-<section id="contact" class="padding-top-40">
+<section id="contact" class="padding-top-40 background-white">
   <div class="contact">
     <div class="row">
       <div class="col-md-12">
@@ -18,7 +18,7 @@
         <p class="st-website"><i class="fa fa-globe"></i><strong><%= Settings.contact_domain %></strong></p>
       </div>
       <div class="col-sm-7 col-sm-offset-1">
-        <%= form_for @contact do |f| %>
+        <%= form_for @contact, remote: true do |f| %>
         <%= render "shared/error_messages", object: @contact %>
           <div class="row">
             <% if current_user.present? %>

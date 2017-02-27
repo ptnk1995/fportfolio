@@ -9,10 +9,15 @@ class ContactsController < ApplicationController
     if @contact.save
       ContactMailer.contact_mailer(@contact).deliver_later
       flash[:success] = t ".success"
-      redirect_to root_path
+      # redirect_to root_path
+      respond_to do |format|
+        format.js
+      end
     else
       flash[:error] = t ".fail"
-      render :new
+      respond_to do |format|
+        format.js
+      end
     end
   end
 

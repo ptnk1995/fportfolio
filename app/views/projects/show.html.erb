@@ -172,8 +172,12 @@
         </ul>
         <div class="tab-content">
           <div class="tab-pane active" id="member_of_project">
-            <div class="row margin-bottom-50">
-              <%= render "member_of_project", object: @project.users %>
+            <div class="margin-bottom-50" id="member_of_project1">
+              <%= render "member_of_project"  %>
+            </div>
+            <div class="center">
+              <%= link_to_next_page @participates_project, (t "load_more"), remote: true, id: "load_more_member_of_project",
+                class: "btn btn-primary" %>
             </div>
           </div>
           <div class="tab-pane" id="comment">
@@ -182,12 +186,12 @@
               <%= render partial: "comments/comment_form", locals: {project: @project}%>
             </div>
             <div class="entries" id="entries">
-            <%= render @comments %>
-          </div>
-          <center>
-            <%= link_to_next_page @comments, (t "load_more"), remote: true,
-             id: "load_more",class: "btn btn-primary" %>
-           </center>
+              <%= render @comments %>
+            </div>
+            <center>
+              <%= link_to_next_page @comments, (t "load_more"), remote: true,
+               id: "load_more",class: "btn btn-primary" %>
+            </center>
           </div>
         </div>
       </div>
