@@ -1,0 +1,2 @@
+$('#projects').append('<%= j (render partial: @projects)%>');
+$('#load_more').replaceWith('<%= j (link_to_next_page(@projects, (t "load_more"), remote: true, id: "load_more", class: "fluid ui button"))%>')

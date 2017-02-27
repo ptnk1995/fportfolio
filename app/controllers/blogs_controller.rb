@@ -37,7 +37,7 @@ class BlogsController < ApplicationController
 
   def create
     @blog = current_user.posts.new post_params
-    if blog.save
+    if @blog.save
       flash[:success] = t "blogs.created"
       redirect_to blogs_path
     else

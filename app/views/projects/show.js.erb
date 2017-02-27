@@ -1,2 +1,5 @@
-$('#entries').append("<%= j (render partial: @comments)%>");
-$('#load_more').replaceWith("<%= j (link_to_next_page(@comments, (t 'load_more'), remote: true, id: 'load_more', class: 'btn btn-primary'))%>")
+$('#entries').append('<%= j (render partial: @comments)%>');
+$('#load_more').replaceWith('<%= j (link_to_next_page(@comments, (t "load_more"), remote: true, id: "load_more", class: "btn btn-primary"))%>')
+
+$('#member_of_project1').append('<%= j (render partial: "projects/member_of_project")%>');
+$('#load_more_member_of_project').replaceWith('<%= j (link_to_next_page(@participates_project, (t "load_more"), remote: true, id: "load_more_member_of_project", class: "btn btn-primary"))%>')

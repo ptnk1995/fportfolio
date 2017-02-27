@@ -12,17 +12,17 @@
     <%= search_form_for @q, id: "search_form" do |f| %>
       <div class="col-md-12">
         <div class="col-md-2">
-          <%= f.text_field :name_cont, placeholder: (t".search_project"), 
+          <%= f.text_field :name_cont, placeholder: (t".search_project"),
             id: "user_search", class: "form-control" %>
         </div>
         <div class="col-md-2">
-          <%= f.select :branch_eq, 
-            options_for_select(Project::BRANCH), {include_blank: (t".all")}, 
+          <%= f.select :branch_eq,
+            options_for_select(Project::BRANCH), {include_blank: (t".all")},
             {class: "form-control selectpicker", "data-live-search": true} %>
         </div>
         <div class="col-md-2">
-          <%= f.select :category_id_eq, 
-            options_for_select(@categories.all.map{|c| [c.name, c.id]}, 
+          <%= f.select :category_id_eq,
+            options_for_select(@categories.all.map{|c| [c.name, c.id]},
             f.object.category_id),{include_blank: (t".all")} ,
             {class: "form-control selectpicker", "data-live-search": true} %>
         </div>
@@ -37,13 +37,14 @@
     <br />
     <div class="row">
       <div class="portfolio-wrapper" >
-        <div class="portfolio-items">
+        <div class="portfolio-items" id="projects">
           <%= render @projects %>
         </div>
       </div>
     </div>
     <div class="center">
-      <%= paginate @projects, theme: "twitter-bootstrap-3" %>
+      <%= link_to_next_page @projects, (t "load_more"), remote: true, id: "load_more",
+        class: "fluid ui button" %>
     </div>
   </div>
 </div>
