@@ -20,6 +20,7 @@ Rails.application.routes.draw do
     resources :homes
     namespace :admin do
       root "static_pages#index", as: "root"
+      resources :categories
     end
     resources :messages
   end

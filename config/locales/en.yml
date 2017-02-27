@@ -300,3 +300,7 @@ en:
     created: "Blog was successfully created."
     create_failed: "Blog was create failed ."
   title: "Title"
+  admin:
+    categories:
+      new:
+        create_button: "Create Category"

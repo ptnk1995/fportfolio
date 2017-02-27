@@ -329,3 +329,9 @@ vi:
     created: " Tạo bài viết thành công ."
     create_failed: "Tạo bài viết thất bại ."
   title: "Tiêu đề"
+  admin:
+    categories:
+      new:
+        create_button: "Thêm thể loại"
+    form:
+      cancel_button: "Hủy thêm"

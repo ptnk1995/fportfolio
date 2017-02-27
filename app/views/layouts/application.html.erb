@@ -9,10 +9,14 @@
     <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
     <%= favicon_link_tag "icon.png" %>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"/>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js"></script>
   </head>
   <body>
     <%= render "layouts/header" %>
+    <div class="flash-messages">
+
     <%= render "shared/flash_message.js.erb" %>
+    </div>
     <div id="wrapper" class="wrapper margin-minus-top">
       <%= yield %>
     </div>

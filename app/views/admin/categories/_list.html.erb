@@ -1,0 +1,18 @@
+<% @categories.each do |category| %>
+  <tr>
+    <td><%= category.name %></td>
+    <td class = "last-column">
+      <span class="pull">
+        <%= link_to "",
+          class: "btn btn-sm btn-warning" do %>
+          <i class="glyphicon glyphicon-edit"></i>
+        <% end %>
+        <%= link_to "", method: :delete,
+          data: {confirm: t("function.confirm_delete")},
+          class: "btn btn-sm btn-danger" do %>
+          <i class="glyphicon glyphicon-remove"></i>
+        <% end %>
+      </span>
+    </td>
+  </tr>
+<% end %>
